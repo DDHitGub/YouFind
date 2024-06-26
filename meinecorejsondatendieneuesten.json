@@ -1,0 +1,539 @@
+[
+    {
+        "acceptedDate": "",
+        "authors": [
+            {
+                "name": "M. Stalteri"
+            },
+            {
+                "name": "C. La Vecchia"
+            }
+        ],
+        "contributors": [],
+        "createdDate": "2019-03-06T15:26:08+00:00",
+        "dataProvider": {
+            "id": 1107,
+            "name": "AIR Universita degli studi di Milano",
+            "url": "https://api.core.ac.uk/v3/data-providers/1107",
+            "logo": "https://api.core.ac.uk/data-providers/1107/logo"
+        },
+        "depositedDate": "",
+        "documentType": "",
+        "doi": "10.1001/jama.1996.03530280028024",
+        "downloadUrl": "http://hdl.handle.net/2434/518854",
+        "fullText": "",
+        "id": 187972309,
+        "identifiers": {
+            "doi": "10.1001/jama.1996.03530280028024",
+            "oai": "oai:air.unimi.it:2434/518854"
+        },
+        "title": "The AMA, tobacco, and the public health",
+        "language": null,
+        "publishedDate": "1996-01-01T00:00:00+00:00",
+        "publisher": "'American Medical Association (AMA)'",
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "1996",
+        "links": [
+            {
+                "type": "display",
+                "url": "https://core.ac.uk/outputs/187972309"
+            }
+        ],
+        "abstract": "",
+        "tags": [
+            "info:eu-repo/semantics/article",
+            "Industry",
+            "Plants, Toxic",
+            "Public Health",
+            "Tobacco",
+            "Settore MED/01 - Statistica Medica"
+        ],
+        "fulltextStatus": "enabled",
+        "subjects": [
+            "info:eu-repo/semantics/article"
+        ],
+        "oai": "oai:air.unimi.it:2434/518854",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": null,
+        "repositories": {
+            "id": "1107",
+            "openDoarId": 0,
+            "name": "AIR Universita degli studi di Milano",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 187972309,
+            "depositedDate": "",
+            "publishedDate": "1996-01-01T00:00:00+00:00",
+            "updatedDate": "2021-04-22T06:29:39+01:00",
+            "acceptedDate": "",
+            "createdDate": "2019-03-06T15:26:08+00:00"
+        },
+        "urls": [
+            "http://hdl.handle.net/2434/518854"
+        ],
+        "lastUpdate": "2021-04-22T06:29:39+01:00",
+        "setSpecs": []
+    },
+    {
+        "acceptedDate": "2009-03-02T00:00:00+00:00",
+        "authors": [
+            {"name": "Katja Beesdo"},
+            {"name": "Jennifer Y. F. Lau"},
+            {"name": "Amanda E. Guyer"},
+            {"name": "Erin B. McClure-Tone"},
+            {"name": "Christopher S. Monk"},
+            {"name": "Eric E. Nelson"},
+            {"name": "Stephen J. Fromm"},
+            {"name": "Michelle A. Goldwin"},
+            {"name": "Hans-Ulrich Wittchen"},
+            {"name": "Ellen Leibenluft"},
+            {"name": "Monique Ernst"},
+            {"name": "Daniel S. Pine"}
+        ],
+        "contributors": [""],
+        "createdDate": "2019-03-27T10:15:05+00:00",
+        "dataProvider": {
+            "id": 4786,
+            "name": "Crossref",
+            "url": "https://api.core.ac.uk/v3/data-providers/4786",
+            "logo": "https://api.core.ac.uk/data-providers/4786/logo"
+        },
+        "depositedDate": "2009-03-01T00:00:00+00:00",
+        "documentType": "",
+        "doi": "10.1001/archgenpsychiatry.2008.545",
+        "downloadUrl": "",
+        "fullText": "",
+        "id": 189822704,
+        "identifiers": {"doi": "10.1001/archgenpsychiatry.2008.545", "oai": null},
+        "title": "Common and Distinct Amygdala-Function Perturbations in Depressed vs Anxious Adolescents",
+        "language": null,
+        "publishedDate": "",
+        "publisher": "'American Medical Association (AMA)'",
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "",
+        "links": [{"type": "display", "url": "https://core.ac.uk/outputs/189822704"}],
+        "abstract": "",
+        "tags": [],
+        "fulltextStatus": "enabled",
+        "subjects": [],
+        "oai": "",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": null,
+        "repositories": {
+            "id": "4786",
+            "openDoarId": 0,
+            "name": "Crossref",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 189822704,
+            "depositedDate": "2009-03-01T00:00:00+00:00",
+            "publishedDate": null,
+            "updatedDate": "2022-06-20T20:55:54+01:00",
+            "acceptedDate": "2009-03-02T00:00:00+00:00",
+            "createdDate": "2019-03-27T10:15:05+00:00"
+        },
+        "urls": [],
+        "lastUpdate": "2022-06-20T20:55:54+01:00",
+        "setSpecs": []
+    },
+    {
+        "acceptedDate": "2003-03-18T00:00:00+00:00",
+        "authors": [
+            {
+                "name": "Huisman, M. V."
+            },
+            {
+                "name": "Büller, H. R."
+            },
+            {
+                "name": "ten Cate, J. W."
+            }
+        ],
+        "contributors": [
+            "Other departments"
+        ],
+        "createdDate": "2017-12-16T08:09:27+00:00",
+        "dataProvider": {
+            "id": 708,
+            "name": "NARCIS ",
+            "url": "https://api.core.ac.uk/v3/data-providers/708",
+            "logo": "https://api.core.ac.uk/data-providers/708/logo"
+        },
+        "depositedDate": "1988-03-01T00:00:00+00:00",
+        "documentType": "",
+        "doi": "10.1001/archinte.148.3.681",
+        "downloadUrl": "https://pure.amc.nl/en/publications/utility-of-impedance-plethysmography-in-the-diagnosis-of-recurrent-deepvein-thrombosis(f2237b02-2e49-4a78-93c9-1ef0f76fc05e).html",
+        "fullText": "",
+        "id": 141621795,
+        "identifiers": {
+            "doi": "10.1001/archinte.148.3.681",
+            "oai": null
+        },
+        "title": "Utility of impedance plethysmography in the diagnosis of recurrent deep-vein thrombosis",
+        "language": null,
+        "publishedDate": "1988-01-01T00:00:00+00:00",
+        "publisher": "'American Medical Association (AMA)'",
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "1988",
+        "links": [
+            {
+                "type": "display",
+                "url": "https://core.ac.uk/outputs/141621795"
+            }
+        ],
+        "abstract": "Serial impedance plethysmography has been shown to be a safe and effective alternative to venography in the management of patients with clinically suspected acute venous thrombosis. The rate of normalization of an initial abnormal impedance plethysmogram and, consequently, the usefulness of impedance plethysmography in the management of patients with recurrent symptoms is, however, unknown. In a prospective cohort follow-up study, 161 consecutive patients with proved venous thrombosis and abnormal impedance plethysmograms were studied for one year. After 3, 6, 9, and 12 months, the impedance plethysmograms had normalized in 67%, 85%, 92%, and 95% of the patients, respectively. Thirty-five patients (22%) returned with clinically suspected recurrent thrombosis, of whom 31 had normal impedance plethysmograms prior to their return. In 18 of these patients, repeated tests were normal; these patients did not undergo anticoagulant therapy, and follow-up disclosed no subsequent adverse consequences. In the other 13 patients, the test again became abnormal; 11 patients were shown by venograms to have recurrent deep-vein thrombosis. Consequently, 29 (83%) of the 35 patients in whom the suspicion of recurrent thrombosis arose could have been managed with impedance plethysmography alone without the necessity for venography or anticoagulant therapy. It is concluded that normalization of impedance plethysmography tests occurs in almost all patients within nine months, and that serial impedance plethysmography is useful for patient management in nearly 90% of patients presenting with recurrent symptom",
+        "tags": [
+            "info:eu-repo/semantics/article"
+        ],
+        "fulltextStatus": "enabled",
+        "subjects": [
+            "info:eu-repo/semantics/article"
+        ],
+        "oai": "",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": null,
+        "repositories": {
+            "id": "708",
+            "openDoarId": 0,
+            "name": "NARCIS ",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 141621795,
+            "depositedDate": "1988-03-01T00:00:00+00:00",
+            "publishedDate": "1988-01-01T00:00:00+00:00",
+            "updatedDate": "2021-05-29T04:34:46+01:00",
+            "acceptedDate": "2003-03-18T00:00:00+00:00",
+            "createdDate": "2017-12-16T08:09:27+00:00"
+        },
+        "urls": [
+            "https://pure.amc.nl/en/publications/utility-of-impedance-plethysmography-in-the-diagnosis-of-recurrent-deepvein-thrombosis(f2237b02-2e49-4a78-93c9-1ef0f76fc05e).html"
+        ],
+        "lastUpdate": "2021-05-29T04:34:46+01:00",
+        "setSpecs": []
+    },
+    {
+        "acceptedDate": "2012-03-12T00:00:00+00:00",
+        "authors": [
+            {
+                "name": "Costanza, Mary E."
+            }
+        ],
+        "contributors": [],
+        "createdDate": "2016-11-12T14:57:19+00:00",
+        "dataProvider": {
+            "id": 1448,
+            "name": "eScholarship@UMMS",
+            "url": "https://api.core.ac.uk/v3/data-providers/1448",
+            "logo": "https://api.core.ac.uk/data-providers/1448/logo"
+        },
+        "depositedDate": "2012-03-12T00:00:00+00:00",
+        "documentType": "",
+        "doi": "10.1001/archinternmed.2011.1882",
+        "downloadUrl": "http://dx.doi.org/10.1001/archinternmed.2011.1882",
+        "fullText": "",
+        "id": 56524852,
+        "identifiers": {
+            "doi": "10.1001/archinternmed.2011.1882",
+            "oai": "oai:escholarship.umassmed.edu:wfc_pp-1541"
+        },
+        "title": "Screening mammograms should not be underestimated",
+        "language": null,
+        "publishedDate": "2012-03-12T07:00:00+00:00",
+        "publisher": "'American Medical Association (AMA)'",
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "2012",
+        "links": [
+            {
+                "type": "display",
+                "url": "https://core.ac.uk/outputs/56524852"
+            }
+        ],
+        "abstract": "Comment on: Likelihood that a woman with screen-detected breast cancer has had her  life saved  by that screening.  Arch Intern Med. 2011 Dec 12;171(22):2043-6",
+        "tags": [
+            "text",
+            "Breast Neoplasms",
+            "*Early Detection of Cancer",
+            "Female",
+            "Humans",
+            "*Mammography",
+            "*SEER Program",
+            "Survivors",
+            "Community Health and Preventive Medicine",
+            "Neoplasms",
+            "Oncology",
+            "Preventive Medicine"
+        ],
+        "fulltextStatus": "enabled",
+        "subjects": [
+            "text"
+        ],
+        "oai": "oai:escholarship.umassmed.edu:wfc_pp-1541",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": null,
+        "repositories": {
+            "id": "1448",
+            "openDoarId": 0,
+            "name": "eScholarship@UMMS",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 56524852,
+            "depositedDate": "2012-03-12T00:00:00+00:00",
+            "publishedDate": "2012-03-12T07:00:00+00:00",
+            "updatedDate": "2022-07-28T14:59:23+01:00",
+            "acceptedDate": "2012-03-12T00:00:00+00:00",
+            "createdDate": "2016-11-12T14:57:19+00:00"
+        },
+        "urls": [
+            "http://dx.doi.org/10.1001/archinternmed.2011.1882",
+            "https://escholarship.umassmed.edu/wfc_pp/542"
+        ],
+        "lastUpdate": "2022-07-28T14:59:23+01:00",
+        "setSpecs": []
+    },
+    {
+        "acceptedDate": "",
+        "authors": [
+            {
+                "name": "GALLO, Antonio"
+            },
+            {
+                "name": "Rovaris M"
+            },
+            {
+                "name": "Riva R"
+            },
+            {
+                "name": "Angelo GI"
+            },
+            {
+                "name": "Benedetti B"
+            },
+            {
+                "name": "Martinelli V"
+            },
+            {
+                "name": "Falini A"
+            },
+            {
+                "name": "Comi G"
+            },
+            {
+                "name": "Filippi M."
+            }
+        ],
+        "contributors": [
+            "Gallo, Antonio",
+            "Rovaris, M",
+            "Riva, R",
+            "Angelo, Gi",
+            "Benedetti, B",
+            "Martinelli, V",
+            "Falini, A",
+            "Comi, G",
+            "Filippi, M."
+        ],
+        "createdDate": "2019-05-07T00:32:29+01:00",
+        "dataProvider": {
+            "id": 5485,
+            "name": "Archivio Istituzionale della Ricerca - Università degli Studi della Campania \"Luigi Vanvitelli\"",
+            "url": "https://api.core.ac.uk/v3/data-providers/5485",
+            "logo": "https://api.core.ac.uk/data-providers/5485/logo"
+        },
+        "depositedDate": "",
+        "documentType": "",
+        "doi": "10.1001/archneur.62.5.803",
+        "downloadUrl": "http://hdl.handle.net/11591/231371",
+        "fullText": "",
+        "id": 197633146,
+        "identifiers": {
+            "doi": "10.1001/archneur.62.5.803",
+            "oai": "oai:iris.unicampania.it:11591/231371"
+        },
+        "title": "Diffusion-tensor magnetic resonance imaging detects normal-appearing white matter damage unrelated to short-term disease activity in patients at the earliest clinical stage of multiple sclerosis",
+        "language": null,
+        "publishedDate": "2005-01-01T00:00:00+00:00",
+        "publisher": null,
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "2005",
+        "links": [
+            {
+                "type": "display",
+                "url": "https://core.ac.uk/outputs/197633146"
+            }
+        ],
+        "abstract": "Background: Diffusion-tensor (DT) magnetic resonance imaging (MRI) has the potential to elucidate some characteristics of tissue microstructure inaccessible to other MRI techniques. Objective: To investigate whether normal-appearing brain tissue abnormalities occur in patients with multiple sclerosis at the earliest clinical stage and whether their severity is predictive of a short-term disease evolution by using DT MRI. Design: Forty-five patients and 22 healthy control subjects were studied. All patients had had a clinically isolated syndrome within the 3 months preceding study enrollment and paraclinical evidence of disease dissemination in space. During a single session, dual-echo, pulsed-gradient spin-echo echo-planar, and post-gadolinium T1-weighted images of the brain were obtained from each subject. In patients, dual-echo and enhanced images were obtained after 3 and 12 months, to detect MRI signs of disease dissemination in time. An on-study neurological examination was also conducted to ascertain the occurrence of clinical relapses. Mean diffusivity and fractional anisotropy maps were derived from DT images. Normal-appearing white matter (NAWM) and normal-appearing gray matter mean diffusivity and fractional anisotropy histograms were produced and analyzed. Results: During the study period, 29 patients showed MRI evidence of disease dissemination in time. When compared with healthy controls, patients showed higher average NAWM mean diffusivity (P=.01), lower average NAWM mean-diffusivity peak height (P <.001), and fractional anisotropy (P<.001). The DT MRI characteristics of patients did not differ between those with and those without disease dissemination in time at follow-up. Conclusions: In patients with multiple sclerosis at the earliest clinical stage, the severity of NAWM damage does not predict new lesion formation in the short term, suggesting that the \"diffuse\" component of tissue damage is, at least, partially, independent of the \"discrete,\" predominantly inflammatory aspects of the disease since its clinical onset",
+        "tags": [
+            "info:eu-repo/semantics/article"
+        ],
+        "fulltextStatus": "enabled",
+        "subjects": [
+            "info:eu-repo/semantics/article"
+        ],
+        "oai": "oai:iris.unicampania.it:11591/231371",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": null,
+        "repositories": {
+            "id": "5485",
+            "openDoarId": 0,
+            "name": "Archivio Istituzionale della Ricerca - Università degli Studi della Campania \"Luigi Vanvitelli\"",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 197633146,
+            "depositedDate": "",
+            "publishedDate": "2005-01-01T00:00:00+00:00",
+            "updatedDate": "2024-05-19T20:59:44+01:00",
+            "acceptedDate": "",
+            "createdDate": "2019-05-07T00:32:29+01:00"
+        },
+        "urls": [
+            "http://hdl.handle.net/11591/231371"
+        ],
+        "lastUpdate": "2024-05-19T20:59:44+01:00",
+        "setSpecs": [
+            "com_123456789_41",
+            "com_123456789_40",
+            "col_123456789_1"
+        ]
+    },
+    {
+        "acceptedDate": "2010-09-13T00:00:00+01:00",
+        "authors": [
+            {
+                "name": "Daniel S. Morris"
+            }
+        ],
+        "contributors": [],
+        "createdDate": "2019-03-27T10:25:18+00:00",
+        "dataProvider": {
+            "id": 4786,
+            "name": "Crossref",
+            "url": "https://api.core.ac.uk/v3/data-providers/4786",
+            "logo": "https://api.core.ac.uk/data-providers/4786/logo"
+        },
+        "depositedDate": "2010-09-01T00:00:00+01:00",
+        "documentType": "",
+        "doi": "10.1001/archophthalmol.2010.191",
+        "downloadUrl": "http://dx.doi.org/10.1001/archophthalmol.2010.191",
+        "fullText": "",
+        "id": 189823253,
+        "identifiers": {
+            "doi": "10.1001/archophthalmol.2010.191",
+            "oai": "info:doi/10.1001%2Farchophthalmol.2010.191"
+        },
+        "title": "Endonasal Dacryocystorhinostomy in Wegener Granulomatosis",
+        "language": null,
+        "publishedDate": "2010-09-01T01:00:00+01:00",
+        "publisher": "American Medical Association (AMA)",
+        "references": [],
+        "sourceFulltextUrls": [],
+        "updatedDate": "",
+        "yearPublished": "2010",
+        "links": [
+            {
+                "type": "display",
+                "url": "https://core.ac.uk/outputs/189823253"
+            }
+        ],
+        "abstract": "",
+        "tags": [
+            "journal-article"
+        ],
+        "fulltextStatus": "enabled",
+        "subjects": [
+            "journal-article"
+        ],
+        "oai": "info:doi/10.1001%2Farchophthalmol.2010.191",
+        "deleted": "ALLOWED",
+        "disabled": false,
+        "journals": [
+            {
+                "title": "Archives of Ophthalmology",
+                "identifiers": [
+                    "0003-9950"
+                ]
+            }
+        ],
+        "repositories": {
+            "id": "4786",
+            "openDoarId": 0,
+            "name": "Crossref",
+            "urlHomepage": null,
+            "uriJournals": null,
+            "physicalName": "noname",
+            "roarId": 0,
+            "baseId": 0,
+            "pdfStatus": null,
+            "nrUpdates": 0,
+            "lastUpdateTime": null
+        },
+        "repositoryDocument": {
+            "id": 189823253,
+            "depositedDate": "2010-09-01T00:00:00+01:00",
+            "publishedDate": "2010-09-01T01:00:00+01:00",
+            "updatedDate": "2024-06-09T15:59:59+01:00",
+            "acceptedDate": "2010-09-13T00:00:00+01:00",
+            "createdDate": "2019-03-27T10:25:18+00:00"
+        },
+        "urls": [
+            "http://dx.doi.org/10.1001/archophthalmol.2010.191",
+            "http://jamanetwork.com/journals/jamaophthalmology/fullarticle/1103787"
+        ],
+        "lastUpdate": "2024-06-09T15:59:59+01:00",
+        "setSpecs": []
+    }
+]
