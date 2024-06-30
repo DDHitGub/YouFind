@@ -1,3 +1,1 @@
-# YouFind
-Wir sind gefickt Jungs
-PlanB: https://hireindianprogrammers.com/
+# Dieser branch ist für scripts die nicht mit vufind zusammen hängen (convertieren daten holen usw.)
