@@ -12,7 +12,7 @@ def map_to_vufind_format(data):
         "fullrecord": "",
         "record_format": "marc",
         "spelling": [],
-        "language": [data["language"]],
+        "language": str(data["language"]),
         "format": ["Journal"],
         "author_corporate": [],
         "author_facet": [],

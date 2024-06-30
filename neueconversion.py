@@ -19,6 +19,9 @@ def convert_to_marc(json_data):
         for value in json_data['collection']:
             record.add_field(Field(tag='010', indicators=[' ', ' '], subfields=[Subfield('a', value)]))
 
+    if 'issn' in json_data:
+        record.add_field(Field(tag='022', indicators=[' ', ' '], subfields=[Subfield('a', json_data['issn'])]))
+
     # 691 Field (institution)
     if 'institution' in json_data:
         for value in json_data['institution']:
@@ -34,13 +37,12 @@ def convert_to_marc(json_data):
         for value in json_data['topic']:
             record.add_field(Field(tag='600', indicators=[' ', ' '], subfields=[Subfield('a', value)]))
 
-    if 'language' in json_data:
-        for value in json_data['language']:
-            record.add_field(Field(tag='008', indicators=[' ', ' '], subfields=[Subfield('a', value)]))
 
     if 'language' in json_data:
-        for value in json_data['language']:
-            record.add_field(Field(tag='041', indicators=[' ', ' '], subfields=[Subfield('a', value)]))
+        record.add_field(Field(tag='008', data=json_data['language']))
+        
+        if len(json_data['language'])>35: 
+            record.add_field(Field(tag='041', indicators=[' ', ' '], subfields=[Subfield('a', json_data['language'][35:38] )]))
 
 
 
