@@ -1,10 +1,12 @@
 from pymarc import Record, Field, Subfield
 import json
+import os
 
 def convert_to_marc(json_data):
 
-    languageList = read_json_file("New Converter (David)\ReverseLanguageMap.json")
+    languageList = read_json_file(os.path.join(src_dir, "ReverseLanguageMap.json"))
     record = Record()
+    
 
     # 001 Field (id)
     if 'id' in json_data:
@@ -107,9 +109,10 @@ def read_json_file(file_path):
         json_data_list = json.load(file)
     return json_data_list
 
-# Example: Paths to JSON files
+
+src_dir = os.path.dirname(__file__)
 json_file_paths = [
-    'New Converter (David)\DDjson.json'
+    os.path.join(src_dir, 'DDjson.json')
 ]
 
 # Byte-String for all converted MARC data
@@ -125,7 +128,7 @@ for file_path in json_file_paths:
 # Write all MARC data to a single .mrc file
 #IMPORTANT: CHANGE THIS TO YOUR VUFIND INSTALL FOLDER
 #output_file = "C:/vufind/ddmarc.marc"
-output_file = "New Converter (David)\ddmarc.marc"
+output_file = os.path.join(src_dir,"TestAuto.marc")
 with open(output_file, 'wb') as f:
     f.write(mrc_data_all)
 

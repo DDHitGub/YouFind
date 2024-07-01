@@ -5,7 +5,10 @@
 /converter_for_vuFind_Format_mapping.py
 /allerneueste.mrc
 /.idea/
+/.vscode/
+/New-Converter-(David)/.vs/
 VufindautoAPI/.idea
 VufindautoAPI/target
 VufindautoAPI/output.json
 VufindautoAPI/output2.json
+.fake
