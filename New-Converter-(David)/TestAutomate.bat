@@ -25,7 +25,7 @@ if %ERRORLEVEL% NEQ 0 (
 cd ..
 cd New-Converter-(David)
 echo Converting JSON to Marc ...
-call python convert.py
+call py convert.py
 
 if %ERRORLEVEL% NEQ 0 (
     echo Py application failed.
