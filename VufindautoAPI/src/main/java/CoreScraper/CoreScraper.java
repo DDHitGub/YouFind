@@ -1,9 +1,6 @@
 package CoreScraper;
-import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -22,6 +19,8 @@ public class CoreScraper {
         String Subject = args[0];
         String limit = args[1];
         String path = args[2];
+        limit = String.valueOf(Integer.parseInt(limit) + 2);
+
 
         HttpRequest request = HttpRequest.newBuilder(new URI(URIString+"?q=+AND+fieldsOfStudy%3A%22"+Subject+"%22&limit="+limit)).GET().build();
         HttpClient httpClient = HttpClient.newHttpClient();

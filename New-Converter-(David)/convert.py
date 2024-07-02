@@ -112,7 +112,7 @@ def read_json_file(file_path):
 
 src_dir = os.path.dirname(__file__)
 json_file_paths = [
-    os.path.join(src_dir, 'DDjson.json')
+    os.path.join(src_dir, 'TestOutput.json')
 ]
 
 # Byte-String for all converted MARC data

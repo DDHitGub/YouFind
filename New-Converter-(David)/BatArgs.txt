@@ -1,1 +1,1 @@
-TestAutomate.bat computer+science 10 ..\New-Converter-(David)\TestOutput.json
+TestAutomate.bat computer+science 5 ..\New-Converter-(David)\TestOutput.json

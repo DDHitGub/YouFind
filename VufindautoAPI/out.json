@@ -1,0 +1,1068 @@
+[
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/4425864"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1003.0219",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2022-01-03T00:02:25",
+  "title": "Sequential Compressed Sensing",
+  "acceptedDate": "2010-03-01T00:00:00",
+  "pubmedId": null,
+  "oaiIds": [
+   "oai:arxiv.org:1003.0219",
+   "oai:dspace.mit.edu:1721.1/61416"
+  ],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/178/logo",
+    "id": 178,
+    "url": "https://api.core.ac.uk/v3/data-providers/178"
+   }
+  ],
+  "depositedDate": "2010-04-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1003.0219"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/687974"
+   }
+  ],
+  "id": 687974,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/1003.0219"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1003.0219",
+  "magId": null,
+  "identifiers": [
+   {
+    "identifier": "4425864",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:dspace.mit.edu:1721.1/61416",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:1003.0219",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "2109339",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "10.1109/jstsp.2009.2038211",
+    "type": "DOI"
+   },
+   {
+    "identifier": "1003.0219",
+    "type": "ARXIV_ID"
+   }
+  ],
+  "yearPublished": 2009,
+  "journals": [{
+   "identifiers": ["1932-4553"],
+   "title": null
+  }],
+  "createdDate": "2012-04-13T14:17:48",
+  "publisher": "'Institute of Electrical and Electronics Engineers (IEEE)'",
+  "contributors": [
+   "Willsky, Alan S.",
+   "Malioutov, Dmitry M.",
+   "Massachusetts Institute of Technology. Department of Electrical Engineering and Computer Science"
+  ],
+  "publishedDate": "2009-10-01T00:00:00",
+  "authors": [
+   {"name": "Malioutov, Dmitry"},
+   {"name": "Sanghavi, Sujay"},
+   {"name": "Willsky, Alan"}
+  ],
+  "doi": "10.1109/jstsp.2009.2038211"
+ },
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/193011844"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1102.4423",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-07-22T00:26:38",
+  "title": "Solving k-Set Agreement with Stable Skeleton Graphs",
+  "acceptedDate": "2011-09-12T00:00:00",
+  "pubmedId": null,
+  "oaiIds": ["oai:arxiv.org:1102.4423"],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2011-05-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1102.4423"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/744308"
+   }
+  ],
+  "id": 744308,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/1102.4423"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1102.4423",
+  "magId": "1571000703",
+  "identifiers": [
+   {
+    "identifier": "1571000703",
+    "type": "MAG_ID"
+   },
+   {
+    "identifier": "10.1109/ipdps.2011.301",
+    "type": "DOI"
+   },
+   {
+    "identifier": "1102.4423",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "2179236",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "193011844",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:1102.4423",
+    "type": "OAI_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [],
+  "createdDate": "2012-04-13T14:18:40",
+  "publisher": "'Institute of Electrical and Electronics Engineers (IEEE)'",
+  "contributors": ["Martin"],
+  "publishedDate": "2011-02-22T00:00:00",
+  "authors": [
+   {"name": "Biely, Martin"},
+   {"name": "Robinson, Peter"},
+   {"name": "Schmid, Ulrich"}
+  ],
+  "doi": "10.1109/ipdps.2011.301"
+ },
+ {
+  "outputs": [
+   "https://api.core.ac.uk/v3/outputs/186876656",
+   "https://api.core.ac.uk/v3/outputs/104477499"
+  ],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1105.6163",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-07-22T01:01:09",
+  "title": "Assisted Common Information: Further Results",
+  "acceptedDate": "2011-10-06T00:00:00",
+  "pubmedId": null,
+  "oaiIds": [
+   "oai:arxiv.org:1105.6163",
+   "oai:citeseerx.psu:10.1.1.767.5178"
+  ],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/145/logo",
+    "id": 145,
+    "url": "https://api.core.ac.uk/v3/data-providers/145"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2011-07-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1105.6163"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/760223"
+   }
+  ],
+  "id": 760223,
+  "sourceFulltextUrls": [
+   "http://arxiv.org/abs/1105.6163",
+   "http://arxiv.org/pdf/1105.6163.pdf"
+  ],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1105.6163",
+  "magId": "2142437065",
+  "identifiers": [
+   {
+    "identifier": "186876656",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "1105.6163",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "2198747",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:citeseerx.psu:10.1.1.767.5178",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:1105.6163",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "10.1109/isit.2011.6034098",
+    "type": "DOI"
+   },
+   {
+    "identifier": "104477499",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "2142437065",
+    "type": "MAG_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [],
+  "createdDate": "2012-04-13T14:18:55",
+  "publisher": "'Institute of Electrical and Electronics Engineers (IEEE)'",
+  "contributors": ["The Pennsylvania State University CiteSeerX Archives"],
+  "publishedDate": "2011-01-01T00:00:00",
+  "authors": [
+   {"name": "Prabhakaran, Manoj M."},
+   {"name": "Prabhakaran, Vinod M."}
+  ],
+  "doi": "10.1109/isit.2011.6034098"
+ },
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/186812205"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/0904.1110",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-07-20T19:41:44",
+  "title": "On formal verification of arithmetic-based cryptographic primitives",
+  "acceptedDate": "2009-03-17T00:00:00",
+  "pubmedId": null,
+  "oaiIds": ["oai:arxiv.org:0904.1110"],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2009-01-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/0904.1110"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/640990"
+   }
+  ],
+  "id": 640990,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/0904.1110"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "0904.1110",
+  "magId": "2201750573",
+  "identifiers": [
+   {
+    "identifier": "2201750573",
+    "type": "MAG_ID"
+   },
+   {
+    "identifier": "186812205",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "2051089",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "0904.1110",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:0904.1110",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "10.1007/978-3-642-00730-9_23",
+    "type": "DOI"
+   }
+  ],
+  "yearPublished": 2009,
+  "journals": [{
+   "identifiers": ["0302-9743"],
+   "title": null
+  }],
+  "createdDate": "2012-04-13T14:17:05",
+  "publisher": "'Springer Science and Business Media LLC'",
+  "contributors": [
+   "Pil Joong",
+   "David"
+  ],
+  "publishedDate": "2009-01-01T00:00:00",
+  "authors": [
+   {"name": "A.C. Yao"},
+   {"name": "B. Blanchet"},
+   {"name": "B. Blanchet"},
+   {"name": "D. Nowak"},
+   {"name": "D.E. Knuth"},
+   {"name": "G. Gonthier"},
+   {"name": "L. Blum"},
+   {"name": "N. Ramsey"},
+   {"name": "P. Lafourcade"},
+   {"name": "R. Affeldt"},
+   {"name": "S. Goldwasser"},
+   {"name": "U.V. Vazirani"}
+  ],
+  "doi": "10.1007/978-3-642-00730-9_23"
+ },
+ {
+  "outputs": [
+   "https://api.core.ac.uk/v3/outputs/26544234",
+   "https://api.core.ac.uk/v3/outputs/48290301"
+  ],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "https://core.ac.uk/download/48290301.pdf",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-05-22T12:34:50",
+  "title": "Service-oriented Context-aware Framework",
+  "acceptedDate": "2009-07-02T00:00:00",
+  "pubmedId": null,
+  "oaiIds": [
+   "oai:arxiv.org:0906.3924",
+   "oai:doaj.org/article:77c1343803dd457ebc53dc1c4fb5bd25",
+   "oai:eprints.sztaki.hu:5303"
+  ],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/2211/logo",
+    "id": 2211,
+    "url": "https://api.core.ac.uk/v3/data-providers/2211"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/645/logo",
+    "id": 645,
+    "url": "https://api.core.ac.uk/v3/data-providers/645"
+   }
+  ],
+  "depositedDate": "2009-06-26T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "https://core.ac.uk/download/48290301.pdf"
+   },
+   {
+    "type": "reader",
+    "url": "https://core.ac.uk/reader/48290301"
+   },
+   {
+    "type": "thumbnail_m",
+    "url": "https://core.ac.uk/image/48290301/large"
+   },
+   {
+    "type": "thumbnail_l",
+    "url": "https://core.ac.uk/image/48290301/large"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/651303"
+   }
+  ],
+  "id": 651303,
+  "sourceFulltextUrls": [
+   "http://arxiv.org/abs/0906.3924",
+   "http://doaj.org/search?source=%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22id%22%3A%2277c1343803dd457ebc53dc1c4fb5bd25%22%7D%7D%5D%7D%7D%7D"
+  ],
+  "fieldOfStudy": "computer science",
+  "arxivId": "0906.3924",
+  "magId": "2024787663",
+  "identifiers": [
+   {
+    "identifier": "2063788",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "48290301",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:doaj.org/article:77c1343803dd457ebc53dc1c4fb5bd25",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "0906.3924",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "10.4204/eptcs.2.2",
+    "type": "DOI"
+   },
+   {
+    "identifier": "2024787663",
+    "type": "MAG_ID"
+   },
+   {
+    "identifier": "26544234",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:eprints.sztaki.hu:5303",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:0906.3924",
+    "type": "OAI_ID"
+   }
+  ],
+  "yearPublished": 2009,
+  "journals": [{
+   "identifiers": ["2075-2180"],
+   "title": "Electronic Proceedings in Theoretical Computer Science"
+  }],
+  "createdDate": "2012-04-13T14:17:15",
+  "publisher": "'Open Publishing Association'",
+  "contributors": ["ter Beek, Maurice H."],
+  "publishedDate": "2009-06-01T00:00:00",
+  "authors": [
+   {"name": "Kovács, László"},
+   {"name": "Mátételki, Péter"},
+   {"name": "Pataki, Balázs"}
+  ],
+  "doi": "10.4204/eptcs.2.2"
+ },
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/445268173"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1110.3397",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-07-20T15:54:27",
+  "title": "Odeint - Solving ordinary differential equations in C++",
+  "acceptedDate": "2011-09-15T00:00:00",
+  "pubmedId": null,
+  "oaiIds": ["oai:arxiv.org:1110.3397"],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2011-01-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1110.3397"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/787195"
+   }
+  ],
+  "id": 787195,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/1110.3397"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1110.3397",
+  "magId": "2049797245",
+  "identifiers": [
+   {
+    "identifier": "10.1063/1.3637934",
+    "type": "DOI"
+   },
+   {
+    "identifier": "445268173",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:1110.3397",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "2049797245",
+    "type": "MAG_ID"
+   },
+   {
+    "identifier": "2228026",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "1110.3397",
+    "type": "ARXIV_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [],
+  "createdDate": "2012-04-13T14:19:17",
+  "publisher": "'AIP Publishing'",
+  "contributors": ["Karsten"],
+  "publishedDate": "2011-01-01T00:00:00",
+  "authors": [
+   {"name": "Ahnert, Karsten"},
+   {"name": "Mulansky, Mario"}
+  ],
+  "doi": "10.1063/1.3637934"
+ },
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/188704222"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1110.6483",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-07-22T01:39:08",
+  "title": "Iris Codes Classification Using Discriminant and Witness Directions",
+  "acceptedDate": "2011-11-07T00:00:00",
+  "pubmedId": null,
+  "oaiIds": ["oai:arxiv.org:1110.6483"],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2011-09-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1110.6483"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/786553"
+   }
+  ],
+  "id": 786553,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/1110.6483"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1110.6483",
+  "magId": null,
+  "identifiers": [
+   {
+    "identifier": "2231112",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "10.1109/isciii.2011.6069760",
+    "type": "DOI"
+   },
+   {
+    "identifier": "oai:arxiv.org:1110.6483",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "188704222",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "1110.6483",
+    "type": "ARXIV_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [],
+  "createdDate": "2012-04-13T14:19:19",
+  "publisher": "'Institute of Electrical and Electronics Engineers (IEEE)'",
+  "contributors": ["N."],
+  "publishedDate": "2011-11-08T00:00:00",
+  "authors": [
+   {"name": "Balas, V. E."},
+   {"name": "Motoc, I. M."},
+   {"name": "Popescu-Bodorin, N."}
+  ],
+  "doi": "10.1109/isciii.2011.6069760"
+ },
+ {
+  "outputs": [
+   "https://api.core.ac.uk/v3/outputs/190533515",
+   "https://api.core.ac.uk/v3/outputs/25769629"
+  ],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/1111.0090",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-05-03T17:33:13",
+  "title": "An Improved Implementation and Abstract Interface for Hybrid",
+  "acceptedDate": "2011-10-31T00:00:00",
+  "pubmedId": null,
+  "oaiIds": [
+   "oai:citeseerx.psu:10.1.1.221.7391",
+   "oai:arxiv.org:1111.0090",
+   "oai:doaj.org/article:f548310e6dd34404af6a236d55533734"
+  ],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/145/logo",
+    "id": 145,
+    "url": "https://api.core.ac.uk/v3/data-providers/145"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/645/logo",
+    "id": 645,
+    "url": "https://api.core.ac.uk/v3/data-providers/645"
+   }
+  ],
+  "depositedDate": "2011-10-31T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/1111.0090"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/787021"
+   }
+  ],
+  "id": 787021,
+  "sourceFulltextUrls": [
+   "http://arxiv.org/abs/1111.0090",
+   "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.221.7391",
+   "http://doaj.org/search?source=%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22term%22%3A%7B%22id%22%3A%22f548310e6dd34404af6a236d55533734%22%7D%7D%5D%7D%7D%7D",
+   "http://www.site.uottawa.ca/%7Eafelty/dist/lfmtp11.pdf"
+  ],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1111.0090",
+  "magId": null,
+  "identifiers": [
+   {
+    "identifier": "oai:arxiv.org:1111.0090",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "10.4204/eptcs.71.6",
+    "type": "DOI"
+   },
+   {
+    "identifier": "25769629",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:citeseerx.psu:10.1.1.221.7391",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "190533515",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "1111.0090",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "2231649",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:doaj.org/article:f548310e6dd34404af6a236d55533734",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "21805200",
+    "type": "CORE_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [{
+   "identifiers": [
+    "2075-2180",
+    "issn:2075-2180"
+   ],
+   "title": null
+  }],
+  "createdDate": "2012-04-13T14:19:20",
+  "publisher": "'Open Publishing Association'",
+  "contributors": ["The Pennsylvania State University CiteSeerX Archives"],
+  "publishedDate": "2011-10-01T00:00:00",
+  "authors": [
+   {"name": "Alan J. Martin"},
+   {"name": "Alan J. Martin"},
+   {"name": "Alberto Momigliano"},
+   {"name": "Alberto Momigliano"},
+   {"name": "Amy Felty"},
+   {"name": "Amy P. Felty"},
+   {"name": "Andrei Popescu"},
+   {"name": "Andrew Gacek"},
+   {"name": "Andrew M. Pitts"},
+   {"name": "Brigitte Pientka"},
+   {"name": "Christian Urban"},
+   {"name": "Frank Pfenning"},
+   {"name": "Gopalan Nadathur"},
+   {"name": "Herman Geuvers"},
+   {"name": "Joëlle Despeyroux"},
+   {"name": "Michael Norrish"},
+   {"name": "Murdoch Gabbay"},
+   {"name": "N. G. de Bruijn"},
+   {"name": "Simon Ambler"},
+   {"name": "Tobias Nipkow"},
+   {"name": "Venanzio Capretta"},
+   {"name": "Venanzio Capretta"}
+  ],
+  "doi": "10.4204/eptcs.71.6"
+ },
+ {
+  "outputs": ["https://api.core.ac.uk/v3/outputs/190427975"],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "http://arxiv.org/abs/astro-ph/0703286",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-04-22T07:59:26",
+  "title": "Swift X-ray Observations of Classical Novae",
+  "acceptedDate": "2007-06-22T00:00:00",
+  "pubmedId": null,
+  "oaiIds": ["oai:arxiv.org:astro-ph/0703286"],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2007-07-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "http://arxiv.org/abs/astro-ph/0703286"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/856944"
+   }
+  ],
+  "id": 856944,
+  "sourceFulltextUrls": ["http://arxiv.org/abs/astro-ph/0703286"],
+  "fieldOfStudy": "computer science",
+  "arxivId": "astro-ph/0703286",
+  "magId": null,
+  "identifiers": [
+   {
+    "identifier": "2314901",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "10.1086/518084",
+    "type": "DOI"
+   },
+   {
+    "identifier": "1972707693",
+    "type": "MAG_ID"
+   },
+   {
+    "identifier": "190427975",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "astro-ph/0703286",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:astro-ph/0703286",
+    "type": "OAI_ID"
+   }
+  ],
+  "yearPublished": 2007,
+  "journals": [{
+   "identifiers": ["0004-637X"],
+   "title": null
+  }],
+  "createdDate": "2012-04-13T14:20:26",
+  "publisher": "'University of Chicago Press'",
+  "contributors": [""],
+  "publishedDate": "2007-04-25T00:00:00",
+  "authors": [
+   {"name": "A. Retter"},
+   {"name": "Burrows D. N."},
+   {"name": "D. Burrows"},
+   {"name": "G. J. Schwarz"},
+   {"name": "Iijima T."},
+   {"name": "J. H. M. M. Schmitt"},
+   {"name": "J. P. Osborne"},
+   {"name": "J.\u2010U. Ness"},
+   {"name": "Kiss L. L."},
+   {"name": "Lane B. F."},
+   {"name": "Lyke J. E."},
+   {"name": "Munari U."},
+   {"name": "N. Gehrels"},
+   {"name": "Ness J.-U."},
+   {"name": "Perry R. B."},
+   {"name": "Puetter R. C."},
+   {"name": "Rauch T."},
+   {"name": "S. Starrfield"},
+   {"name": "Siviero A."},
+   {"name": "van den Bergh S."}
+  ],
+  "doi": "10.1086/518084"
+ },
+ {
+  "outputs": [
+   "https://api.core.ac.uk/v3/outputs/191337004",
+   "https://api.core.ac.uk/v3/outputs/55616496"
+  ],
+  "references": [],
+  "documentType": "research",
+  "downloadUrl": "https://core.ac.uk/download/55616496.pdf",
+  "language": {
+   "code": "en",
+   "name": "English"
+  },
+  "updatedDate": "2021-12-30T07:05:50",
+  "title": "Fault-Tolerant Aggregation: Flow-Updating Meets Mass-Distribution",
+  "acceptedDate": "2011-12-08T00:00:00",
+  "pubmedId": null,
+  "oaiIds": [
+   "oai:repositorium.sdum.uminho.pt:1822/15608",
+   "oai:citeseerx.psu:10.1.1.227.6791",
+   "oai:arxiv.org:1109.4373"
+  ],
+  "dataProviders": [
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/144/logo",
+    "id": 144,
+    "url": "https://api.core.ac.uk/v3/data-providers/144"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/145/logo",
+    "id": 145,
+    "url": "https://api.core.ac.uk/v3/data-providers/145"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/2274/logo",
+    "id": 2274,
+    "url": "https://api.core.ac.uk/v3/data-providers/2274"
+   },
+   {
+    "name": "",
+    "logo": "https://api.core.ac.uk/data-providers/4786/logo",
+    "id": 4786,
+    "url": "https://api.core.ac.uk/v3/data-providers/4786"
+   }
+  ],
+  "depositedDate": "2011-01-01T00:00:00",
+  "links": [
+   {
+    "type": "download",
+    "url": "https://core.ac.uk/download/55616496.pdf"
+   },
+   {
+    "type": "reader",
+    "url": "https://core.ac.uk/reader/55616496"
+   },
+   {
+    "type": "thumbnail_m",
+    "url": "https://core.ac.uk/image/55616496/large"
+   },
+   {
+    "type": "thumbnail_l",
+    "url": "https://core.ac.uk/image/55616496/large"
+   },
+   {
+    "type": "display",
+    "url": "https://core.ac.uk/works/779261"
+   }
+  ],
+  "id": 779261,
+  "sourceFulltextUrls": [
+   "http://arxiv.org/abs/1109.4373",
+   "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.227.6791"
+  ],
+  "fieldOfStudy": "computer science",
+  "arxivId": "1109.4373",
+  "magId": "1878190159",
+  "identifiers": [
+   {
+    "identifier": "21854839",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "1109.4373",
+    "type": "ARXIV_ID"
+   },
+   {
+    "identifier": "10.1007/978-3-642-25873-2_35",
+    "type": "DOI"
+   },
+   {
+    "identifier": "191337004",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:citeseerx.psu:10.1.1.227.6791",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "55616496",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:arxiv.org:1109.4373",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "2222064",
+    "type": "CORE_ID"
+   },
+   {
+    "identifier": "oai:repositorium.sdum.uminho.pt:1822/15608",
+    "type": "OAI_ID"
+   },
+   {
+    "identifier": "1878190159",
+    "type": "MAG_ID"
+   }
+  ],
+  "yearPublished": 2011,
+  "journals": [{
+   "identifiers": ["0302-9743"],
+   "title": null
+  }],
+  "createdDate": "2012-04-13T14:19:12",
+  "publisher": "'Springer Science and Business Media LLC'",
+  "contributors": [
+   "Paulo Sérgio",
+   "The Pennsylvania State University CiteSeerX Archives",
+   "Antonio"
+  ],
+  "publishedDate": "2011-01-01T00:00:00",
+  "authors": [
+   {"name": "A. Sinclair"},
+   {"name": "A.G. Dimakis"},
+   {"name": "C. Intanagonwiwat"},
+   {"name": "D.R. Kowalski"},
+   {"name": "G. Kollios"},
+   {"name": "I.F. Akyildiz"},
+   {"name": "J.-Y. Chen"},
+   {"name": "J.-Y. Chen"},
+   {"name": "J.-Y. Chen"},
+   {"name": "L. Gasieniec"},
+   {"name": "L. Xiao"},
+   {"name": "M. Jelasity"},
+   {"name": "P. Erdos"},
+   {"name": "P. Jesus"},
+   {"name": "R. Olfati-Saber"},
+   {"name": "S. Boyd"}
+  ],
+  "doi": "10.1007/978-3-642-25873-2_35"
+ }
+]
