@@ -4,6 +4,11 @@ import os
 import subprocess
 import time
 
+import requests
+
+url = "https://gw.cortical.io/nlp/keywords"
+
+
 
 def convert_to_marc(json_data):
     src_dir = os.path.dirname(__file__)
@@ -14,8 +19,8 @@ def convert_to_marc(json_data):
         record.add_field(Field(tag='001', data=str(json_data['id'])))
 
     # 655 Field (documentType)
-    if 'documentType' in json_data:
-        record.add_field(Field(tag='655', indicators=[' ', ' '], subfields=[Subfield('a', json_data['documentType'])]))
+    #if 'documentType' in json_data:
+     #   record.add_field(Field(tag='655', indicators=[' ', ' '], subfields=[Subfield('a', json_data['documentType'])]))
 
     # 856 $u Field (downloadUrl)
     if 'downloadUrl' in json_data:
@@ -76,10 +81,12 @@ def convert_to_marc(json_data):
     if 'links' in json_data:
         for link in json_data['links']:
             record.add_field(Field(tag='856', indicators=[' ', ' '], subfields=[Subfield('u', link['url'])]))
+    
+
 
     # 650 $a Field (fieldOfStudy)
-    if 'fieldOfStudy' in json_data:
-        record.add_field(Field(tag='650', indicators=[' ', ' '], subfields=[Subfield('a', json_data['fieldOfStudy'])]))
+    #if 'fieldOfStudy' in json_data:
+     #   record.add_field(Field(tag='650', indicators=[' ', ' '], subfields=[Subfield('a', json_data['fieldOfStudy'])]))
 
     # 260 $c Field (yearPublished)
     if 'yearPublished' in json_data:
@@ -109,6 +116,64 @@ def convert_to_marc(json_data):
             else:
                 record.add_field(Field(tag='700', indicators=['1', ' '], subfields=[Subfield('a', author['name'])]))
 
+    # 022a/440x/490x/730x/773x/776x/780x/785x Field (ISSN)
+    if 'journals' in json_data:
+        for j in json_data['journals']:
+            if 'identifiers' in j:
+                issn = j['identifiers'][0]
+                record.add_field(Field(tag='022', indicators=['1', ' '], subfields=[Subfield('a', issn)]))
+                # record.add_field(Field(tag='440', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='490', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='730', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='773', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='776', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='780', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+                # record.add_field(Field(tag='785', indicators=['1', ' '], subfields=[Subfield('x', issn)]))
+
+    # 773t Field (Journal title in which the article is)
+    if 'journals' in json_data:
+        record.add_field(Field(tag='773', indicators=['1', ' '], subfields=[Subfield('i', 'In')]))
+        if 'title' in json_data['journals'] and json_data['journals']['title'] != 'null':
+            record.add_field(
+                Field(tag='773', indicators=['1', ' '], subfields=[Subfield('t', json_data['journals']['title'])]))
+
+    # Temp - use 502 for document type
+    # TODO: Remember to change marc_local format: 502a or it does not work
+    if "documentType" in json_data:
+        type = json_data["documentType"]
+        record.add_field(Field(tag='502', indicators=['1', ' '], subfields=[
+            Subfield('a', "Article" if type == "research" else "Thesis" if type == "thesis" else "Unknown")]))
+    
+    # 505 $a Field (abstract in contents)
+    if 'abstract' in json_data:
+        record.add_field(Field(tag='505', indicators=['1', '0'], subfields=[Subfield('a', json_data['abstract'])]))
+        
+        payload = {
+            "text": json_data['abstract'],
+            "language": "en",
+            "limit": 20
+        }
+        headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": "eyJvcmciOiI2NTNiOTllNjEzOGM3YzAwMDE2MDM5NTEiLCJpZCI6ImJiZmU5MTUxMzc3MDRmMjNiZDcxODBlMGQxOTljZDA3IiwiaCI6Im11cm11cjEyOCJ9"
+        }
+
+        response = requests.post(url, json=payload, headers=headers)
+        print(response.json())
+        res = response.json()
+        time.sleep(0.5)
+
+        if 'keywords' in res:
+            print(res['keywords'])
+            for word in res['keywords']:
+                record.add_field(Field(tag='650', indicators=[' ', ' '], subfields=[Subfield('a', word["word"])]))
+                print(word)
+        
+        print("\n")
+
+  
+
     return record.as_marc()
 
 
@@ -128,10 +193,10 @@ def converter(filepath: str, jsonObj):
 
     # Byte-String for all converted MARC data
     marc_data_all = b''
-    #print(jsonObj)
+    # print(jsonObj)
     # Perform conversion for each JSON file
     # for file_path in json_file_paths:
-    #json_data_list = read_json_file(filepath)
+    # json_data_list = read_json_file(filepath)
     count = 0
     for json_data in jsonObj:
         marc_data = convert_to_marc(json_data)
@@ -139,7 +204,7 @@ def converter(filepath: str, jsonObj):
         count += 1
     print("converting to MARC...")
     time.sleep(.5)
-    #marc_data += convert_to_marc(read_json_file("TestOutput.json"))
+    # marc_data += convert_to_marc(read_json_file("TestOutput.json"))
     # Write all MARC data to a single .mrc file
     # IMPORTANT: CHANGE THIS TO YOUR VUFIND INSTALL FOLDER
     # output_file =
@@ -152,7 +217,7 @@ def converter(filepath: str, jsonObj):
     print(f"Converted succesfully {count} entries. All MARC data written to {filepath}.\n")
     time.sleep(.5)
     print("starting solr...\n")
-    subprocess.run([os.path.join("C:/vufind", "solr.bat"), "start"])
+    subprocess.run([os.path.join("C:/vufind-9.1.1", "solr.bat"), "start"])
     print("Importing files into vufind...\n")
     time.sleep(.5)
-    subprocess.run([os.path.join("C:/vufind", "import-marc.bat"), filepath], cwd = r"C:/vufind")
+    subprocess.run([os.path.join("C:/vufind-9.1.1", "import-marc.bat"), filepath], cwd=r"C:/vufind-9.1.1")
