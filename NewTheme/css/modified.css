@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'CustomFont'; /* Der Name der Schriftart */
+    src: url("../css/fonts/Jaturat.ttf") format('truetype');
+    font-weight: normal; /* Oder 'bold', je nach Schriftart */
+    font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
+
+
+
+
+
+
+body{
+    background: url("../images/JellyFish.gif");
+    background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+    background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+    background-position: center;   /* Das Bild wird zentriert */
+    background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+    margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+    height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+}
+h1{
+display: inline;
+font-size: 10vw;;
+min-block-size: 750%;
+font-family: 'Times New Roman', serif;
+font-weight: bolder;
+}
+
+#header1{
+    color: #FF007F;
+    text-shadow:
+   
+    0 0 2px #FF073A,  /* Größere Scheine für einen intensiveren Effekt */
+    0 0 2px #FF073A,
+    0 0 2px #FF073A;
+    -webkit-text-stroke: 3px #FF073A; /* Textkontur für Schärfe */
+    filter: drop-shadow(0 0 3px #FF073A) drop-shadow(0 0 5px #FF073A);
+}
+#header2{
+    color: #00F9A7;
+    text-shadow:
+   
+    0 0 2px #00F9A7,  /* Größere Scheine für einen intensiveren Effekt */
+    0 0 2px #00F9A7,
+    0 0 2px #00F9A7;
+    -webkit-text-stroke: 3px #00F9A7; /* Textkontur für Schärfe */
+    filter: drop-shadow(0 0 3px #00F9A7) drop-shadow(0 0 5px #00F9A7);
+}
+
+.searchForm-query {
+    position:relative;
+    margin-left: auto;
+    margin-top: 20vw;
+    border-radius: 0;
+    font-weight: 999;
+   
+    size: relative;
+    height: auto;
+    display:inline;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+
+.navbar-form .form-control {
+    display: inline-block;
+    max-width: 25vw;
+    width: 30vw;
+    vertical-align: middle;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+#searchForm_type {
+    background-color:#a0d6cc;
+    color: black;
+    position: relative;
+    border-radius: 0;
+    text-align: center;
+    font-size: auto;
+    
+    margin-right: 0%;
+
+    size: relative;
+    height: auto;
+    width: auto;
+    display:inline;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+
+
+}
+
+
+.btn-primary {
+    color: #fff;
+    /*background-color: #ff3532;
+    border-color: #fc3131;*/
+    background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+    font-weight: 999;
+    font-size: auto;
+    text-align: center;
+    font-family: CustomFont;
+    height: auto;
+    width: auto;
+
+    border-radius: 0;
+    display:inline-block;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+
+    
+
+}
+
+
+.searchForm .advanced-search-link {
+    background-color:#a0d6cc;
+    color: black;
+    position: relative;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: auto;
+    text-align: center;
+   
+    height: auto;
+    width: auto;
+    display:inline-block;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+
+.navbar-nav button.dropdown-toggle:hover,.navbar-nav button.dropdown-toggle:focus,.navbar-nav button.dropdown-toggle:active,.navbar-nav button.dropdown-toggle.active,.open .navbar-nav button.dropdown-toggle.dropdown-toggle {
+    position:relative;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    
+}
+
+
+.navbar-nav button.dropdown-toggle {
+    position:relative;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+   
+}
+
+.nav>li>a {
+    position:relative;
+    text-decoration: none;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    
+   
+}
+
+
+.logo {
+    /* max-width: 300px;  Größe des Logos anpassen */
+    
+    position:relative;
+    margin-left: 5vw;
+    margin-top: 9vw;
+    border-radius: 0;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    display:inline-block  
+}
+
+
