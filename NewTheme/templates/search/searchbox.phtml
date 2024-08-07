@@ -135,7 +135,7 @@
     <?php elseif ($handlerCount == 1): ?>
       <input type="hidden" name="type" value="<?=$this->escapeHtmlAttr($handlers[0]['value'])?>">
     <?php endif; ?>
-    <button type="submit" class="btn btn-primary"><?=$this->icon('star') ?> <?=$this->transEsc('DIVE')?></button>
+    <button type="submit" class="btn btn-primary"><?=$this->icon('search') ?> <?=$this->transEsc('DIVE')?></button>
     <?php if ($advSearch): ?>
       <?php
         $advSearchQuery = $results ? ['edit' => $results->getSearchId()] : $hiddenFilters;

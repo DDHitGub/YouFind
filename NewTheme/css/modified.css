@@ -5,7 +5,12 @@
     font-style: normal; /* Oder 'italic', je nach Schriftart */
 }
 
-
+@font-face {
+    font-family: 'CustomFont2'; /* Der Name der Schriftart */
+    src: url("../css/fonts/Black\ Ops\ One\ Regular.ttf") format('truetype');
+    font-weight: 900; /* Oder 'bold', je nach Schriftart */
+    font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
 
 
 
@@ -18,36 +23,72 @@ body{
     background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
     margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
     height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+    
 }
 h1{
 display: inline;
-font-size: 10vw;;
-min-block-size: 750%;
+font-size: 10vw;
+min-block-size: 650%;
 font-family: 'Times New Roman', serif;
 font-weight: bolder;
+padding-bottom:0px;
+
+
+}
+
+#dive{
+    color: white;
+    font-family: "CustomFont";
+    display: block;
+    text-align:right;
+    font-size: 2vw;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding-right: 0%;
+    
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+#divContainerHeader{
+    display: inline-block;
+    margin-top: 12vw;
 }
 
 #header1{
-    color: #FF007F;
+    color: rgb(255, 54, 50); 
     text-shadow:
-   
-    0 0 2px #FF073A,  /* Größere Scheine für einen intensiveren Effekt */
-    0 0 2px #FF073A,
-    0 0 2px #FF073A;
-    -webkit-text-stroke: 3px #FF073A; /* Textkontur für Schärfe */
-    filter: drop-shadow(0 0 3px #FF073A) drop-shadow(0 0 5px #FF073A);
+    0 0 5px #ff8986,  
+    0 0 10px #ff8986, 
+    0 0 15px #e1585a; 
+    margin-bottom: 0px;
+    display: inline-block;
+    position: relative;
+    font-size: 5vw;
+    
+    margin-top: 0vw;
 }
 #header2{
-    color: #00F9A7;
+    color: #cef2ec;
     text-shadow:
-   
-    0 0 2px #00F9A7,  /* Größere Scheine für einen intensiveren Effekt */
-    0 0 2px #00F9A7,
-    0 0 2px #00F9A7;
-    -webkit-text-stroke: 3px #00F9A7; /* Textkontur für Schärfe */
-    filter: drop-shadow(0 0 3px #00F9A7) drop-shadow(0 0 5px #00F9A7);
+    0 0 5px #cef2ec,  /* Erste Ebene des Schattens */
+    0 0 10px #cef2ec, /* Zweite Ebene des Schattens */
+    0 0 15px #00ffcc;
+    margin-bottom: 0px;
+    display: inline;
+    position: relative;
+    font-size: 5vw;
+    margin-top: 9vw;
+
 }
 
+
+
+#link{
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
 .searchForm-query {
     position:relative;
     margin-left: auto;
@@ -71,7 +112,7 @@ font-weight: bolder;
     vertical-align: middle;
     size: relative;
     max-block-size: 12vw;
-    height: auto;
+    height: 5vh;
 }
 
 #searchForm_type {
@@ -92,6 +133,8 @@ font-weight: bolder;
     max-block-size: 12vw;
     height: auto;
 
+    font-family: CustomFont;
+
 
 }
 
@@ -101,10 +144,12 @@ font-weight: bolder;
     /*background-color: #ff3532;
     border-color: #fc3131;*/
     background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
-    font-weight: 999;
-    font-size: auto;
+    font-weight: auto;
+    font-size: 150%;
     text-align: center;
-    font-family: CustomFont;
+
+    font-family: CustomFont2;
+
     height: auto;
     width: auto;
 
@@ -134,6 +179,8 @@ font-weight: bolder;
     size: relative;
     max-block-size: 12vw;
     height: auto;
+    
+    font-family: CustomFont;
 }
 
 
@@ -156,10 +203,17 @@ font-weight: bolder;
     background-color: #a0d6cc;
     border-color: #adadad;
     margin-right: 0vw;
-    size: relative;
+    font-size: 10px;
     max-block-size: 12vw;
-    height: auto;
-   
+    height: 2vh;
+    
+    font-family: CustomFont;
+
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+
+    
 }
 
 .nav>li>a {
@@ -171,7 +225,14 @@ font-weight: bolder;
     margin-right: 0vw;
     size: relative;
     max-block-size: 12vw;
-    height: auto;
+    height: 2vh;
+    width: 3.5vw;
+
+    font-family: CustomFont;
+    font-size: 10px;
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
     
    
 }
@@ -179,15 +240,49 @@ font-weight: bolder;
 
 .logo {
     /* max-width: 300px;  Größe des Logos anpassen */
-    
-    position:relative;
-    margin-left: 5vw;
-    margin-top: 9vw;
-    border-radius: 0;
-    size: relative;
-    max-block-size: 12vw;
-    height: auto;
-    display:inline-block  
+    display: inline;
+}
+#brand{
+    position: relative;
+    display: inline-block;
+    height: 9vw;
+    width: 9vw;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    margin-bottom: 6vw;
 }
 
+
+.navbar-header{
+    margin-left: 5vw;
+    margin-top: 9vw;
+    width: 80%;
+}
+
+.dropdown-menu{
+    background-color: rgba(0, 0, 0, 0);
+    font-family: CustomFont; 
+    color: white;
+    font-size: 10px;
+}
+
+
+
+.alert.alert-danger{
+    width: 54.5vw;
+}
+
+.breadcrumb{
+    width:54.5vw;
+}
+.modal-body{
+    background: url("../images/JellyFish.gif");
+    background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+    background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+    background-position: center;   /* Das Bild wird zentriert */
+    background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+    margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+    height: 50vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+    color: white;
+}
 
