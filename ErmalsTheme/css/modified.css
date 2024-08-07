@@ -1,0 +1,619 @@
+@font-face {
+    font-family: 'CustomFont'; /* Der Name der Schriftart */
+    src: url("../css/fonts/Jaturat.ttf") format('truetype');
+    font-weight: normal; /* Oder 'bold', je nach Schriftart */
+    font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
+
+@font-face {
+    font-family: 'DiveFont';
+    src: url('../css/fonts/BlackOpsOne-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+body{
+    background: url("../images/schwarzer_hintergrund.jpg");
+    background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+    background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+    background-position: center;   /* Das Bild wird zentriert */
+    background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+    margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+    height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+    font-family: 'CustomFont', sans-serif;  /*Fallback auf sans-serif */
+    color: white; /* Standardfarbe für alle Texte */
+}
+h1{
+display: inline;
+font-size: 10vw;;
+min-block-size: 750%;
+font-family: 'Times New Roman', serif;
+font-weight: bolder;
+}
+
+#header1{
+    color: #ff8986; 
+    text-shadow:
+    0 0 5px #ff8986,  
+    0 0 10px #ff8986, 
+    0 0 15px #e1585a; 
+}
+#header2{
+    color: #cef2ec;
+    text-shadow:
+    0 0 5px #cef2ec, 
+    0 0 10px #cef2ec, 
+    0 0 15px #00ffcc;
+}
+
+.searchForm-query {
+    position:relative;
+    margin-left: auto;
+    margin-top: 20vw;
+    border-radius: 0;
+    font-weight: 999;
+   
+    size: relative;
+    height: auto;
+    display:inline;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+
+.navbar-form .form-control {
+    display: inline-block;
+    max-width: 25vw;
+    width: 30vw;
+    vertical-align: middle;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+#searchForm_type {
+    background-color:#a0d6cc;
+    color: black;
+    position: relative;
+    border-radius: 0;
+    text-align: center;
+    font-size: auto;
+    
+    margin-right: 0%;
+
+    size: relative;
+    height: auto;
+    width: auto;
+    display:inline;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+
+
+}
+
+
+.btn-primary {
+    color: #fff;
+    /*background-color: #ff3532;
+    border-color: #fc3131;*/
+    background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+    font-weight: 999;
+    font-size: auto;
+    text-align: center;
+    font-family: DiveFont;
+    height: auto;
+    width: auto;
+
+    border-radius: 0;
+    display:inline-block;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+
+    
+
+}
+
+
+.searchForm .advanced-search-link {
+    background-color:#a0d6cc;
+    color: black;
+    position: relative;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: auto;
+    text-align: center;
+   
+    height: auto;
+    width: auto;
+    display:inline-block;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+}
+
+
+.navbar-nav button.dropdown-toggle:hover,.navbar-nav button.dropdown-toggle:focus,.navbar-nav button.dropdown-toggle:active,.navbar-nav button.dropdown-toggle.active,.open .navbar-nav button.dropdown-toggle.dropdown-toggle {
+    position:relative;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    
+}
+
+
+.navbar-nav button.dropdown-toggle {
+    position:relative;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+   
+}
+
+.nav>li>a {
+    position:relative;
+    text-decoration: none;
+    color: black;
+    background-color: #a0d6cc;
+    border-color: #adadad;
+    margin-right: 0vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    
+   
+}
+
+
+.logo {
+    /* max-width: 300px;  Größe des Logos anpassen */
+    
+    position:relative;
+    margin-left: 5vw;
+    margin-top: 9vw;
+    border-radius: 0;
+    size: relative;
+    max-block-size: 12vw;
+    height: auto;
+    display:inline-block  
+}
+
+
+
+/* SEARCH BAR_--------------------------------------------------------*/
+/* Container für das Gesamtergebnis */
+.result-body {
+  padding: 20px;
+  background-color: #a0d6cc;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Titelstilierung */
+.result-body h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.result-body a.title {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-body a.title:hover {
+  text-decoration: underline;
+}
+
+/* Alternative Titelstilierung */
+.title-alt {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Autorenstilierung */
+.authors {
+  font-size: 1em;
+  color: #333;
+}
+
+.result-author {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-author:hover {
+  text-decoration: underline;
+}
+
+/* Container-Link-Stilierung */
+.container-link {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container-link:hover {
+  text-decoration: underline;
+}
+
+/* Stilierung für Sammlung Links */
+.collectionLinkText {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.collectionLinkText:hover {
+  text-decoration: underline;
+}
+
+
+/* FILTER MÖGLICHKEITEN .....................................*/
+.facet {
+    background-color: #a0d6cc; /* Hintergrundfarbe für die Facette */
+    padding: 10px;            /* Innenabstand */
+    margin-bottom: 5px;       /* Abstand zwischen den Facetten */
+}
+
+.top-facet-inner {
+    color: #a0d6cc; /* Textfarbe für das span-Element */
+    background-color: #a0d6cc;
+}
+
+
+.btn.more-btn {
+    background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
+    color: blue; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
+
+  }
+
+/* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
+.save-record {
+    background-color: #a0d6cc; /* Ihre gewünschte Hintergrundfarbe */
+    color: blue; /* Ihre gewünschte Textfarbe */
+    border-radius: 8px; /* Radius der Abrundung der Ecken */
+  }
+  
+  /* Beispiel: Ändern der Farbe des Icons */
+  .save-record .icon-link__icon {
+    color: red; /* Ihre gewünschte Farbe für das Icon */
+  }
+  
+  /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
+  .save-record:hover {
+    background-color: #a0d6cc; /* Ihre gewünschte Farbe beim Hover */
+  }
+
+/*FÜR DIE RELEVANZSORTIERUNG----------------------------------------------------------------*/
+
+/* Container für das <select>-Element und den Pfeil */
+.select-container {
+    position: relative; /* Ermöglicht es, das Pfeilsymbol relativ zum Container zu positionieren */
+    display: inline-block; /* Der Container passt sich der Größe des Dropdown-Menüs an */
+    width: 300px; /* Breite des Containers, anpassen wie nötig */
+  }
+  
+  /* Stil für das <select>-Element */
+  .jumpMenu {
+    background-color: #a0d6cc; /* Hintergrundfarbe */
+    border: 1px solid #cccccc; /* Randfarbe */
+    border-radius: 4px; /* Abrundung der Ecken */
+    padding: 8px 12px; /* Innenabstände */
+    font-size: 16px; /* Schriftgröße */
+    color: #333333; /* Textfarbe */
+    width: 100%; /* Breite auf 100% setzen */
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
+    appearance: none; /* Entfernt die Standard-Stile des Browsers */
+  }
+  
+  /* Stil für das Pfeilsymbol */
+  .select-arrow {
+    position: absolute; /* Absolute Positionierung relativ zum Container */
+    right: 10px; /* Abstand vom rechten Rand des Containers */
+    top: 50%; /* Vertikale Zentrierung */
+    transform: translateY(-50%); /* Korrektur der vertikalen Positionierung */
+    font-size: 16px; /* Größe des Pfeils */
+    color: #333333; /* Farbe des Pfeils */
+    pointer-events: none; /* Verhindert, dass das Pfeilsymbol das Klicken blockiert */
+    user-select: none; /* Verhindert, dass der Pfeil ausgewählt wird */
+  }
+  
+  /* Optional: Stil für das Hover- und Fokus-Verhalten */
+  .jumpMenu:hover,
+  .jumpMenu:focus {
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
+  }
+
+.breadcrumb {
+    background-color: #a0d6cc; /* Hintergrundfarbe nach Wunsch anpassen */
+}
+
+/* FILTER BUTTONS ---------------------------------------------------------------------------------*/
+
+/* Stil für die h3-Überschrift mit der Klasse facet-title */
+.facet-title {
+    /*background-color: #ff8986;*/
+    background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title */
+  .facet-title .title {
+    color: #ffffff; /* Textfarbe des Buttons */
+    border: none; /* Entfernt den Rand des Buttons */
+    border-radius: 4px; /* Abrundung der Ecken des Buttons */
+    padding: 8px 12px; /* Innenabstand des Buttons */
+    cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title beim Hover */
+  .facet-title .title:hover {
+    background-color: #0056b3; /* Hintergrundfarbe des Buttons beim Hover */
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title beim Fokus */
+  .facet-title .title:focus {
+    outline: none; /* Entfernen des Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
+  }
+  
+
+
+/* ÜBERSCHRIFT DER SCHLAGWÖRTER ________________________________________________________________________*/
+/* Stil für den Link mit der Klasse top-title */
+.top-title {
+    color: #ffffff; /* Textfarbe */
+    background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    padding: 8px 12px; /* Innenabstand */
+    border-radius: 4px; /* Abrundung der Ecken */
+    display: inline-block; /* Macht den Link wie einen Block, damit Padding wirkt */
+  }
+  
+  /* Stil für den Link beim Hover (wenn der Benutzer darüber fährt) */
+  .top-title:hover {
+    background-color: #0056b3; /* Hintergrundfarbe beim Hover */
+    color: #f8f9fa; /* Textfarbe beim Hover */
+  }
+  
+  /* Stil für den Link beim Fokus (wenn der Benutzer mit Tab darauf fokussiert) */
+  .top-title:focus {
+    outline: none; /* Entfernen des Standard-Fokusrahmens */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
+  }
+
+  
+/* 3. SEITE WENN MAN EIN ERGEBNIS AUFMACHT AB HIER --------------------------------------------------------------------------------*/
+  
+.media-left {
+    display: none; /* Versteckt die linke Spalte */
+  }
+
+@media (max-width: 767px) {
+    .record .media-left,.record .media-right {
+        display: none;
+    }
+}
+  /* Dropdown Toggle Button */
+  .export-toggle {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
+    color: black;
+  }
+  
+  .export-toggle:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */
+    color: #ff8986;
+  }
+  
+  /* Spezielle Stile für individuelle Buttons */
+  .cite-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Cite Button */
+    color: black;
+  }
+  
+  .cite-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Cite Button */
+    color: #ff8986;
+}
+  
+  .print-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Print Button */
+    color: black;
+  }
+  
+  .print-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Print Button */
+    color: #ff8986;
+  }
+  
+  .save-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Save Button */
+    color: black;
+  }
+  
+  .save-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Save Button */
+    color: #ff8986;
+  }
+  
+  .addThis {
+    background-color: #a0d6cc; /* Hintergrundfarbe für AddThis Button */
+    color: black;
+  }
+  
+  .addThis:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für AddThis Button */
+    color: #ff8986;
+  }
+  
+  .permalink-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Permalink Button */
+    color: black;
+  }
+  
+  .permalink-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Permalink Button */
+    color: #ff8986;
+  }
+  
+/* Überschrift des Ergebnisses */
+/* Medien-Container */
+.media {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
+    gap: 20px; /* Abstand zwischen den Elementen */
+}
+
+
+/* Rechte Spalte */
+.media-body {
+    flex: 1;
+    width: 100%;
+}
+
+/* Überschrift */
+.media-body h1 {
+    font-size: 1.5rem; /* Verwendet relative Einheiten */
+    font-weight: 300;
+    color: red;
+    border: 3px solid #007bff;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    word-wrap: break-word;
+    margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
+    margin-top: 30px;
+}
+
+/* ERGEBNISSTABELLE ---------------------------------------------------*/
+/* Tabelle selbst */
+.table {
+    width: 100%; /* Breite der Tabelle */
+    border-collapse: collapse; /* Zusammenfallende Ränder */
+    margin-bottom: 1rem; /* Abstand nach unten */
+    margin-top: 20px; /* Abstand oben zur Überschrift (kann angepasst werden) */
+}
+
+/* Tabellenkopf */
+.table thead th {
+    background-color: #007bff; /* Hintergrundfarbe des Tabellenkopfs */
+    color: black; /* Textfarbe des Tabellenkopfs */
+    padding: 0.75rem; /* Innenabstand */
+    text-align: left; /* Textausrichtung */
+}
+
+/* Tabellenkörper */
+.table tbody td {
+    padding: 0.75rem; /* Innenabstand */
+    border-bottom: 1px solid #dee2e6; /* Unterer Rand der Zellen */
+}
+
+/* Gestreifte Zeilen */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #bfbebe; /* Hintergrundfarbe für jede ungerade Zeile */
+    color: black;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Hintergrundfarbe für jede gerade Zeile */
+    color: black;
+}
+
+/* Alternativer Hintergrund für Tabellenzeilen */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Hintergrundfarbe beim Hover-Effekt */
+}
+
+/* Rahmen um die Tabelle */
+.table-bordered {
+    border: 1px solid #dee2e6; /* Rahmenfarbe */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6; /* Rahmenfarbe für Kopfzeilen und Zellen */
+}
+
+/* ÄHNLICHE RECORDS FÜR DAS WERK ________________________________________________________________*/
+
+
+
+/* Stil für die Liste der ähnlichen Datensätze */
+.list-group {
+    list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+    padding: 0; /* Entfernt die Standard-Padding */
+    margin: 0; /* Entfernt die Standard-Margin */
+}
+
+/* Stil für jede Listeneinheit */
+.list-group-item {
+    border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
+    border-radius: 4px; /* Abgerundete Ecken */
+    background-color: #f9f9f9; /* Hintergrundfarbe der Listeneinträge */
+    padding: 10px; /* Innenabstand */
+    margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
+    transition: background-color 0.3s, border-color 0.3s; /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
+    color: black;
+}
+
+/* Hover-Effekt für Listeneinträge */
+.list-group-item:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe beim Hover */
+    border-color: #007bff; /* Rahmenfarbe beim Hover */
+}
+
+/* Stil für die Titel in der Liste */
+.related__title {
+    font-size: 1.2rem; /* Größe der Titel */
+    color: #007bff; /* Farbe der Titel */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+/* Hover-Effekt für die Titel */
+.related__title:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Stil für die Icons innerhalb der Listeneinträge */
+.related__icon {
+    margin-right: 10px; /* Abstand rechts vom Icon */
+    vertical-align: middle; /* Vertikale Ausrichtung des Icons */
+}
+
+/* Stil für zusätzliche Informationen wie Autoren und Veröffentlichungsdaten */
+.list-group-item br {
+    display: block; /* Zeigt den Zeilenumbruch als Blockelement an */
+    margin-top: 5px; /* Abstand oberhalb des Zeilenumbruchs */
+}
+
+/* DIE TABS UNTEN ALLE ----------------*/
+/* Farben für Links innerhalb des tab-content Containers */
+.tab-content a {
+    color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
+    text-decoration: none; /* Optional: Entfernt die Unterstreichung der Links */
+}
+
+.tab-content a:hover {
+    color: #0056b3; /* Farbe der Links beim Hover-Effekt (optional) */
+    text-decoration: underline; /* Optional: Unterstreicht den Link beim Hover-Effekt */
+}
+
+
+/* Verstecke das Bild */
+.record-cover-link img {
+    display: none; /* Versteckt das Bild */
+}
