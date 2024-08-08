@@ -94,6 +94,26 @@ padding-bottom:0px;
 } 
 */
 
+
+@media (min-width: 768px) {
+    .container,footer {
+        width:80vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .container,footer {
+        width:80vw
+    }
+}
+
+@media (min-width: 1200px) {
+    .container,footer {
+        width:80vw
+    }
+}
+
+
 .searchForm-query {
     position:relative;
     margin-left: auto;
