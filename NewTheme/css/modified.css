@@ -81,7 +81,7 @@ padding-bottom:0px;
     margin-top: 9vw;
 
 }
-
+/*
 .navbar-header {
 
     @media (min-width: 1080px) {
@@ -91,7 +91,8 @@ padding-bottom:0px;
     @media (min-width: 1921px) {
         margin-top: -5vw;
     }
-}
+} 
+*/
 
 .searchForm-query {
     position:relative;
