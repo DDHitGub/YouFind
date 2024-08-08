@@ -82,14 +82,18 @@ padding-bottom:0px;
 
 }
 
+.hidden-print {
 
+    @media (min-width: 1080px) {
+        margin-top: -2vw;
+    }
 
-#link{
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    width: 50vw;
+    @media (min-width: 1921px) {
+        margin-top: -5vw;
+    }
 }
+
+
 .searchForm-query {
     position:relative;
     margin-left: auto;
