@@ -88,6 +88,7 @@ padding-bottom:0px;
     position: relative;
     text-decoration: none;
     display: inline-block;
+    width: 50vw;
 }
 .searchForm-query {
     position:relative;
@@ -111,7 +112,7 @@ padding-bottom:0px;
     width: 40vw;
     max-width: 1000vw;
     margin-left: 1vw;
-
+    font-size: 1.5vw;
     padding-right: 28px
 }
 
@@ -136,7 +137,7 @@ padding-bottom:0px;
     font-size: 1.6vw;
     
     margin-right: 0%;
-    margin-left: 3vw;
+    
 
     height: 3vw;
     width: 13vw;
@@ -156,7 +157,7 @@ padding-bottom:0px;
     height: 2vw;
     border: none;
     border-radius: 990%;
-    background-color: #gray;
+    background-color: gray;
     margin: 0;
     padding: 0.1vw;
     font-size: 1.4vw;
@@ -200,7 +201,7 @@ padding-bottom:0px;
 }
 
 .navbar-form {
-    width: 85vw;
+    width: 79vw;
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 0;
@@ -239,7 +240,7 @@ padding-bottom:0px;
     text-decoration: none;
     color: black;
     background-color: #a0d6cc;
-    border-radius: 3px;
+    border-radius: .1vw;
     border-color: #fff;
     margin-right: 1vw;
     margin-top: 1vw;
@@ -249,7 +250,7 @@ padding-bottom:0px;
     width: 8vw;
 
     font-family: CustomFont;
-    font-size: 10px;
+    font-size: 1.2vw;
     display: flex; /* Aktiviert Flexbox */
     justify-content: center; /* Zentriert den Inhalt horizontal */
     align-items: center; /* Zentriert den Inhalt vertikal */
@@ -272,12 +273,10 @@ padding-bottom:0px;
     width: 8vw;
 
     font-family: CustomFont;
-    font-size: 10px;
+    font-size: 1.2vw;
     display: flex; /* Aktiviert Flexbox */
     justify-content: center; /* Zentriert den Inhalt horizontal */
     align-items: center; /* Zentriert den Inhalt vertikal */
-    
-   
 }
 
 
@@ -285,6 +284,7 @@ padding-bottom:0px;
     /* max-width: 300px;  Größe des Logos anpassen */
     display: inline;
 }
+
 #brand{
     position: relative;
     display: inline-block;
@@ -312,7 +312,7 @@ padding-bottom:0px;
     background-color: rgba(0, 0, 0, 0);
     font-family: CustomFont; 
     color: white;
-    font-size: 10px;
+    font-size: 1.2vw;
 }
 
 
@@ -335,3 +335,6 @@ padding-bottom:0px;
     color: white;
 }
 
+.container{
+    margin-left: 11vw;
+}
