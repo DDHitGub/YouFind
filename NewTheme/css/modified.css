@@ -28,6 +28,51 @@ body{
 }
 
 
+/* "Neues Konto anlegen" Button wenn du auf Login gehst*/
+.btn.btn-link.createAccountLink{
+  background-color: #a0d6cc;
+  transform: scaleY(1.38);
+  margin-bottom: 1px; 
+}
+
+/* Login Schriftzug wenn man auf Login geht */
+#lightbox-title.lightbox-header{
+  color: white;
+}
+
+/* die Search Advanced (Erweitert) Website */
+.mainbody.left{
+  background-color: lightblue;
+}
+
+h2{
+  color: black;
+  font-family: "CustomFont";
+}
+
+.adv-submit .btn.btn-primary{
+  margin-bottom: 50px;
+}
+ 
+
+.sidebar.right.hidden-print{
+  font-family: "CustomFont";
+  background-color: lightblue ;
+}
+/* bis hier hin */
+
+/* Die Box wo man Konto erstellen kann */
+.modal-body #lightbox-title, .back-to-login.btn.btn-link, .help-block {
+  color: white;
+}
+
+.form-group .btn.btn-primary{
+  font-size: medium;
+}
+/* bis hier hin */
+
+
+
 
 
 
@@ -511,7 +556,7 @@ padding-bottom:0px;
 }
 
 .dropdown-menu{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #a0d6cc;
     font-family: CustomFont; 
     color: white;
     font-size: 1.2vw;
