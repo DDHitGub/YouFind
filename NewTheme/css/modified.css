@@ -15,7 +15,7 @@
 
 /* Startseite */
 body.homepage {
-  background-image: url("../images/JellyFish.gif");
+  background-image: url("../images/homepage/JellyFish_2_idee.gif");
   background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
   background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
  
@@ -117,6 +117,98 @@ body.record-page {
   text-decoration: none;
   background: rgb(69, 69, 69);
 }
+
+#record-tab-holdings{
+  display:none;
+}
+
+.nav>li>a {
+  text-decoration: none;
+  color: black;
+  background-color: #a0d6cc;
+  border-radius: 3px;
+  border-color: #fff;
+  margin-right: 1vw;
+  margin-top: 2vw;
+  size: relative;
+  max-block-size: 12vw;
+  height: 3vw;
+  width: 8vw;
+  font-family: CustomFont;
+  font-size: 1.4vw;
+  display: inline;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+}
+.nav-tabs {
+  border-bottom: none;
+}
+
+/* Für die Tabs Example, Beschreibung, Inhaltsangabe */
+.tab-content>.active {
+  display: block;
+  background-color: #acc1e2;
+  margin-top: 1.5vw;
+}
+
+.nav-tabs>li {
+  float: left;
+  /* margin-bottom:-1px; */
+  margin-left: 1vw;
+  font-size: 16px;
+}
+
+.record .media-body,.result .media-body {
+  flex: 1;
+  width: unset;
+  overflow: visible;
+  margin-bottom: 2vw;
+}
+.tab-content {
+  padding: 4px;
+  margin-left: 1vw;
+}
+
+#loginOptions .icon-link {
+    position:relative;
+    text-decoration: none;
+    color: black;
+    background-color: #a0d6cc;
+    border-radius: 3px;
+    border-color: #fff;
+    margin-right: 1vw;
+    margin-top: 1vw;
+    size: relative;
+    max-block-size: 12vw;
+    height: 3vw;
+    width: 8vw;
+
+    font-family: CustomFont;
+    font-size: 1.2vw;
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+}
+
+/* Für die 3.Seite der Zu Favoriten Hinzufügen button
+  /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
+  .save-record {
+    /* color: black; */ /* Ihre gewünschte Textfarbe */
+    /*border-radius: 8px;  Radius der Abrundung der Ecken */
+    background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
+    color: black;
+  }
+  /* Beispiel: Ändern der Farbe des Icons */
+  .save-record .icon-link__icon {
+    color: red; /* Ihre gewünschte Farbe für das Icon */
+  }
+  
+  /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
+  .save-record:hover {
+    color: #ff8986;
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
+  }
+
 }
 
 
@@ -604,7 +696,7 @@ padding-bottom:0px;
     display:none;
 }
 .modal-body{
-    background: url("../images/JellyFish.gif");
+    background: url("../images/homepage/JellyFish.gif");
     background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
     background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
     background-position: center;   /* Das Bild wird zentriert */
@@ -628,7 +720,7 @@ padding-bottom:0px;
     background-color: #c1d6d2;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px; */
   }
   
   /* Titelstilierung */
@@ -692,7 +784,7 @@ padding-bottom:0px;
   
   /* FILTER MÖGLICHKEITEN .....................................*/
   .facet {
-      background-color: #c1d6d2; /* Hintergrundfarbe für die Facette */
+      background-color: #b7c8c4; /* Hintergrundfarbe für die Facette */
       padding: 10px;            /* Innenabstand */
       margin-bottom: 5px;       /* Abstand zwischen den Facetten */
 
@@ -721,8 +813,7 @@ padding-bottom:0px;
   
   /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
   .save-record {
-      background-color: #a0d6cc; /* Ihre gewünschte Hintergrundfarbe */
-      color: blue; /* Ihre gewünschte Textfarbe */
+      color: black; /* Ihre gewünschte Textfarbe */
       /*border-radius: 8px;  Radius der Abrundung der Ecken */
     }
     
@@ -733,7 +824,7 @@ padding-bottom:0px;
     
     /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
     .save-record:hover {
-      background-color: #a0d6cc; /* Ihre gewünschte Farbe beim Hover */
+      background-color: yellow; /* Ihre gewünschte Farbe beim Hover */
     }
   
   /* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
@@ -884,15 +975,6 @@ padding-bottom:0px;
       color: #ff8986;
     }
     
-    .save-record {
-      background-color: #a0d6cc; /* Hintergrundfarbe für Save Button */
-      color: black;
-    }
-    
-    .save-record:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Save Button */
-      color: #ff8986;
-    }
     
     .addThis {
       background-color: #a0d6cc; /* Hintergrundfarbe für AddThis Button */
@@ -972,18 +1054,18 @@ padding-bottom:0px;
   
   /* Gestreifte Zeilen */
   .table-striped tbody tr:nth-of-type(odd) {
-      background-color: #7cb8ad; /* Hintergrundfarbe für jede ungerade Zeile */
+      background-color: #a0e2d6; /* Hintergrundfarbe für jede ungerade Zeile */
       color: black;
   }
   
   .table-striped tbody tr:nth-of-type(even) {
-      background-color: #889fc1; /* Hintergrundfarbe für jede gerade Zeile */
+      background-color: #abb9d1; /* Hintergrundfarbe für jede gerade Zeile */
       color: black;
   }
   
   /* Alternativer Hintergrund für Tabellenzeilen */
   .table tbody tr:hover {
-      background-color: #aec6dd; /* Hintergrundfarbe beim Hover-Effekt */
+      background-color: #9e9e9e; /* Hintergrundfarbe beim Hover-Effekt */
   }
   
   /* Rahmen um die Tabelle */
@@ -1012,7 +1094,7 @@ padding-bottom:0px;
    .list-group-item {
     border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
     border-radius: 4px; /* Abgerundete Ecken */
-    background-color: #c1d6d2; /* Hintergrundfarbe der Listeneinträge */
+    background-color: #b7c8c4; /* Hintergrundfarbe der Listeneinträge */
     padding: 10px; /* Innenabstand */
     margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
     margin-right: 5px;
@@ -1083,7 +1165,7 @@ padding-bottom:0px;
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
 .tab-content>.active {
   display: block;
-  background-color: #bfbebe;
+  background-color: #acc1e2;
 }
 
 .tab-pane.toc-tab.active strong {

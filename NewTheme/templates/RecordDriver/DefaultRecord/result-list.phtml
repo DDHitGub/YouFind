@@ -131,8 +131,7 @@
       <div class="result-previews">
         <?=$this->record($this->driver)->getPreviews()?>
       </div>
-    </div>
-    <div class="result-links hidden-print">
+      <div class="result-links hidden-print">
       <?=$this->record($this->driver)->renderTemplate('controls/qrcode.phtml', ['driver' => $this->driver, 'context' => 'results'])?>
 
       <?php if ($this->cart()->isActiveInSearch() && isset($this->params) && $this->params->getOptions()->supportsCart() && $this->cart()->isActive()): ?>
@@ -171,6 +170,8 @@
 
       <?=$this->driver->supportsCoinsOpenUrl() ? '<span class="Z3988" aria-hidden="true" title="' . $this->escapeHtmlAttr($this->driver->getCoinsOpenUrl()) . '"></span>' : ''?>
     </div>
+    </div>
+    
   </div>
   <?php if ($thumbnail && $thumbnailAlignment == 'right'): ?>
     <?=$thumbnail ?>
