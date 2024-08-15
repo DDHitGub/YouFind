@@ -13,10 +13,115 @@
 }
 
 
+/* Startseite */
+body.homepage {
+  background-image: url("../images/JellyFish.gif");
+  background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+ 
+  .active-filters .filters-toggle {
+    display: none;
+}
+  .reset-filters-btn {
+    display: none;
+}
+  .active-filters .filters .title-value-pair {
+    display: none; }
+}
+
+/* Seite der Liste mit Ergebnissen */
+body.search-page {
+  background-image: url("../images/searchpage/searchpage_orig.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+#divContainerHeader{
+  display: inline-block;
+  margin-top: 0vw;
+}
+.active-filters .filters .filter-value {
+  display: inline-block;
+  margin-block:5px;padding: 2px 8px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+  background: rgb(69, 69, 69);
+}
+}
+/* Seite des einen Ergebnisses */
+body.record-page {
+  background-image: url("../images/searchpage/searchpage_orig.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  
+#header1{
+    color: yellow; 
+    margin-bottom: 0px;
+    display: inline;
+    position: relative;
+    font-size: 3vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+}
+
+
+#header2{
+    color: black;
+    margin-bottom: 0px;
+    display: inline;
+    position: relative;
+    font-size: 3vw;
+    margin-top: 0vw;
+    margin-left: 0vw;
+
+}
+
+#divContainerHeader{
+  display: inline;
+}
+
+#brand{
+  position: relative;
+  width: 4vw;
+  max-width: 9vw;
+  height: auto;
+  display: inline;
+}
+#dive{
+  color: #aaa8a7;
+  font-family: "CustomFont";
+  display: block;
+  text-align:left;
+  font-size: 1vw;
+  position: relative;
+  height: auto;
+  width: auto;
+  padding-right: 0%;
+  margin-left: 5vw;
+  margin-top: -1vw;
+}
+.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse {
+  margin-right:0;
+  width: auto;
+  margin-left:0;
+}
+
+.active-filters .filters .filter-value {
+  display: inline-block;
+  margin-block:5px;padding: 2px 8px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+  background: rgb(69, 69, 69);
+}
+}
 
 
 body{
-    background: url("../images/JellyFish.gif");
+    /*background: url("../images/schwarzer_hintergrund.jpg");*/
     background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
     background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
     background-position: center;   /* Das Bild wird zentriert */
@@ -25,7 +130,8 @@ body{
     height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
     font-family: 'CustomFont', sans-serif;  /*Fallback auf sans-serif */
     color: white; /* Standardfarbe für alle Texte */
-}
+  }
+
 
 
 /* "Neues Konto anlegen" Button wenn du auf Login gehst*/
@@ -41,9 +147,9 @@ body{
 }
 
 /* die Search Advanced (Erweitert) Website */
-.mainbody.left{
-  background-color: lightblue;
-}
+/*.mainbody.left{
+  background-color: hsla(240, 46%, 38%, 0.8); /* Ein Blau mit % Deckkraft ;
+}*/
 
 h2{
   color: black;
@@ -57,7 +163,7 @@ h2{
 
 .sidebar.right.hidden-print{
   font-family: "CustomFont";
-  background-color: lightblue ;
+  background-color: #c1d6d2;
 }
 /* bis hier hin */
 
@@ -150,85 +256,6 @@ background: linear-gradient(45deg,#ff3131, #ff5d3e, #ff8b4b);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1{
 display: inline;
 font-size: 10vw;
@@ -241,24 +268,22 @@ padding-bottom:0px;
 }
 
 #dive{
-    color: #aaa8a7;
-    font-family: "CustomFont";
-    display: block;
-    text-align:left;
-    font-size: 1.9vw;
-    position: relative;
-    height: auto;
-    width: auto;
-    padding-right: 0%;
-    
-    margin-left: 2vw;
-    margin-top: 0vw;
+  color: #aaa8a7;
+  font-family: "CustomFont";
+  display: block;
+  text-align:left;
+  font-size: 1.9vw;
+  position: relative;
+  height: auto;
+  width: auto;
+  padding-right: 0%;
+  margin-left: 10vw;
+  margin-top: -3vw;
 }
 
 #divContainerHeader{
     display: inline-block;
-    margin-top: 12vw;
-    margin-left: 9vw;
+    margin-top: 9vw;
 }
 
 
@@ -272,7 +297,6 @@ padding-bottom:0px;
     display: inline-block;
     position: relative;
     font-size: 6vw;
-    
     margin-top: 0vw;
 }
 
@@ -536,14 +560,9 @@ padding-bottom:0px;
 #brand{
     position: relative;
     width: 9vw;
-    margin-left: 0vw;
-    margin-right: 0vw;
-    margin-top: 5vw;
-    margin-bottom: -21vw;
-
     max-width: 9vw;
     height: auto;
-    display: block;
+    display: inline;
 }
 
 /*
@@ -563,9 +582,7 @@ padding-bottom:0px;
     margin-left: 5vw;
 }
 
-
-.navbar-header{
-    
+.navbar-header{    
     margin-left: 5vw;
     margin-bottom: 1.5vw;
     width: 80vw;
@@ -578,14 +595,13 @@ padding-bottom:0px;
     font-size: 1.2vw;
 }
 
-
-
 .alert.alert-danger{
     width: 54.5vw;
 }
 
 .breadcrumb{
     width:54.5vw;
+    display:none;
 }
 .modal-body{
     background: url("../images/JellyFish.gif");
@@ -594,8 +610,9 @@ padding-bottom:0px;
     background-position: center;   /* Das Bild wird zentriert */
     background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
     margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
-    height: 50vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
-    color: white;
+    height: fit-content;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+    color: white;    
+    
 }
 
 /*.container{
@@ -608,7 +625,7 @@ padding-bottom:0px;
 /* Container für das Gesamtergebnis */
 .result-body {
     padding: 20px;
-    background-color: #a0d6cc;
+    background-color: #c1d6d2;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -675,9 +692,10 @@ padding-bottom:0px;
   
   /* FILTER MÖGLICHKEITEN .....................................*/
   .facet {
-      background-color: #a0d6cc; /* Hintergrundfarbe für die Facette */
+      background-color: #c1d6d2; /* Hintergrundfarbe für die Facette */
       padding: 10px;            /* Innenabstand */
       margin-bottom: 5px;       /* Abstand zwischen den Facetten */
+
   }
   
   .top-facet-inner {
@@ -685,7 +703,16 @@ padding-bottom:0px;
       background-color: #a0d6cc;
   }
   
-  
+  .facet-group .facet,.facet-load-indicator,.facet-load-failed {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
   .btn.more-btn {
       background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
       color: blue; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
@@ -709,7 +736,7 @@ padding-bottom:0px;
       background-color: #a0d6cc; /* Ihre gewünschte Farbe beim Hover */
     }
   
-  /*FÜR DIE RELEVANZSORTIERUNG----------------------------------------------------------------*/
+  /* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
   
   /* Container für das <select>-Element und den Pfeil */
   .select-container {
@@ -759,15 +786,14 @@ padding-bottom:0px;
   
   /* Stil für die h3-Überschrift mit der Klasse facet-title */
   .facet-title {
-      /*background-color: #ff8986;*/
-      background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
-  
+      background: hsl(166, 61%, 76%);
+      color: black;
     }
     
     /* Stil für das Button-Element innerhalb der facet-title */
     .facet-title .title {
       color: #ffffff; /* Textfarbe des Buttons */
-      border: none; /* Entfernt den Rand des Buttons */
+      border: 1px solid black; /* Entfernt den Rand des Buttons */
       border-radius: 4px; /* Abrundung der Ecken des Buttons */
       padding: 8px 12px; /* Innenabstand des Buttons */
       cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
@@ -792,7 +818,7 @@ padding-bottom:0px;
   /* Stil für den Link mit der Klasse top-title */
   .top-title {
       color: #ffffff; /* Textfarbe */
-      background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+      background: linear-gradient(to right, #055296, #235e92, #4477a3);
       text-decoration: none; /* Entfernt die Unterstreichung */
       padding: 8px 12px; /* Innenabstand */
       border-radius: 4px; /* Abrundung der Ecken */
@@ -894,6 +920,7 @@ padding-bottom:0px;
       display: flex;
       flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
       gap: 20px; /* Abstand zwischen den Elementen */
+      padding-top: 20px; /* Erhöht den oberen Abstand */
   }
   
   
@@ -906,16 +933,18 @@ padding-bottom:0px;
   /* Überschrift */
   .media-body h1 {
       font-size: 2rem; /* Verwendet relative Einheiten */
-      font-weight: 300;
-      font-family: CustomFont;
-      color: red;
-      
-     
-      
+      font-weight: 500;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
       border-radius: 4px;
       word-wrap: break-word;
       margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
-      margin-top: 30px;
+      background: linear-gradient(to right, #055296, #235e92, #4477a3);
+      padding: 10px; /* Abstand innerhalb des Kastens */
+      border: 1px solid transparent; /* Unsichtbarer Rahmen */
+      border-radius: 8px; /* Abgerundete Ecken */
+      display:inline-block;
+
   }
   
   /* ERGEBNISSTABELLE ---------------------------------------------------*/
@@ -943,18 +972,18 @@ padding-bottom:0px;
   
   /* Gestreifte Zeilen */
   .table-striped tbody tr:nth-of-type(odd) {
-      background-color: #bfbebe; /* Hintergrundfarbe für jede ungerade Zeile */
+      background-color: #7cb8ad; /* Hintergrundfarbe für jede ungerade Zeile */
       color: black;
   }
   
   .table-striped tbody tr:nth-of-type(even) {
-      background-color: #ffffff; /* Hintergrundfarbe für jede gerade Zeile */
+      background-color: #889fc1; /* Hintergrundfarbe für jede gerade Zeile */
       color: black;
   }
   
   /* Alternativer Hintergrund für Tabellenzeilen */
   .table tbody tr:hover {
-      background-color: #e9ecef; /* Hintergrundfarbe beim Hover-Effekt */
+      background-color: #aec6dd; /* Hintergrundfarbe beim Hover-Effekt */
   }
   
   /* Rahmen um die Tabelle */
@@ -976,18 +1005,22 @@ padding-bottom:0px;
       list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
       padding: 0; /* Entfernt die Standard-Padding */
       margin: 0; /* Entfernt die Standard-Margin */
+      margin-bottom: 5px;
   }
   
-  /* Stil für jede Listeneinheit */
-  .list-group-item {
-      border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
-      border-radius: 4px; /* Abgerundete Ecken */
-      background-color: #f9f9f9; /* Hintergrundfarbe der Listeneinträge */
-      padding: 10px; /* Innenabstand */
-      margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
-      transition: background-color 0.3s, border-color 0.3s; /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
-      color: black;
-  }
+   /* Stil für jede Listeneinheit */
+   .list-group-item {
+    border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
+    border-radius: 4px; /* Abgerundete Ecken */
+    background-color: #c1d6d2; /* Hintergrundfarbe der Listeneinträge */
+    padding: 10px; /* Innenabstand */
+    margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
+    margin-right: 5px;
+    margin-left: 5px;
+    /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
+    color: black;
+    border-color: black;
+}
   
   /* Hover-Effekt für Listeneinträge */
   .list-group-item:hover {
@@ -1022,7 +1055,7 @@ padding-bottom:0px;
   /* DIE TABS UNTEN ALLE ----------------*/
   /* Farben für Links innerhalb des tab-content Containers */
   .tab-content a {
-      color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
+      /*color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
       text-decoration: none; /* Optional: Entfernt die Unterstreichung der Links */
   }
   
@@ -1037,3 +1070,44 @@ padding-bottom:0px;
       display: none; /* Versteckt das Bild */
   }
 
+/* Versteckt die Sektion "Ähnliche Einträge" */
+  #record-tab-similar {
+    display: none;
+}
+
+/* Versteckt die Sektion "Kommentare" */
+  #record-tab-usercomments {
+    display:none;
+  }
+
+/* Für die Tabs Example, Beschreibung, Inhaltsangabe */
+.tab-content>.active {
+  display: block;
+  background-color: #bfbebe;
+}
+
+.tab-pane.toc-tab.active strong {
+  color: darkred; /* Farbe für "Inhaltsangabe:" */
+}
+
+.tab-pane.toc-tab.active .toc li {
+  color: black; /* Farbe für den Text innerhalb der Liste */
+}
+
+
+/* Hintergrundfarbe für den Header */
+.header-background {
+  background-color: red; /* Beispiel: helles Grün */
+  padding: 10px; /* Optional: Abstand um den Inhalt */
+  color: white; /* Textfarbe für den Inhalt */
+}
+
+/* Optional: Link- und Textfarbe innerhalb des Headers anpassen */
+.header-background a {
+  color: inherit; /* Vererbt die Textfarbe (weiß) */
+}
+
+.header-background h1 {
+  margin: 0; /* Entfernt den Standard-Abstand */
+  display: inline-block; /* Stellt sicher, dass die Überschriften nebeneinander stehen */
+}
