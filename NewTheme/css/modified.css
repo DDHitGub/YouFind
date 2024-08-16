@@ -57,7 +57,7 @@ body.record-page {
 
   
 #header1{
-    color: yellow; 
+    color: rgb(255, 54, 50); 
     margin-bottom: 0px;
     display: inline;
     position: relative;
@@ -68,7 +68,7 @@ body.record-page {
 
 
 #header2{
-    color: black;
+    color: #cef2ec;
     margin-bottom: 0px;
     display: inline;
     position: relative;
@@ -118,6 +118,7 @@ body.record-page {
   background: rgb(69, 69, 69);
 }
 
+/* Holding Exemplare wegmachen */
 #record-tab-holdings{
   display:none;
 }
@@ -188,6 +189,20 @@ body.record-page {
     display: flex; /* Aktiviert Flexbox */
     justify-content: center; /* Zentriert den Inhalt horizontal */
     align-items: center; /* Zentriert den Inhalt vertikal */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+}
+
+#loginOptions .icon-link:hover {
+  background-color: #333;
+  color: white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 /* Für die 3.Seite der Zu Favoriten Hinzufügen button
@@ -208,6 +223,71 @@ body.record-page {
     color: #ff8986;
     background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
   }
+
+/* ANORDNUNG LOGO UND SUCHLEISTE */
+/* Grid Container für Logo und Suchleiste */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr); /* Der Banner nimmt nur so viel Platz wie nötig ein, die Suchleiste nimmt den verbleibenden Platz ein, aber mit einer maximalen Breite */
+  gap: 40px; /* Abstand zwischen Logo und Suchleiste */
+  align-items: center; /* Vertikale Ausrichtung */
+  width: 100%; /* Container auf volle Breite setzen */
+  padding: 0 10px; /* Abstand zu den Seiten */
+  box-sizing: border-box; /* Sicherstellen, dass Padding die Gesamtbreite beeinflusst */
+}
+
+/* Banner Container */
+.banner-container {
+  position: relative; /* Ermöglicht Feineinstellungen der Breite und Position */
+  max-width: 100%; /* Maximale Breite auf 100% des verfügbaren Platzes */
+}
+
+/* Banner Stil */
+.banner.container.navbar {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Zentriert das Logo vertikal */
+  justify-content: flex-start; /* Das Logo nach links ausrichten */
+  width: auto; /* Banner-Container auf automatische Breite einstellen */
+}
+
+/* Suchleiste */
+.search.container.navbar {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Vertikale Ausrichtung */
+  overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
+  transform: scale(0.6);
+  transform-origin: left;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Eine Spalte für mobile Ansicht */
+    gap: 20px; /* Kleineren Abstand für mobile Ansicht */
+  }
+
+  .banner.container.navbar {
+    justify-content: center; /* Logo zentrieren */
+    width: 100%; /* Banner auf volle Breite setzen */
+  }
+
+  .search.container.navbar {
+    transform: scale(0.8); /* Suchleiste auf 80% skalieren */
+    transform-origin: left;
+    width: 100%; /* Suchleiste auf volle Breite setzen */
+    margin-top: 20px; /* Abstand nach dem Logo */
+  }
+}
 
 }
 
@@ -239,9 +319,9 @@ body{
 }
 
 /* die Search Advanced (Erweitert) Website */
-/*.mainbody.left{
-  background-color: hsla(240, 46%, 38%, 0.8); /* Ein Blau mit % Deckkraft ;
-}*/
+.mainbody.left{
+  margin-top:3vw;
+}
 
 h2{
   color: black;
@@ -256,6 +336,7 @@ h2{
 .sidebar.right.hidden-print{
   font-family: "CustomFont";
   background-color: #c1d6d2;
+  margin-top: 3vw;
 }
 /* bis hier hin */
 
@@ -280,19 +361,19 @@ h2{
     font-weight: auto;
     font-size: 150%;
     text-align: center;
-
     font-family: CustomFont2;
-    border:none;
     outline:none;
     position: relative;
-   
-
-    border-radius: 12px;
     display:inline-block;
     size: relative;
     max-block-size: 12vw;
  
     z-index: 0;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 .btn-primary::after{
@@ -429,12 +510,11 @@ padding-bottom:0px;
     height: 3vw;
     width: 40vw;
     max-width: 1000vw;
-
-   
     display:inline;
     size: relative;
     max-block-size: 12vw;
     height: auto;
+    
 }
 
 .searchForm-query #searchForm_lookfor {
@@ -443,7 +523,12 @@ padding-bottom:0px;
     max-width: 1000vw;
     margin-left: 1vw;
     font-size: 1.5vw;
-    padding-right: 28px
+    padding-right: 28px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 .form-control:hover{
@@ -474,19 +559,19 @@ padding-bottom:0px;
     background-color:#a0d6cc;
     color: black;
     position: relative;
-    border-radius: 0px;
-    border-color: #fff;
     text-align: center;
     font-size: 1.6vw;
-    
     margin-right: 0%;
-    
-
     height: 3vw;
     width: 13vw;
     display:inline;
     size: relative;
     font-family: CustomFont;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 
@@ -537,12 +622,14 @@ padding-bottom:0px;
     max-width: 1000vw;
 
     margin-left: 1vw;
-
-
-    border-radius: 0;
     display:inline;
     size: relative;
     max-block-size: 12vw;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 
 }
 
@@ -572,22 +659,22 @@ padding-bottom:0px;
     background-color:#a0d6cc;
     color: black;
     position: relative;
-    border-radius: 0px;
-    border-color: #fff;
     text-align: center;
     font-size: 1.7vw;
     text-decoration: none;
     line-height: 2vw;
     justify-content: center;
     align-items: center;
-
     height: 3vw;
     width: 11vw;
-
     margin-left: 1vw;
-    
     size: relative;
     font-family: CustomFont;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 
@@ -611,6 +698,11 @@ padding-bottom:0px;
     display: flex; /* Aktiviert Flexbox */
     justify-content: center; /* Zentriert den Inhalt horizontal */
     align-items: center; /* Zentriert den Inhalt vertikal */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 .advanced-search-link:hover {
@@ -641,6 +733,11 @@ padding-bottom:0px;
     display: flex; /* Aktiviert Flexbox */
     justify-content: center; /* Zentriert den Inhalt horizontal */
     align-items: center; /* Zentriert den Inhalt vertikal */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
 }
 
 
@@ -1012,22 +1109,24 @@ padding-bottom:0px;
       width: 100%;
   }
   
-  /* Überschrift */
-  .media-body h1 {
-      font-size: 2rem; /* Verwendet relative Einheiten */
-      font-weight: 500;
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      border-radius: 4px;
-      word-wrap: break-word;
-      margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
-      background: linear-gradient(to right, #055296, #235e92, #4477a3);
-      padding: 10px; /* Abstand innerhalb des Kastens */
-      border: 1px solid transparent; /* Unsichtbarer Rahmen */
-      border-radius: 8px; /* Abgerundete Ecken */
-      display:inline-block;
-
-  }
+   /* Überschrift */
+   .media-body h1 {
+    font-size: 2rem; /* Verwendet relative Einheiten */
+    font-weight: 100;
+    font-family: 'CUSTOMFONT';
+    color: #007bff;
+    border-radius: 4px;
+    word-wrap: break-word;
+    margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
+    background: linear-gradient(to right, #b7c8c4, #c1d6d2);
+    padding: 10px; /* Abstand innerhalb des Kastens */
+    border-radius: 8px; /* Abgerundete Ecken */
+    display:inline-block;
+    border-left:3px solid black ;
+    border-right:3px solid black ;
+    border-top:3px solid black ;
+    border-bottom:3px solid black ;
+}
   
   /* ERGEBNISSTABELLE ---------------------------------------------------*/
   /* Tabelle selbst */
@@ -1049,8 +1148,16 @@ padding-bottom:0px;
   /* Tabellenkörper */
   .table tbody td {
       padding: 0.75rem; /* Innenabstand */
-      border-bottom: 1px solid #dee2e6; /* Unterer Rand der Zellen */
+      border-bottom: 1px solid black; /* Unterer Rand der Zellen */
   }
+
+  .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
   
   /* Gestreifte Zeilen */
   .table-striped tbody tr:nth-of-type(odd) {
@@ -1192,4 +1299,12 @@ padding-bottom:0px;
 .header-background h1 {
   margin: 0; /* Entfernt den Standard-Abstand */
   display: inline-block; /* Stellt sicher, dass die Überschriften nebeneinander stehen */
+}
+
+#side-panel-institution {
+  display:none;
+}
+
+#side-panel-building {
+  display: none;
 }
