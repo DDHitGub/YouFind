@@ -146,7 +146,6 @@
     <?php if ($geoUrl = $this->geocoords()->getSearchUrl($options)) : ?>
         <a href="<?=$geoUrl ?>" class="btn btn-link"><?=$this->transEsc('Geographic Search')?></a>
     <?php endif; ?>
-    
     </span>
 
     <?php $shards = $options->getShards(); ?>

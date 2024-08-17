@@ -4,10 +4,12 @@ $bodyClass = '';
 
 if (strpos($currentUrl, '/vufind/Search/') !== false) {
     $bodyClass = 'search-page';
-} elseif (strpos($currentUrl, '/vufind/Record') !== false) {
+} elseif (strpos($currentUrl, '/vufind/Record/') !== false) {
     $bodyClass = 'record-page';
+} elseif (strpos($currentUrl, '/vufind/Tag/') !== false) {
+    $bodyClass = 'tag-page';
 } elseif (strpos($currentUrl, '/vufind/') !== false) {
-    $bodyClass = 'homepage';
+  $bodyClass = 'homepage';
 }
 ?>
 

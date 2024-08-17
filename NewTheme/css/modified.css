@@ -13,9 +13,13 @@
 }
 
 
+/* IM FOLGENDEN STARTSEITE(homepage), LISTE(search-page), ERGEBNIS(result-page), TAG-SEITE(tag-page).
+Diese Unterteilung wurde gemacht um innerhalb dieser Seiten spezielle Änderungen vornehmen zu können.
+Für Funktionsweise siehe Layouts/layout.phtml, erste if-clause mit url-filter. */
+
 /* Startseite */
 body.homepage {
-  background-image: url("../images/homepage/JellyFish_2_idee.gif");
+  background-image: url("../images/homepage/jellyfish-homepage.webp");
   background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
   background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
  
@@ -29,7 +33,7 @@ body.homepage {
     display: none; }
 }
 
-/* Seite der Liste mit Ergebnissen */
+/* 2. Seite der Liste mit Ergebnissen */
 body.search-page {
   background-image: url("../images/searchpage/searchpage_orig.jpg");
   background-size: cover;
@@ -49,7 +53,10 @@ body.search-page {
   background: rgb(69, 69, 69);
 }
 }
-/* Seite des einen Ergebnisses */
+
+
+
+/* 3. Seite des einen Ergebnisses */
 body.record-page {
   background-image: url("../images/searchpage/searchpage_orig.jpg");
   background-size: cover;
@@ -127,6 +134,37 @@ body.record-page {
   text-decoration: none;
   color: black;
   background-color: #a0d6cc;
+  border-radius: 4px;
+  border-color: black;
+  /* margin-right: 1vw; */
+  /* margin-top: 2vw; */
+  max-block-size: 12vw;
+  font-family: CustomFont;
+  font-size: 1.2vw;
+  /* display: inline; */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  padding: 15px;
+  width: 10vw;
+  height: 3vw;
+}
+
+.nav>li>a:hover {
+  background-color: #333;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  color: white;
+
+}
+
+/* War die version davor, für den fall dass der login button bei der record-page 
+crashen sollte weil man was geändert hat oder so
+.nav>li>a {
+  text-decoration: none;
+  color: black;
+  background-color: #a0d6cc;
   border-radius: 3px;
   border-color: #fff;
   margin-right: 1vw;
@@ -138,9 +176,12 @@ body.record-page {
   font-family: CustomFont;
   font-size: 1.4vw;
   display: inline;
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center; /* Zentriert den Inhalt vertikal */
-}
+  justify-content: center; /* Zentriert den Inhalt horizontal 
+  align-items: center; /* Zentriert den Inhalt vertikal 
+} */
+
+
+
 .nav-tabs {
   border-bottom: none;
 }
@@ -205,7 +246,7 @@ body.record-page {
   border-bottom: 1px solid white;
 }
 
-/* Für die 3.Seite der Zu Favoriten Hinzufügen button
+  /* Für die 3.Seite der Zu Favoriten Hinzufügen button
   /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
   .save-record {
     /* color: black; */ /* Ihre gewünschte Textfarbe */
@@ -223,6 +264,12 @@ body.record-page {
     color: #ff8986;
     background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
   }
+
+
+  /* Wenn man eingeloggt ist: */
+.nav .navbar-nav .navbar-right.flip {
+  margin-top: -3vw;
+}
 
 /* ANORDNUNG LOGO UND SUCHLEISTE */
 /* Grid Container für Logo und Suchleiste */
@@ -262,7 +309,7 @@ body.record-page {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  display: flex;
+  display: none;
   align-items: center; /* Vertikale Ausrichtung */
   overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
   transform: scale(0.6);
@@ -289,6 +336,34 @@ body.record-page {
   }
 }
 
+
+
+}
+
+/* 4. Seite tag-page wo tag-ergebnisse gezeigt werden*/
+.tag-page {
+
+background-image: url('../images/searchpage/searchpage_orig.jpg');
+
+.search.container.navbar {
+  display:none;
+}
+
+#divContainerHeader{
+  display: inline-block;
+  margin-top: 2vw;
+}
+
+/* die Search Advanced (Erweitert) Website */
+.mainbody.left{
+  margin-top:3vw;
+  width: 100%;
+}
+
+.navbar-form {
+ display:none;
+}
+
 }
 
 
@@ -305,12 +380,20 @@ body{
   }
 
 
-
 /* "Neues Konto anlegen" Button wenn du auf Login gehst*/
 .btn.btn-link.createAccountLink{
   background-color: #a0d6cc;
-  transform: scaleY(1.38);
+  /* transform: scaleY(1.38); */
   margin-bottom: 1px; 
+  border-radius: 5px;
+  height: 3vw;
+  width: auto;
+  padding: 5px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
 }
 
 /* Login Schriftzug wenn man auf Login geht */
@@ -331,7 +414,173 @@ h2{
 .adv-submit .btn.btn-primary{
   margin-bottom: 50px;
 }
- 
+
+
+
+/* auf der advanced search seite - erweiterte suche*/
+
+.pull-left {
+  color: white;
+}
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+.adv-group {
+  position: relative;
+  margin-bottom: .5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #007bff;
+  background-color: #b7c8c4;
+}
+
+@media (min-width: 100px) {
+  .solr-facet-container {
+      display:flex;
+      flex-wrap: wrap
+  }
+
+  .solr-adv-facet {
+      padding: 5px;
+      flex: 1 25%;
+      background-color: #b7c8c4;
+      color: #007bff;
+      border-radius: 5px;
+      margin-right: 1vw;
+      text-align: center;
+  }
+}
+@media (min-width: 100px) {
+.mainbody {
+  width: 75%;
+}
+.form-control {
+  max-width: 100%;
+}
+}
+
+
+fieldset.solr label[for="illustrated_0"] {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black; /* Grüner Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+  color: #007bff;
+  width: 10vw;
+  font-size: 1vw;
+}
+
+fieldset.solr label[for="illustrated_-1"] {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black; /* Grüner Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+  color: #007bff;
+  width: 10vw;
+  font-size: 1vw;
+}
+
+
+fieldset.solr {
+  position: relative; /* Für die absolute Positionierung des Rahmens */
+} 
+
+/* Kasten um das Label für 'Has Illustrations' */
+fieldset.solr label[for="illustrated_1"] {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black; /* Grüner Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+  color: #007bff;
+  width: 10vw;
+  font-size: 1vw;
+}
+
+.date-fields .date-from {
+  padding-right: .25rem;
+  background-color: #b7c8c4;
+  color: #007bff;
+  text-align: center;
+  margin-right: 1vw;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.date-fields .date-to {
+  padding-left: .25rem;
+  background-color: #b7c8c4;
+  color: #007bff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+#groupPlaceHolder {
+  display: block;
+  padding: 1rem;
+  color: #12538B;
+  border: 1px solid black; /* Grüner Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+  width: 18vw;
+  font-size: 1.15vw;
+  margin-bottom: 2vw;
+}
+
+#groupPlaceHolder:hover {
+  display: block;
+  padding: 1rem;
+  color: white;
+}
+
+.adv-submit .clear-btn {
+  float: right;
+  background-color: red;
+  font-weight: bolder;
+  font-family: CustomFont;
+  font-size: 1vw;
+  text-align: center;
+  line-height: 2vw;
+  height: 3vw;
+  width: 10vw;
+  max-width: 1000vw;
+  margin-left: 1vw;
+  display:inline;
+  size: relative;
+  max-block-size: 12vw;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  color: white;
+
+}
+.adv-submit .clear-btn:hover {
+  color: #333333;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+
 
 .sidebar.right.hidden-print{
   font-family: "CustomFont";
@@ -347,6 +596,9 @@ h2{
 
 .form-group .btn.btn-primary{
   font-size: medium;
+}
+.btn.btn-primary {
+  padding: 5px;
 }
 /* bis hier hin */
 
@@ -424,9 +676,13 @@ opacity: 1;
 color: #000;
 font-weight: bold;
 background: linear-gradient(45deg,#ff3131, #ff5d3e, #ff8b4b); 
-
-
 }
+
+.btn.less-btn {
+  background-color: #a0d6cc;
+  color: #007bff;
+}
+
 
 
 h1{
@@ -713,33 +969,41 @@ padding-bottom:0px;
   align-items: center;
 }
 
-
 .nav>li>a {
-    position:relative;
-    text-decoration: none;
-    color: black;
-    background-color: #a0d6cc;
-    border-radius: 3px;
-    border-color: #fff;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    size: relative;
-    max-block-size: 12vw;
-    height: 3vw;
-    width: 8vw;
-
-    font-family: CustomFont;
-    font-size: 1.2vw;
-    display: flex; /* Aktiviert Flexbox */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+  position:relative;
+  text-decoration: none;
+  color: black;
+  background-color: #a0d6cc;
+  border-radius: 3px;
+  border-color: #fff;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  size: relative;
+  max-block-size: 12vw;
+  height: 3vw;
+  width: 10vw;
+  font-family: CustomFont;
+  font-size: 1.2vw;
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center;  /*Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 15px;
 }
 
+.nav>li>a:hover {
+  background-color: #333;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  color: white;
+
+}
 
 .logo {
     /* max-width: 300px;  Größe des Logos anpassen */
@@ -904,7 +1168,7 @@ padding-bottom:0px;
 
   .btn.more-btn {
       background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
-      color: blue; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
+      color: #007bff; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
   
     }
   
@@ -933,18 +1197,20 @@ padding-bottom:0px;
       width: 300px; /* Breite des Containers, anpassen wie nötig */
     }
     
-    /* Stil für das <select>-Element */
-    .jumpMenu {
-      background-color: #a0d6cc; /* Hintergrundfarbe */
-      border: 1px solid #cccccc; /* Randfarbe */
-      border-radius: 4px; /* Abrundung der Ecken */
-      padding: 8px 12px; /* Innenabstände */
-      font-size: 16px; /* Schriftgröße */
-      color: #333333; /* Textfarbe */
-      width: 100%; /* Breite auf 100% setzen */
-      box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
-      appearance: none; /* Entfernt die Standard-Stile des Browsers */
-    }
+      /* Stil für das <select>-Element */
+      .jumpMenu {
+        background-color: #a0d6cc; /* Hintergrundfarbe */
+        border: 1px solid #cccccc; /* Randfarbe */
+        border-radius: 4px; /* Abrundung der Ecken */
+         /* Innenabstände */
+        font-size: 1.4vw; /* Schriftgröße */
+        color: #333333; /* Textfarbe */
+        width: 100%; /* Breite auf 100% setzen */
+        box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
+        appearance: none; /* Entfernt die Standard-Stile des Browsers */
+        padding-left: 1vw;
+        padding-bottom: 0.25vw;
+      }
     
     /* Stil für das Pfeilsymbol */
     .select-arrow {
