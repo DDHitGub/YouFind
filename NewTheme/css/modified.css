@@ -585,7 +585,7 @@ fieldset.solr label[for="illustrated_1"] {
 .sidebar.right.hidden-print{
   font-family: "CustomFont";
   background-color: #c1d6d2;
-  margin-top: 3vw;
+  margin-top: 13vw;
 }
 /* bis hier hin */
 
@@ -1365,7 +1365,7 @@ padding-bottom:0px;
       display: flex;
       flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
       gap: 20px; /* Abstand zwischen den Elementen */
-      padding-top: 20px; /* Erhöht den oberen Abstand */
+      /*padding-top: 20px;  Erhöht den oberen Abstand */
   }
   
   
@@ -1392,6 +1392,8 @@ padding-bottom:0px;
     border-right:3px solid black ;
     border-top:3px solid black ;
     border-bottom:3px solid black ;
+
+    width:75vw; 
 }
   
   /* ERGEBNISSTABELLE ---------------------------------------------------*/
