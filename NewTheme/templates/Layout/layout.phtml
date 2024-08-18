@@ -2,14 +2,20 @@
 $currentUrl = $_SERVER['REQUEST_URI'];
 $bodyClass = '';
 
-if (strpos($currentUrl, '/vufind/Search/') !== false) {
-    $bodyClass = 'search-page';
+if (strpos($currentUrl, '/vufind/Search/History') !== false) {
+    $bodyClass = 'acc-search-history-page';
+} elseif (strpos($currentUrl, '/vufind/Author/') !== false) {
+    $bodyClass = 'author-page';
 } elseif (strpos($currentUrl, '/vufind/Record/') !== false) {
     $bodyClass = 'record-page';
 } elseif (strpos($currentUrl, '/vufind/Tag/') !== false) {
     $bodyClass = 'tag-page';
+} elseif (strpos($currentUrl, '/vufind/MyResearch') !== false) {
+    $bodyClass = 'account-page';
+} elseif (strpos($currentUrl, '/vufind/Search/') !== false) {
+  $bodyClass = 'search-page';
 } elseif (strpos($currentUrl, '/vufind/') !== false) {
-  $bodyClass = 'homepage';
+    $bodyClass = 'homepage';
 }
 ?>
 

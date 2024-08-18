@@ -1,342 +1,344 @@
 @font-face {
-    font-family: 'CustomFont'; /* Der Name der Schriftart */
-    src: url("../css/fonts/Jaturat.ttf") format('truetype');
-    font-weight: normal; /* Oder 'bold', je nach Schriftart */
-    font-style: normal; /* Oder 'italic', je nach Schriftart */
+  font-family: 'CustomFont'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Jaturat.ttf") format('truetype');
+  font-weight: normal; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
 }
 
 @font-face {
-    font-family: 'CustomFont2'; /* Der Name der Schriftart */
-    src: url("../css/fonts/Black\ Ops\ One\ Regular.ttf") format('truetype');
-    font-weight: 900; /* Oder 'bold', je nach Schriftart */
-    font-style: normal; /* Oder 'italic', je nach Schriftart */
+  font-family: 'CustomFont2'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Black\ Ops\ One\ Regular.ttf") format('truetype');
+  font-weight: 900; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
 }
 
 
-/* IM FOLGENDEN STARTSEITE(homepage), LISTE(search-page), ERGEBNIS(result-page), TAG-SEITE(tag-page).
+/* IM FOLGENDEN STARTSEITE(homepage), LISTE(search-page), ERGEBNIS(result-page), TAG-SEITE(tag-page)
+und eine ACCOUNT-Seite(account-page) (wenn man auf ihr konto oben rechts klickt).
 Diese Unterteilung wurde gemacht um innerhalb dieser Seiten spezielle Änderungen vornehmen zu können.
 Für Funktionsweise siehe Layouts/layout.phtml, erste if-clause mit url-filter. */
 
 /* Startseite */
 body.homepage {
-  background-image: url("../images/homepage/jellyfish-homepage.webp");
-  background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
-  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
- 
-  .active-filters .filters-toggle {
-    display: none;
+background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
+background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+
+.active-filters .filters-toggle {
+  display: none;
 }
-  .reset-filters-btn {
-    display: none;
+.reset-filters-btn {
+  display: none;
 }
-  .active-filters .filters .title-value-pair {
-    display: none; }
+.active-filters .filters .title-value-pair {
+  display: none; }
+
+/* wenn man eingeloggt ist soll hier nix erscheinen, dass regelt die seite body.account-page */
+.mainbody.left {
+  display: none;
 }
+.sidebar.right.hidden-print {
+  display: none;
+}
+}
+
+
 
 /* 2. Seite der Liste mit Ergebnissen */
 body.search-page {
-  background-image: url("../images/searchpage/searchpage_orig.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover;
+background-repeat: no-repeat;
 
 #divContainerHeader{
-  display: inline-block;
-  margin-top: 0vw;
+display: inline-block;
+margin-top: 0vw;
 }
 .active-filters .filters .filter-value {
-  display: inline-block;
-  margin-block:5px;padding: 2px 8px;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-  text-decoration: none;
-  background: rgb(69, 69, 69);
+display: inline-block;
+margin-block:5px;padding: 2px 8px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+text-decoration: none;
+background: rgb(69, 69, 69);
 }
+
+.search-stats h2{
+  color: white;
+}
+
+.result-body div {
+  color: white;
+}
+
 }
 
 
 
 /* 3. Seite des einen Ergebnisses */
 body.record-page {
-  background-image: url("../images/searchpage/searchpage_orig.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+background-image: url("../images/searchpage/searchpage_orig.jpg");
+background-size: cover;
+background-repeat: no-repeat;
 
-  
-#header1{
-    color: rgb(255, 54, 50); 
-    margin-bottom: 0px;
-    display: inline;
-    position: relative;
-    font-size: 3vw;
-    margin-top: 0vw;
-    margin-left: 0vw;
-}
-
-
-#header2{
-    color: #cef2ec;
-    margin-bottom: 0px;
-    display: inline;
-    position: relative;
-    font-size: 3vw;
-    margin-top: 0vw;
-    margin-left: 0vw;
-
-}
-
-#divContainerHeader{
-  display: inline;
-}
-
-#brand{
-  position: relative;
-  width: 4vw;
-  max-width: 9vw;
-  height: auto;
-  display: inline;
-}
-#dive{
-  color: #aaa8a7;
-  font-family: "CustomFont";
-  display: block;
-  text-align:left;
-  font-size: 1vw;
-  position: relative;
-  height: auto;
-  width: auto;
-  padding-right: 0%;
-  margin-left: 5vw;
-  margin-top: -1vw;
-}
 .container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse {
-  margin-right:0;
-  width: auto;
-  margin-left:0;
+margin-right:0;
+width: auto;
+margin-left:0;
 }
-
+#divContainerHeader{
+display: inline-block;
+margin-top: 0vw;
+}
 .active-filters .filters .filter-value {
-  display: inline-block;
-  margin-block:5px;padding: 2px 8px;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-  text-decoration: none;
-  background: rgb(69, 69, 69);
+display: inline-block;
+margin-block:5px;padding: 2px 8px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+text-decoration: none;
+background: rgb(69, 69, 69);
 }
 
 /* Holding Exemplare wegmachen */
 #record-tab-holdings{
-  display:none;
+display:none;
 }
 
 .nav>li>a {
-  text-decoration: none;
-  color: black;
-  background-color: #a0d6cc;
-  border-radius: 4px;
-  border-color: black;
-  /* margin-right: 1vw; */
-  /* margin-top: 2vw; */
-  max-block-size: 12vw;
-  font-family: CustomFont;
-  font-size: 1.2vw;
-  /* display: inline; */
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center; /* Zentriert den Inhalt vertikal */
-  padding: 15px;
-  width: 10vw;
-  height: 3vw;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 4px;
+border-color: black;
+/* margin-right: 1vw; */
+/* margin-top: 2vw; */
+max-block-size: 12vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+/* display: inline; */
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+padding: 20px;
+width: 10vw;
+height: 3vw;
+line-height: 1.15vw;
 }
 
 .nav>li>a:hover {
-  background-color: #333;
-  border-left: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  color: white;
+background-color: #333;
+border-left: 2px solid #ccc;
+border-right: 2px solid #ccc;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+color: white;
 
+}
+
+.logoutOptions .logout {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
+}
+
+.logoutOptions .icon-link {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
 }
 
 /* War die version davor, für den fall dass der login button bei der record-page 
 crashen sollte weil man was geändert hat oder so
 .nav>li>a {
-  text-decoration: none;
-  color: black;
-  background-color: #a0d6cc;
-  border-radius: 3px;
-  border-color: #fff;
-  margin-right: 1vw;
-  margin-top: 2vw;
-  size: relative;
-  max-block-size: 12vw;
-  height: 3vw;
-  width: 8vw;
-  font-family: CustomFont;
-  font-size: 1.4vw;
-  display: inline;
-  justify-content: center; /* Zentriert den Inhalt horizontal 
-  align-items: center; /* Zentriert den Inhalt vertikal 
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 2vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 8vw;
+font-family: CustomFont;
+font-size: 1.4vw;
+display: inline;
+justify-content: center; /* Zentriert den Inhalt horizontal 
+align-items: center; /* Zentriert den Inhalt vertikal 
 } */
 
 
 
 .nav-tabs {
-  border-bottom: none;
+border-bottom: none;
 }
 
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
 .tab-content>.active {
-  display: block;
-  background-color: #acc1e2;
-  margin-top: 1.5vw;
+display: block;
+background-color: #acc1e2;
+margin-top: 1.5vw;
 }
 
 .nav-tabs>li {
-  float: left;
-  /* margin-bottom:-1px; */
-  margin-left: 1vw;
-  font-size: 16px;
+float: left;
+/* margin-bottom:-1px; */
+margin-left: 1vw;
+font-size: 16px;
 }
 
 .record .media-body,.result .media-body {
-  flex: 1;
-  width: unset;
-  overflow: visible;
-  margin-bottom: 2vw;
+flex: 1;
+width: unset;
+overflow: visible;
+margin-bottom: 2vw;
 }
 .tab-content {
-  padding: 4px;
-  margin-left: 1vw;
+padding: 4px;
+margin-left: 1vw;
 }
 
 #loginOptions .icon-link {
-    position:relative;
-    text-decoration: none;
-    color: black;
-    background-color: #a0d6cc;
-    border-radius: 3px;
-    border-color: #fff;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    size: relative;
-    max-block-size: 12vw;
-    height: 3vw;
-    width: 8vw;
-
-    font-family: CustomFont;
-    font-size: 1.2vw;
-    display: flex; /* Aktiviert Flexbox */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
 }
 
 #loginOptions .icon-link:hover {
-  background-color: #333;
-  color: white;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+background-color: #333;
+color: white;
+border-left: 1px solid white;
+border-right: 1px solid white;
+border-top: 1px solid white;
+border-bottom: 1px solid white;
 }
 
-  /* Für die 3.Seite der Zu Favoriten Hinzufügen button
-  /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
-  .save-record {
-    /* color: black; */ /* Ihre gewünschte Textfarbe */
-    /*border-radius: 8px;  Radius der Abrundung der Ecken */
-    background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
-    color: black;
-  }
-  /* Beispiel: Ändern der Farbe des Icons */
-  .save-record .icon-link__icon {
-    color: red; /* Ihre gewünschte Farbe für das Icon */
-  }
-  
-  /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
-  .save-record:hover {
-    color: #ff8986;
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
-  }
+/* Für die 3.Seite der Zu Favoriten Hinzufügen button
+/* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
+.save-record {
+  /* color: black; */ /* Ihre gewünschte Textfarbe */
+  /*border-radius: 8px;  Radius der Abrundung der Ecken */
+  background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
+  color: black;
+}
+/* Beispiel: Ändern der Farbe des Icons */
+.save-record .icon-link__icon {
+  color: red; /* Ihre gewünschte Farbe für das Icon */
+}
+
+/* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
+.save-record:hover {
+  color: #ff8986;
+  background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
+}
 
 
-  /* Wenn man eingeloggt ist: */
+/* Wenn man eingeloggt ist: */
 .nav .navbar-nav .navbar-right.flip {
-  margin-top: -3vw;
+margin-top: -3vw;
 }
 
-/* ANORDNUNG LOGO UND SUCHLEISTE */
-/* Grid Container für Logo und Suchleiste */
-.grid-container {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr); /* Der Banner nimmt nur so viel Platz wie nötig ein, die Suchleiste nimmt den verbleibenden Platz ein, aber mit einer maximalen Breite */
-  gap: 40px; /* Abstand zwischen Logo und Suchleiste */
-  align-items: center; /* Vertikale Ausrichtung */
-  width: 100%; /* Container auf volle Breite setzen */
-  padding: 0 10px; /* Abstand zu den Seiten */
-  box-sizing: border-box; /* Sicherstellen, dass Padding die Gesamtbreite beeinflusst */
-}
-
-/* Banner Container */
-.banner-container {
-  position: relative; /* Ermöglicht Feineinstellungen der Breite und Position */
-  max-width: 100%; /* Maximale Breite auf 100% des verfügbaren Platzes */
-}
-
-/* Banner Stil */
-.banner.container.navbar {
-  background-color: transparent;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center; /* Zentriert das Logo vertikal */
-  justify-content: flex-start; /* Das Logo nach links ausrichten */
-  width: auto; /* Banner-Container auf automatische Breite einstellen */
-}
 
 /* Suchleiste */
 .search.container.navbar {
-  background-color: transparent;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  display: none;
-  align-items: center; /* Vertikale Ausrichtung */
-  overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
-  transform: scale(0.6);
-  transform-origin: left;
+background-color: transparent;
+padding: 10px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+display: none;
+align-items: center; /* Vertikale Ausrichtung */
+overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
+transform: scale(0.6);
+transform-origin: left;
 }
 
-/* Mobile Ansicht */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Eine Spalte für mobile Ansicht */
-    gap: 20px; /* Kleineren Abstand für mobile Ansicht */
-  }
-
-  .banner.container.navbar {
-    justify-content: center; /* Logo zentrieren */
-    width: 100%; /* Banner auf volle Breite setzen */
-  }
-
-  .search.container.navbar {
-    transform: scale(0.8); /* Suchleiste auf 80% skalieren */
-    transform-origin: left;
-    width: 100%; /* Suchleiste auf volle Breite setzen */
-    margin-top: 20px; /* Abstand nach dem Logo */
-  }
+.btn.btn-primary {
+padding: 5px;
+width: auto;
+font-size: 1.3vw;
 }
-
-
+.comment-name {
+color: black;
+margin-top: 1vw;
+margin-left: 1vw;
+}
+.comment-text {
+color: black;
+margin-top: 1vw;
+}
+.comment-label {
+color: black;
+margin-top: 1vw;
+margin-left: 1vw;
+}
+.comment-form .text-form {
+width: 100%;
+margin-top: 1vw;
+margin-right: 1vw;
+}
 
 }
 
@@ -346,73 +348,225 @@ crashen sollte weil man was geändert hat oder so
 background-image: url('../images/searchpage/searchpage_orig.jpg');
 
 .search.container.navbar {
-  display:none;
+display:none;
 }
 
 #divContainerHeader{
-  display: inline-block;
-  margin-top: 2vw;
+display: inline-block;
+margin-top: 2vw;
 }
 
 /* die Search Advanced (Erweitert) Website */
 .mainbody.left{
-  margin-top:3vw;
-  width: 100%;
+margin-top:3vw;
+width: 100%;
 }
 
 .navbar-form {
- display:none;
+display:none;
 }
 
 }
 
+/* 5. Seite die erscheint wenn man auf ihr Konto klickt.
+Account-page  url mit MyResearch*/
+
+body.account-page {
+background-image: url('../images/searchpage/searchpage_orig.jpg');
+
+/* es hat nochmal ein h2, hier nur für account-page*/
+h2 {
+  color: white;
+}
+h3 {
+  color: black;
+}
+h4 {
+  color: black;
+}
+#divContainerHeader{
+  display: inline-block;
+  margin-top: 0vw;
+  }
+.btn-default,.search-filter-toggle {
+  color: #333;
+  background-color: #a0e2d6;
+  border-color: #ccc;
+}
+.btn-default:hover, .search-filter-toggle:hover {
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  color: white;
+  background-color:#333 ;
+  }
+  .search-controls .btn.icon-link {
+    display: inline-block;
+    padding: 1rem;
+    color: #12538B;
+    border: 1px solid black; /* Grüner Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+    width: auto;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+  }
+  .search-controls .btn.icon-link:hover {
+    color: white; 
+  }
+
+  .last {
+    color: black;
+  }
+  .resultItemLine2 {
+    color: black;
+  }
+  .result .title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  .toolbar-btn {
+    background-color: #a0e2d6;
+  }
+  .toolbar-btn:hover {
+    color: #007bff;
+  }
+  .result-links{  
+    width: 8vw;
+    margin-left: 1vw;
+    background-color: #c1d6d2;
+    text-align: center;
+  }
+  fieldset,.fieldset {
+    float:left;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    background-color: #c1d6d2;
+    border-radius: 1vw;
+    align-items: center;
+    width: 40vw;
+    padding-left: 1vw;
+    color: black;
+    margin-bottom: 1vw;
+}
+
+}
+
+/* 6. Seite mit acc-search-history-page (auch erst wenn man eingeloggt ist im login-fenster
+Kommt erst wenn man im login-bereich auf search-history drückt */
+body.acc-search-history-page {
+background-image: url('../images/searchpage/searchpage_orig.jpg');
+
+h2 {
+  color: white;
+}
+h3 {
+  color: black;
+}
+td {
+  color: black;
+  background-color: white;
+}
+th {
+  color: black;
+  background-color: #b7c8c4;
+}
+a.icon-link[href="?purge=true"] {
+display: block;
+padding: 1rem;
+color: #12538B;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+width: 19vw;
+font-size: 1.15vw;
+margin-bottom: 2vw;
+}
+a.icon-link[href="?purge=true"]:hover {
+color: white; 
+}
+}
+
+/* 7. Seite mit author-page wenn man einen der authors anklickt */
+body.author-page {
+background-image: url('../images/searchpage/searchpage_orig.jpg');
+
+.search.container.navbar {
+display:none;
+}
+
+#divContainerHeader{
+display: inline-block;
+margin-top: 2vw;
+}
+
+/* die Search Advanced (Erweitert) Website */
+.mainbody.left{
+margin-top:3vw;
+width: 75%;
+}
+
+.navbar-form {
+display:none;
+}
+
+.sidebar.right.hidden-print{
+font-family: "CustomFont";
+background-color: #c1d6d2;
+margin-top: 3vw;
+}
+h4 {
+color: black;
+}
+}
 
 body{
-    /*background: url("../images/schwarzer_hintergrund.jpg");*/
-    background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
-    background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
-    background-position: center;   /* Das Bild wird zentriert */
-    background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
-    margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
-    height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
-    font-family: 'CustomFont', sans-serif;  /*Fallback auf sans-serif */
-    color: white; /* Standardfarbe für alle Texte */
-  }
+  /*background: url("../images/schwarzer_hintergrund.jpg");*/
+  background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+  background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+  background-position: center;   /* Das Bild wird zentriert */
+  background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+  margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+  height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+  font-family: 'CustomFont', sans-serif;  /*Fallback auf sans-serif */
+  color: white; /* Standardfarbe für alle Texte */
+}
 
 
 /* "Neues Konto anlegen" Button wenn du auf Login gehst*/
 .btn.btn-link.createAccountLink{
-  background-color: #a0d6cc;
-  /* transform: scaleY(1.38); */
-  margin-bottom: 1px; 
-  border-radius: 5px;
-  height: 3vw;
-  width: auto;
-  padding: 5px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+background-color: #a0d6cc;
+/* transform: scaleY(1.38); */
+margin-bottom: 1px; 
+border-radius: 5px;
+height: 3vw;
+width: auto;
+padding: 5px;
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
 
 }
 
 /* Login Schriftzug wenn man auf Login geht */
 #lightbox-title.lightbox-header{
-  color: white;
+color: white;
 }
 
 /* die Search Advanced (Erweitert) Website */
 .mainbody.left{
-  margin-top:3vw;
+margin-top:3vw;
 }
 
 h2{
-  color: black;
-  font-family: "CustomFont";
+color: white;
+font-family: "CustomFont";
 }
 
 .adv-submit .btn.btn-primary{
-  margin-bottom: 50px;
+margin-bottom: 50px;
 }
 
 
@@ -420,212 +574,217 @@ h2{
 /* auf der advanced search seite - erweiterte suche*/
 
 .pull-left {
-  color: white;
+color: white;
 }
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: inherit;
-  color: white;
-  border: 0;
-  border-bottom: 1px solid white;
+display: block;
+width: 100%;
+padding: 0;
+margin-bottom: 20px;
+font-size: 21px;
+line-height: inherit;
+color: white;
+border: 0;
+border-bottom: 1px solid white;
 }
 
 .adv-group {
-  position: relative;
-  margin-bottom: .5rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color: #007bff;
-  background-color: #b7c8c4;
+position: relative;
+margin-bottom: .5rem;
+padding: 1rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+color: #007bff;
+background-color: #b7c8c4;
 }
 
 @media (min-width: 100px) {
-  .solr-facet-container {
-      display:flex;
-      flex-wrap: wrap
-  }
+.solr-facet-container {
+    display:flex;
+    flex-wrap: wrap
+}
 
-  .solr-adv-facet {
-      padding: 5px;
-      flex: 1 25%;
-      background-color: #b7c8c4;
-      color: #007bff;
-      border-radius: 5px;
-      margin-right: 1vw;
-      text-align: center;
-  }
+.solr-adv-facet {
+    padding: 5px;
+    flex: 1 25%;
+    background-color: #b7c8c4;
+    color: #007bff;
+    border-radius: 5px;
+    margin-right: 1vw;
+    text-align: center;
+}
 }
 @media (min-width: 100px) {
 .mainbody {
-  width: 75%;
+width: 75%;
 }
 .form-control {
-  max-width: 100%;
+max-width: 100%;
 }
 }
 
 
 fieldset.solr label[for="illustrated_0"] {
-  position: relative;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid black; /* Grüner Rahmen */
-  border-radius: 5px; /* Abgerundete Ecken */
-  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-  color: #007bff;
-  width: 10vw;
-  font-size: 1vw;
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
 }
 
 fieldset.solr label[for="illustrated_-1"] {
-  position: relative;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid black; /* Grüner Rahmen */
-  border-radius: 5px; /* Abgerundete Ecken */
-  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-  color: #007bff;
-  width: 10vw;
-  font-size: 1vw;
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
 }
 
 
 fieldset.solr {
-  position: relative; /* Für die absolute Positionierung des Rahmens */
+position: relative; /* Für die absolute Positionierung des Rahmens */
 } 
 
 /* Kasten um das Label für 'Has Illustrations' */
 fieldset.solr label[for="illustrated_1"] {
-  position: relative;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid black; /* Grüner Rahmen */
-  border-radius: 5px; /* Abgerundete Ecken */
-  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-  color: #007bff;
-  width: 10vw;
-  font-size: 1vw;
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
 }
 
 .date-fields .date-from {
-  padding-right: .25rem;
-  background-color: #b7c8c4;
-  color: #007bff;
-  text-align: center;
-  margin-right: 1vw;
-  border-radius: 5px;
-  padding: 2px;
+padding-right: .25rem;
+background-color: #b7c8c4;
+color: #007bff;
+text-align: center;
+margin-right: 1vw;
+border-radius: 5px;
+padding: 2px;
 }
 
 .date-fields .date-to {
-  padding-left: .25rem;
-  background-color: #b7c8c4;
-  color: #007bff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 2px;
+padding-left: .25rem;
+background-color: #b7c8c4;
+color: #007bff;
+text-align: center;
+border-radius: 5px;
+padding: 2px;
 }
 
 #groupPlaceHolder {
-  display: block;
-  padding: 1rem;
-  color: #12538B;
-  border: 1px solid black; /* Grüner Rahmen */
-  border-radius: 5px; /* Abgerundete Ecken */
-  background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-  width: 18vw;
-  font-size: 1.15vw;
-  margin-bottom: 2vw;
+display: block;
+padding: 1rem;
+color: #12538B;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+width: 18vw;
+font-size: 1.15vw;
+margin-bottom: 2vw;
 }
 
 #groupPlaceHolder:hover {
-  display: block;
-  padding: 1rem;
-  color: white;
+display: block;
+padding: 1rem;
+color: white;
 }
 
 .adv-submit .clear-btn {
-  float: right;
-  background-color: red;
-  font-weight: bolder;
-  font-family: CustomFont;
-  font-size: 1vw;
-  text-align: center;
-  line-height: 2vw;
-  height: 3vw;
-  width: 10vw;
-  max-width: 1000vw;
-  margin-left: 1vw;
-  display:inline;
-  size: relative;
-  max-block-size: 12vw;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-radius: 5px;
-  color: white;
+float: right;
+background-color: red;
+font-weight: bolder;
+font-family: CustomFont;
+font-size: 1vw;
+text-align: center;
+line-height: 2vw;
+height: 3vw;
+width: 10vw;
+max-width: 1000vw;
+margin-left: 1vw;
+display:inline;
+size: relative;
+max-block-size: 12vw;
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+color: white;
 
 }
 .adv-submit .clear-btn:hover {
-  color: #333333;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+color: #333333;
+border-left: 2px solid white;
+border-right: 2px solid white;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
 }
 
 
 
 .sidebar.right.hidden-print{
-  font-family: "CustomFont";
-  background-color: #c1d6d2;
-  margin-top: 13vw;
+font-family: "CustomFont";
+margin-top: 3vw;
+background: linear-gradient(135deg, rgba(0, 255, 204, 0.333) , rgba(0, 255, 204, 0) );
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius: 20px;
+border:1px solid rgba(255, 255, 255, 0.18);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 /* bis hier hin */
 
 /* Die Box wo man Konto erstellen kann */
 .modal-body #lightbox-title, .back-to-login.btn.btn-link, .help-block {
-  color: white;
+color: white;
 }
 
 .form-group .btn.btn-primary{
-  font-size: medium;
+font-size: medium;
 }
 .btn.btn-primary {
-  padding: 5px;
+padding: 5px;
 }
 /* bis hier hin */
 
 
 
 .btn-primary {
-    color: #fff;
-    /*background-color: #ff3532;
-    border-color: #fc3131;*/
-    background: #333;
-   
-    font-weight: auto;
-    font-size: 150%;
-    text-align: center;
-    font-family: CustomFont2;
-    outline:none;
-    position: relative;
-    display:inline-block;
-    size: relative;
-    max-block-size: 12vw;
+  color: #fff;
+  /*background-color: #ff3532;
+  border-color: #fc3131;*/
+  background: #333;
  
-    z-index: 0;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+  font-weight: auto;
+  font-size: 150%;
+  text-align: center;
+  font-family: CustomFont2;
+  outline:none;
+  position: relative;
+  display:inline-block;
+  size: relative;
+  max-block-size: 12vw;
+
+  z-index: 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
 }
 
 .btn-primary::after{
@@ -658,9 +817,9 @@ opacity: 0;
 }
 
 @keyframes glowing {
-    0% { background-position:0 0; }
-    50% {background-position: 400% 0;  }
-    100%{background-position: 0 0;}
+  0% { background-position:0 0; }
+  50% {background-position: 400% 0;  }
+  100%{background-position: 0 0;}
 }
 
 .btn-primary:hover::before{
@@ -668,8 +827,8 @@ opacity: 1;
 }
 
 .btn-primary:active::after{
-    background:transparent;
-    outline: none;
+  background:transparent;
+  outline: none;
 }
 
 .btn-primary:active{
@@ -679,8 +838,8 @@ background: linear-gradient(45deg,#ff3131, #ff5d3e, #ff8b4b);
 }
 
 .btn.less-btn {
-  background-color: #a0d6cc;
-  color: #007bff;
+background-color: #a0d6cc;
+color: #007bff;
 }
 
 
@@ -697,882 +856,1016 @@ padding-bottom:0px;
 }
 
 #dive{
-  color: #aaa8a7;
-  font-family: "CustomFont";
-  display: block;
-  text-align:left;
-  font-size: 1.9vw;
-  position: relative;
-  height: auto;
-  width: auto;
-  padding-right: 0%;
-  margin-left: 10vw;
-  margin-top: -3vw;
+color: #aaa8a7;
+font-family: "CustomFont";
+display: block;
+text-align:left;
+font-size: 1.9vw;
+position: relative;
+height: auto;
+width: auto;
+padding-right: 0%;
+margin-left: 10vw;
+margin-top: -3vw;
 }
 
 #divContainerHeader{
-    display: inline-block;
-    margin-top: 9vw;
+  display: inline-block;
+  margin-top: 9vw;
 }
 
 
 #header1{
-    color: rgb(255, 54, 50); 
-    text-shadow:
-    0 0 40px #e1585a,  
-    0 0 50px #e1585a, 
-    0 0 1px #e1585a; 
-    margin-bottom: 0px;
-    display: inline-block;
-    position: relative;
-    font-size: 6vw;
-    margin-top: 0vw;
+  color: rgb(255, 54, 50); 
+  text-shadow:
+  0 0 40px #e1585a,  
+  0 0 50px #e1585a, 
+  0 0 1px #e1585a; 
+  margin-bottom: 0px;
+  display: inline-block;
+  position: relative;
+  font-size: 6vw;
+  margin-top: 0vw;
 }
 
 
 #header2{
-    color: #cef2ec;
-    text-shadow:
-    0 0 40px #00ffcc,  /* Erste Ebene des Schattens */
-    0 0 50px #00ffcc, /* Zweite Ebene des Schattens */
-    0 0 1px #00ffcc;
-    margin-bottom: 0px;
-    display: inline;
-    position: relative;
-    font-size: 6vw;
-    margin-top: 9vw;
+  color: #cef2ec;
+  text-shadow:
+  0 0 40px #00ffcc,  /* Erste Ebene des Schattens */
+  0 0 50px #00ffcc, /* Zweite Ebene des Schattens */
+  0 0 1px #00ffcc;
+  margin-bottom: 0px;
+  display: inline;
+  position: relative;
+  font-size: 6vw;
+  margin-top: 9vw;
 
 }
 
 /*
 .navbar-header {
 
-    @media (min-width: 1080px) {
-        margin-top: -2vw;
-    }
+  @media (min-width: 1080px) {
+      margin-top: -2vw;
+  }
 
-    @media (min-width: 1921px) {
-        margin-top: -5vw;
-    }
+  @media (min-width: 1921px) {
+      margin-top: -5vw;
+  }
 } 
 */
 
 .searchForm-query {
-    position:relative;
-    margin-left: auto;
-    margin-top: 20vw;
-    border-radius: 0;
-    font-weight: 999;
-    height: 3vw;
-    width: 40vw;
-    max-width: 1000vw;
-    display:inline;
-    size: relative;
-    max-block-size: 12vw;
-    height: auto;
-    
+  position:relative;
+  margin-left: auto;
+  margin-top: 20vw;
+  border-radius: 0;
+  font-weight: 999;
+  height: 3vw;
+  width: 40vw;
+  max-width: 1000vw;
+  display:inline;
+  size: relative;
+  max-block-size: 12vw;
+  height: auto;
+  
 }
 
 .searchForm-query #searchForm_lookfor {
-    height: 3vw;
-    width: 40vw;
-    max-width: 1000vw;
-    margin-left: 1vw;
-    font-size: 1.5vw;
-    padding-right: 28px;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+  height: 3vw;
+  width: 40vw;
+  max-width: 1000vw;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+  padding-right: 28px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
 }
 
 .form-control:hover{
-  border-color: #a0d6cc;
-  border-width: .1em;
+border-color: #a0d6cc;
+border-width: .1em;
 }
 
 .form-control:focus{
-  border-color: #58afc2;
-  border-width: .1em;
-  outline:1em;
-  -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(102, 175, 233, 0.8);
-  box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(58, 150, 220, .8)
+border-color: #58afc2;
+border-width: .1em;
+outline:1em;
+-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(102, 175, 233, 0.8);
+box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(58, 150, 220, .8)
 }
 
 
 .navbar-form .form-control {
-    display: inline-block;
-    max-width: 25vw;
-    width: 30vw;
-    vertical-align: middle;
-    size: relative;
-    max-block-size: 12vw;
-    height: 5vh;
+  display: inline-block;
+  max-width: 25vw;
+  width: 30vw;
+  vertical-align: middle;
+  size: relative;
+  max-block-size: 12vw;
+  height: 5vh;
 }
 
 #searchForm_type {
-    background-color:#a0d6cc;
-    color: black;
-    position: relative;
-    text-align: center;
-    font-size: 1.6vw;
-    margin-right: 0%;
-    height: 3vw;
-    width: 13vw;
-    display:inline;
-    size: relative;
-    font-family: CustomFont;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+  background-color:#a0d6cc;
+  color: black;
+  position: relative;
+  text-align: center;
+  font-size: 1.6vw;
+  margin-right: 0%;
+  height: 3vw;
+  width: 13vw;
+  display:inline;
+  size: relative;
+  font-family: CustomFont;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
 }
 
 
 #searchForm_type:hover{
-  color: #fff;
-  background-color: #333;
-  border-color: #adadad;
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center;
-  font-family: CustomFont;
+color: #fff;
+background-color: #333;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+font-family: CustomFont;
 }
 
 #searchForm_type:focus{
-  color: #000000;
-  background-color: #a0d6cc;
-  border-color: #adadad;
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center;
-  font-family: CustomFont;
+color: #000000;
+background-color: #a0d6cc;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+font-family: CustomFont;
 }
 
 
 .searchForm-query #searchForm-reset {
-    position: absolute;
-    right: 0.6vw;
-    top: -0.6vw;
-    width: 2vw;
-    height: 2vw;
-    border: none;
-    background-color: gray;
-    font-size: 1.4vw;
+  position: absolute;
+  right: 0.6vw;
+  top: -0.6vw;
+  width: 2vw;
+  height: 2vw;
+  border: none;
+  background-color: gray;
+  font-size: 1.4vw;
 }
 
 
 .btn-primary {
-    color: #fff;
-    /*background-color: #ff3532;*/
-    
-    background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
-    font-weight: bolder;
-    font-size: 1.9vw;
-    text-align: center;
-    line-height: 2vw;
+  color: #fff;
+  /*background-color: #ff3532;*/
+  
+  background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+  font-weight: bolder;
+  font-size: 1.9vw;
+  text-align: center;
+  line-height: 2vw;
 
-    font-family: CustomFont2;
-    height: 3vw;
-    width: 10vw;
-    max-width: 1000vw;
+  font-family: CustomFont2;
+  height: 3vw;
+  width: 10vw;
+  max-width: 1000vw;
 
-    margin-left: 1vw;
-    display:inline;
-    size: relative;
-    max-block-size: 12vw;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+  margin-left: 1vw;
+  display:inline;
+  size: relative;
+  max-block-size: 12vw;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
 
 }
 
 .icon--font {
-    display: inline-block;
-    max-width: 1.25em;
-    line-height: 1.8vw;
-    text-align: center;
-    vertical-align: top;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+  display: inline-block;
+  max-width: 1.25em;
+  line-height: 1.8vw;
+  text-align: center;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 
 .navbar-form {
-    width: 79vw;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: 0;
-    margin-left: 0;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none
+  width: 79vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 
 
-.searchForm .advanced-search-link {
-    background-color:#a0d6cc;
-    color: black;
-    position: relative;
-    text-align: center;
-    font-size: 1.7vw;
-    text-decoration: none;
-    line-height: 2vw;
-    justify-content: center;
-    align-items: center;
-    height: 3vw;
-    width: 11vw;
-    margin-left: 1vw;
-    size: relative;
-    font-family: CustomFont;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
+.searchForm .advanced-search-link,
+.searchForm .advanced-search-link:after { 
+  width: auto;
+  height: 3vw;
+  line-height: 20px;
+  font-size: 1.4vw;
+  font-family: 'CustomFont2';
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.searchForm .advanced-search-link:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.searchForm .advanced-search-link:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+  
+  /*color: white;
+  position: relative;
+  text-align: center;
+  font-size: 1.7vw;
+  text-decoration: none;
+  line-height: 2vw;
+  justify-content: center;
+  align-items: center;
+  height: 3vw;
+  width: 11vw;
+  margin-left: 1vw;
+  size: relative;
+  font-family: CustomFont;
+  /*---------------------
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.333) , rgba(0, 255, 204, 0d) );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
+
 
 
 
 .navbar-nav button.dropdown-toggle {
-    position:relative;
-    text-decoration: none;
-    color: black;
-    background-color: #a0d6cc;
-    border-radius: .1vw;
-    border-color: #fff;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    size: relative;
-    max-block-size: 12vw;
-    height: 3vw;
-    width: 8vw;
-
-    font-family: CustomFont;
-    font-size: 1.2vw;
-    display: flex; /* Aktiviert Flexbox */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
-}
-
-.advanced-search-link:hover {
-  color: #fff;
-  background-color: #333;
-  border-color: #adadad;
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center;
-}
-
-.nav>li>a {
   position:relative;
   text-decoration: none;
   color: black;
   background-color: #a0d6cc;
-  border-radius: 3px;
+  border-radius: .1vw;
   border-color: #fff;
   margin-right: 1vw;
   margin-top: 1vw;
   size: relative;
   max-block-size: 12vw;
   height: 3vw;
-  width: 10vw;
+  width: 8vw;
+
   font-family: CustomFont;
   font-size: 1.2vw;
   display: flex; /* Aktiviert Flexbox */
-  justify-content: center;  /*Zentriert den Inhalt horizontal */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
   align-items: center; /* Zentriert den Inhalt vertikal */
   border-left: 2px solid black;
   border-right: 2px solid black;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-radius: 5px;
-  padding: 15px;
+}
+
+.advanced-search-link:hover {
+color: #fff;
+background-color: #333;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+}
+
+.nav>li>a {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
 }
 
 .nav>li>a:hover {
-  background-color: #333;
-  border-left: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  color: white;
+background-color: #333;
+border-left: 2px solid #ccc;
+border-right: 2px solid #ccc;
+border-top: 2px solid #ccc;
+border-bottom: 2px solid #ccc;
+color: white;
 
 }
 
 .logo {
-    /* max-width: 300px;  Größe des Logos anpassen */
-    display: inline;
+  /* max-width: 300px;  Größe des Logos anpassen */
+  display: inline;
 }
 
 #brand{
-    position: relative;
-    width: 9vw;
-    max-width: 9vw;
-    height: auto;
-    display: inline;
+  position: relative;
+  width: 9vw;
+  max-width: 9vw;
+  height: auto;
+  display: inline;
 }
 
 /*
 #brand{
-    position: relative;
-    display: inline-block;
-    height: 9vw;
-    width: 9vw;
-    margin-left: 0vw;
-    margin-top: 0vh;
-    margin-bottom: 6vw;
+  position: relative;
+  display: inline-block;
+  height: 9vw;
+  width: 9vw;
+  margin-left: 0vw;
+  margin-top: 0vh;
+  margin-bottom: 6vw;
 }*/
 
 .container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse {
-    margin-right:0;
-    width:auto;
-    margin-left: 5vw;
+  margin-right:0;
+  width:auto;
+  margin-left: 5vw;
 }
 
 .navbar-header{    
-    margin-left: 5vw;
-    margin-bottom: 1.5vw;
-    width: 80vw;
+  margin-left: 5vw;
+  margin-bottom: 1.5vw;
+  width: 80vw;
 }
 
 .dropdown-menu{
-    background-color: #a0d6cc;
-    font-family: CustomFont; 
-    color: white;
-    font-size: 1.2vw;
+  background-color: #a0d6cc;
+  font-family: CustomFont; 
+  color: white;
+  font-size: 1.2vw;
 }
 
 .alert.alert-danger{
-    width: 54.5vw;
+  width: 54.5vw;
 }
 
 .breadcrumb{
-    width:54.5vw;
-    display:none;
+  width:54.5vw;
+  display:none;
 }
 .modal-body{
-    background: url("../images/homepage/JellyFish.gif");
-    background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
-    background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
-    background-position: center;   /* Das Bild wird zentriert */
-    background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
-    margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
-    height: fit-content;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
-    color: white;    
-    
+  background: url("../images/homepage/jellyfish-homepage.webp");
+  background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+  background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+  background-position: center;   /* Das Bild wird zentriert */
+  background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+  margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+  height: fit-content;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+  color: white;    
+  
 }
 
 /*.container{
-    margin-left: 11vw;
-    width: auto;
-    margin-top: 2vw;
+  margin-left: 11vw;
+  width: auto;
+  margin-top: 2vw;
 }*/
 
 /* SEARCH BAR_--------------------------------------------------------*/
 /* Container für das Gesamtergebnis */
 .result-body {
-    padding: 20px;
-    background-color: #c1d6d2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    /*margin-bottom: 20px; */
-  }
-  
-  /* Titelstilierung */
-  .result-body h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .result-body a.title {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .result-body a.title:hover {
-    text-decoration: underline;
-  }
-  
-  /* Alternative Titelstilierung */
-  .title-alt {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-  }
-  
-  /* Autorenstilierung */
-  .authors {
-    font-size: 1em;
-    color: #333;
-  }
-  
-  .result-author {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .result-author:hover {
-    text-decoration: underline;
-  }
-  
-  /* Container-Link-Stilierung */
-  .container-link {
-    font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .container-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Stilierung für Sammlung Links */
-  .collectionLinkText {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .collectionLinkText:hover {
-    text-decoration: underline;
-  }
-  
-  
-  /* FILTER MÖGLICHKEITEN .....................................*/
-  .facet {
-      background-color: #b7c8c4; /* Hintergrundfarbe für die Facette */
-      padding: 10px;            /* Innenabstand */
-      margin-bottom: 5px;       /* Abstand zwischen den Facetten */
-
-  }
-  
-  .top-facet-inner {
-      color: #a0d6cc; /* Textfarbe für das span-Element */
-      background-color: #a0d6cc;
-  }
-  
-  .facet-group .facet,.facet-load-indicator,.facet-load-failed {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px; 
 }
 
-  .btn.more-btn {
-      background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
-      color: #007bff; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
-  
-    }
-  
-  /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
-  .save-record {
-      color: black; /* Ihre gewünschte Textfarbe */
-      /*border-radius: 8px;  Radius der Abrundung der Ecken */
-    }
-    
-    /* Beispiel: Ändern der Farbe des Icons */
-    .save-record .icon-link__icon {
-      color: red; /* Ihre gewünschte Farbe für das Icon */
-    }
-    
-    /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
-    .save-record:hover {
-      background-color: yellow; /* Ihre gewünschte Farbe beim Hover */
-    }
-  
-  /* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
-  
-  /* Container für das <select>-Element und den Pfeil */
-  .select-container {
-      position: relative; /* Ermöglicht es, das Pfeilsymbol relativ zum Container zu positionieren */
-      display: inline-block; /* Der Container passt sich der Größe des Dropdown-Menüs an */
-      width: 300px; /* Breite des Containers, anpassen wie nötig */
-    }
-    
-      /* Stil für das <select>-Element */
-      .jumpMenu {
-        background-color: #a0d6cc; /* Hintergrundfarbe */
-        border: 1px solid #cccccc; /* Randfarbe */
-        border-radius: 4px; /* Abrundung der Ecken */
-         /* Innenabstände */
-        font-size: 1.4vw; /* Schriftgröße */
-        color: #333333; /* Textfarbe */
-        width: 100%; /* Breite auf 100% setzen */
-        box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
-        appearance: none; /* Entfernt die Standard-Stile des Browsers */
-        padding-left: 1vw;
-        padding-bottom: 0.25vw;
-      }
-    
-    /* Stil für das Pfeilsymbol */
-    .select-arrow {
-      position: absolute; /* Absolute Positionierung relativ zum Container */
-      right: 10px; /* Abstand vom rechten Rand des Containers */
-      top: 50%; /* Vertikale Zentrierung */
-      transform: translateY(-50%); /* Korrektur der vertikalen Positionierung */
-      font-size: 16px; /* Größe des Pfeils */
-      color: #333333; /* Farbe des Pfeils */
-      pointer-events: none; /* Verhindert, dass das Pfeilsymbol das Klicken blockiert */
-      user-select: none; /* Verhindert, dass der Pfeil ausgewählt wird */
-    }
-    
-    /* Optional: Stil für das Hover- und Fokus-Verhalten */
-    .jumpMenu:hover,
-    .jumpMenu:focus {
-      border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
-      outline: none; /* Entfernen des Standard-Fokus-Rahmens */
-      box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
-    }
-  
-  .breadcrumb {
-      background-color: #a0d6cc; /* Hintergrundfarbe nach Wunsch anpassen */
-  }
-  
-  /* FILTER BUTTONS ---------------------------------------------------------------------------------*/
-  
-  /* Stil für die h3-Überschrift mit der Klasse facet-title */
-  .facet-title {
-      background: hsl(166, 61%, 76%);
-      color: black;
-    }
-    
-    /* Stil für das Button-Element innerhalb der facet-title */
-    .facet-title .title {
-      color: #ffffff; /* Textfarbe des Buttons */
-      border: 1px solid black; /* Entfernt den Rand des Buttons */
-      border-radius: 4px; /* Abrundung der Ecken des Buttons */
-      padding: 8px 12px; /* Innenabstand des Buttons */
-      cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
-    }
-    
-    /* Stil für das Button-Element innerhalb der facet-title beim Hover */
-    .facet-title .title:hover {
-      border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
-      outline: none; /* Entfernen des Standard-Fokus-Rahmens */
-      box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
-    }
-    
-    /* Stil für das Button-Element innerhalb der facet-title beim Fokus */
-    .facet-title .title:focus {
-      outline: none; /* Entfernen des Fokus-Rahmens */
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
-    }
-    
-  
-  
-  /* ÜBERSCHRIFT DER SCHLAGWÖRTER ________________________________________________________________________*/
-  /* Stil für den Link mit der Klasse top-title */
-  .top-title {
-      color: #ffffff; /* Textfarbe */
-      background: linear-gradient(to right, #055296, #235e92, #4477a3);
-      text-decoration: none; /* Entfernt die Unterstreichung */
-      padding: 8px 12px; /* Innenabstand */
-      border-radius: 4px; /* Abrundung der Ecken */
-      display: inline-block; /* Macht den Link wie einen Block, damit Padding wirkt */
-    }
-    
-    /* Stil für den Link beim Hover (wenn der Benutzer darüber fährt) */
-    .top-title:hover {
-      color: #f8f9fa; /* Textfarbe beim Hover */
-  
-      border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
-      outline: none; /* Entfernen des Standard-Fokus-Rahmens */
-      box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
-    }
-    
-    /* Stil für den Link beim Fokus (wenn der Benutzer mit Tab darauf fokussiert) */
-    .top-title:focus {
-      outline: none; /* Entfernen des Standard-Fokusrahmens */
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
-    }
-  
-    
-  /* 3. SEITE WENN MAN EIN ERGEBNIS AUFMACHT AB HIER --------------------------------------------------------------------------------*/
-    
-  .media-left {
-      display: none; /* Versteckt die linke Spalte */
-    }
-  
-  @media (max-width: 767px) {
-      .record .media-left,.record .media-right {
-          display: none;
-      }
-  }
-    /* Dropdown Toggle Button */
-    .export-toggle {
-      background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
-      color: black;
-    }
-    
-    .export-toggle:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */
-      color: #ff8986;
-    }
-    
-    /* Spezielle Stile für individuelle Buttons */
-    .cite-record {
-      background-color: #a0d6cc; /* Hintergrundfarbe für Cite Button */
-      color: black;
-    }
-    
-    .cite-record:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Cite Button */
-      color: #ff8986;
-  }
-    
-    .print-record {
-      background-color: #a0d6cc; /* Hintergrundfarbe für Print Button */
-      color: black;
-    }
-    
-    .print-record:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Print Button */
-      color: #ff8986;
-    }
-    
-    
-    .addThis {
-      background-color: #a0d6cc; /* Hintergrundfarbe für AddThis Button */
-      color: black;
-    }
-    
-    .addThis:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für AddThis Button */
-      color: #ff8986;
-    }
-    
-    .permalink-record {
-      background-color: #a0d6cc; /* Hintergrundfarbe für Permalink Button */
-      color: black;
-    }
-    
-    .permalink-record:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Permalink Button */
-      color: #ff8986;
-    }
-    
-  /* Überschrift des Ergebnisses */
-  /* Medien-Container */
-  .media {
-      display: flex;
-      flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
-      gap: 20px; /* Abstand zwischen den Elementen */
-      /*padding-top: 20px;  Erhöht den oberen Abstand */
-  }
-  
-  
-  /* Rechte Spalte */
-  .media-body {
-      flex: 1;
-      width: 100%;
-  }
-  
-   /* Überschrift */
-   .media-body h1 {
-    font-size: 2rem; /* Verwendet relative Einheiten */
-    font-weight: 100;
-    font-family: 'CUSTOMFONT';
-    color: #007bff;
-    border-radius: 4px;
-    word-wrap: break-word;
-    margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
-    background: linear-gradient(to right, #b7c8c4, #c1d6d2);
-    padding: 10px; /* Abstand innerhalb des Kastens */
-    border-radius: 8px; /* Abgerundete Ecken */
-    display:inline-block;
-    border-left:3px solid black ;
-    border-right:3px solid black ;
-    border-top:3px solid black ;
-    border-bottom:3px solid black ;
-
-    width:75vw; 
+/* Titelstilierung */
+.result-body h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
-  
-  /* ERGEBNISSTABELLE ---------------------------------------------------*/
-  /* Tabelle selbst */
-  .table {
-      width: 100%; /* Breite der Tabelle */
-      border-collapse: collapse; /* Zusammenfallende Ränder */
-      margin-bottom: 1rem; /* Abstand nach unten */
-      margin-top: 20px; /* Abstand oben zur Überschrift (kann angepasst werden) */
-  }
-  
-  /* Tabellenkopf */
-  .table thead th {
-      background-color: #007bff; /* Hintergrundfarbe des Tabellenkopfs */
-      color: black; /* Textfarbe des Tabellenkopfs */
-      padding: 0.75rem; /* Innenabstand */
-      text-align: left; /* Textausrichtung */
-  }
-  
-  /* Tabellenkörper */
-  .table tbody td {
-      padding: 0.75rem; /* Innenabstand */
-      border-bottom: 1px solid black; /* Unterer Rand der Zellen */
+
+.result-body a.title {
+  color: white;
+  text-decoration: none;
+}
+
+.result-body a.title:hover {
+  text-decoration: underline;
+}
+
+/* Alternative Titelstilierung */
+.title-alt {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Autorenstilierung */
+.authors {
+  font-size: 1em;
+  color: gray;
+}
+
+.result-author {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-body .author {
+  color: grey;
+}
+
+
+.result-author:hover {
+  text-decoration: underline;
+}
+
+/* Container-Link-Stilierung */
+.container-link {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container-link:hover {
+  text-decoration: underline;
+}
+
+/* Stilierung für Sammlung Links */
+.collectionLinkText {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.collectionLinkText:hover {
+  text-decoration: underline;
+}
+
+
+/* FILTER MÖGLICHKEITEN .....................................*/
+.facet {
+    background-color: #b7c8c4; /* Hintergrundfarbe für die Facette */
+    padding: 10px;            /* Innenabstand */
+    margin-bottom: 5px;       /* Abstand zwischen den Facetten */
+
+}
+
+.top-facet-inner {
+    color: #a0d6cc; /* Textfarbe für das span-Element */
+    background-color: #a0d6cc;
+}
+
+.facet-group .facet,.facet-load-indicator,.facet-load-failed {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn.more-btn {
+    background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
+    color: #007bff; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
+
   }
 
-  .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+/* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
+.save-record {
+  color: #007bff; /* Ihre gewünschte Textfarbe */
+  /*border-radius: 8px;  Radius der Abrundung der Ecken */
 }
   
-  /* Gestreifte Zeilen */
-  .table-striped tbody tr:nth-of-type(odd) {
-      background-color: #a0e2d6; /* Hintergrundfarbe für jede ungerade Zeile */
-      color: black;
+  /* Beispiel: Ändern der Farbe des Icons */
+  .save-record .icon-link__icon {
+    color: red; /* Ihre gewünschte Farbe für das Icon */
   }
   
-  .table-striped tbody tr:nth-of-type(even) {
-      background-color: #abb9d1; /* Hintergrundfarbe für jede gerade Zeile */
-      color: black;
+  /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
+  .save-record:hover {
+    background-color: yellow; /* Ihre gewünschte Farbe beim Hover */
+  }
+
+/* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
+
+/* Container für das <select>-Element und den Pfeil */
+.select-container {
+    position: relative; /* Ermöglicht es, das Pfeilsymbol relativ zum Container zu positionieren */
+    display: inline-block; /* Der Container passt sich der Größe des Dropdown-Menüs an */
+    width: 300px; /* Breite des Containers, anpassen wie nötig */
   }
   
-  /* Alternativer Hintergrund für Tabellenzeilen */
-  .table tbody tr:hover {
-      background-color: #9e9e9e; /* Hintergrundfarbe beim Hover-Effekt */
+    /* Stil für das <select>-Element */
+    .jumpMenu {
+
+       /* Innenabstände */
+      font-size: 1.4vw; /* Schriftgröße */
+      color: white; /* Textfarbe */
+      width: 100%; /* Breite auf 100% setzen */
+      box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
+      appearance: none; /* Entfernt die Standard-Stile des Browsers */
+      padding-left: 1vw;
+      padding-bottom: 0.25vw;
+      /*---*/
+      background: rgba(0, 255, 204, 0.333) ;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border:1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+  
+  /* Stil für das Pfeilsymbol */
+  .select-arrow {
+    position: absolute; /* Absolute Positionierung relativ zum Container */
+    right: 10px; /* Abstand vom rechten Rand des Containers */
+    top: 50%; /* Vertikale Zentrierung */
+    transform: translateY(-50%); /* Korrektur der vertikalen Positionierung */
+    font-size: 16px; /* Größe des Pfeils */
+    color: #333333; /* Farbe des Pfeils */
+    pointer-events: none; /* Verhindert, dass das Pfeilsymbol das Klicken blockiert */
+    user-select: none; /* Verhindert, dass der Pfeil ausgewählt wird */
   }
   
-  /* Rahmen um die Tabelle */
-  .table-bordered {
-      border: 1px solid #dee2e6; /* Rahmenfarbe */
+  /* Optional: Stil für das Hover- und Fokus-Verhalten */
+  .jumpMenu:hover,
+  .jumpMenu:focus {
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
   }
-  
-  .table-bordered th,
-  .table-bordered td {
-      border: 1px solid #dee2e6; /* Rahmenfarbe für Kopfzeilen und Zellen */
-  }
-  
-  /* ÄHNLICHE RECORDS FÜR DAS WERK ________________________________________________________________*/
-  
-  
-  
-  /* Stil für die Liste der ähnlichen Datensätze */
-  .list-group {
-      list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
-      padding: 0; /* Entfernt die Standard-Padding */
-      margin: 0; /* Entfernt die Standard-Margin */
-      margin-bottom: 5px;
-  }
-  
-   /* Stil für jede Listeneinheit */
-   .list-group-item {
-    border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
-    border-radius: 4px; /* Abgerundete Ecken */
-    background-color: #b7c8c4; /* Hintergrundfarbe der Listeneinträge */
-    padding: 10px; /* Innenabstand */
-    margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
-    margin-right: 5px;
-    margin-left: 5px;
-    /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
+
+.breadcrumb {
+    background-color: #a0d6cc; /* Hintergrundfarbe nach Wunsch anpassen */
+}
+
+/* FILTER BUTTONS ---------------------------------------------------------------------------------*/
+
+/* Stil für die h3-Überschrift mit der Klasse facet-title */
+.facet-title {
+    background: hsl(166, 61%, 76%);
+    width: 99%;
     color: black;
-    border-color: black;
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title */
+  .facet-title .title {
+    color: #ffffff; /* Textfarbe des Buttons */
+    border: 1px solid black; /* Entfernt den Rand des Buttons */
+    border-radius: 4px; /* Abrundung der Ecken des Buttons */
+    padding: 8px 12px; /* Innenabstand des Buttons */
+    cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title beim Hover */
+  .facet-title .title:hover {
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
+  }
+  
+  /* Stil für das Button-Element innerhalb der facet-title beim Fokus */
+  .facet-title .title:focus {
+    outline: none; /* Entfernen des Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
+  }
+  
+
+
+/* ÜBERSCHRIFT DER SCHLAGWÖRTER ________________________________________________________________________*/
+/* Stil für den Link mit der Klasse top-title */
+.top-title {
+    color: #ffffff; /* Textfarbe */
+    background: linear-gradient(to right, #055296, #235e92, #4477a3);
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    padding: 8px 12px; /* Innenabstand */
+    border-radius: 4px; /* Abrundung der Ecken */
+    display: inline-block; /* Macht den Link wie einen Block, damit Padding wirkt */
+  }
+  
+  /* Stil für den Link beim Hover (wenn der Benutzer darüber fährt) */
+  .top-title:hover {
+    color: #f8f9fa; /* Textfarbe beim Hover */
+
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
+  }
+  
+  /* Stil für den Link beim Fokus (wenn der Benutzer mit Tab darauf fokussiert) */
+  .top-title:focus {
+    outline: none; /* Entfernen des Standard-Fokusrahmens */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
+  }
+
+  
+/* 3. SEITE WENN MAN EIN ERGEBNIS AUFMACHT AB HIER --------------------------------------------------------------------------------*/
+  
+.media-left {
+    display: none; /* Versteckt die linke Spalte */
+  }
+
+@media (max-width: 767px) {
+    .record .media-left,.record .media-right {
+        display: none;
+    }
+}
+  /* Dropdown Toggle Button */
+  .export-toggle {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
+    color: black;
+  }
+  
+  .export-toggle:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */
+    color: #ff8986;
+  }
+  
+  /* Spezielle Stile für individuelle Buttons */
+  .cite-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Cite Button */
+    color: black;
+  }
+  
+  .cite-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Cite Button */
+    color: #ff8986;
 }
   
-  /* Hover-Effekt für Listeneinträge */
-  .list-group-item:hover {
-      background-color: #a0d6cc; /* Hintergrundfarbe beim Hover */
-      border-color: #007bff; /* Rahmenfarbe beim Hover */
+  .print-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Print Button */
+    color: black;
   }
   
-  /* Stil für die Titel in der Liste */
-  .related__title {
-      font-size: 1.2rem; /* Größe der Titel */
-      color: #007bff; /* Farbe der Titel */
-      text-decoration: none; /* Entfernt die Unterstreichung */
-  }
-  
-  /* Hover-Effekt für die Titel */
-  .related__title:hover {
-      text-decoration: underline; /* Unterstreichung beim Hover */
-  }
-  
-  /* Stil für die Icons innerhalb der Listeneinträge */
-  .related__icon {
-      margin-right: 10px; /* Abstand rechts vom Icon */
-      vertical-align: middle; /* Vertikale Ausrichtung des Icons */
-  }
-  
-  /* Stil für zusätzliche Informationen wie Autoren und Veröffentlichungsdaten */
-  .list-group-item br {
-      display: block; /* Zeigt den Zeilenumbruch als Blockelement an */
-      margin-top: 5px; /* Abstand oberhalb des Zeilenumbruchs */
-  }
-  
-  /* DIE TABS UNTEN ALLE ----------------*/
-  /* Farben für Links innerhalb des tab-content Containers */
-  .tab-content a {
-      /*color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
-      text-decoration: none; /* Optional: Entfernt die Unterstreichung der Links */
-  }
-  
-  .tab-content a:hover {
-      color: #0056b3; /* Farbe der Links beim Hover-Effekt (optional) */
-      text-decoration: underline; /* Optional: Unterstreicht den Link beim Hover-Effekt */
+  .print-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Print Button */
+    color: #ff8986;
   }
   
   
-  /* Verstecke das Bild */
-  .record-cover-link img {
-      display: none; /* Versteckt das Bild */
+  .addThis {
+    background-color: #a0d6cc; /* Hintergrundfarbe für AddThis Button */
+    color: black;
   }
+  
+  .addThis:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für AddThis Button */
+    color: #ff8986;
+  }
+  
+  .permalink-record {
+    background-color: #a0d6cc; /* Hintergrundfarbe für Permalink Button */
+    color: black;
+  }
+  
+  .permalink-record:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Permalink Button */
+    color: #ff8986;
+  }
+  
+/* Überschrift des Ergebnisses */
+/* Medien-Container */
+.media {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
+    gap: 20px; /* Abstand zwischen den Elementen */
+    /*padding-top: 20px;  Erhöht den oberen Abstand */
+}
+
+
+/* Rechte Spalte */
+.media-body {
+    flex: 1;
+    width: 100%;
+}
+
+ /* Überschrift */
+ .media-body h1 {
+  font-size: 2rem; /* Verwendet relative Einheiten */
+  font-weight: 100;
+  font-family: 'CUSTOMFONT';
+  color: #007bff;
+  border-radius: 4px;
+  word-wrap: break-word;
+  margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
+  background: linear-gradient(to right, #b7c8c4, #c1d6d2);
+  padding: 10px; /* Abstand innerhalb des Kastens */
+  border-radius: 8px; /* Abgerundete Ecken */
+  display:inline-block;
+  border-left:3px solid black ;
+  border-right:3px solid black ;
+  border-top:3px solid black ;
+  border-bottom:3px solid black ;
+}
+
+/* ERGEBNISSTABELLE ---------------------------------------------------*/
+/* Tabelle selbst */
+.table {
+    width: 100%; /* Breite der Tabelle */
+    border-collapse: collapse; /* Zusammenfallende Ränder */
+    margin-bottom: 1rem; /* Abstand nach unten */
+    margin-top: 20px; /* Abstand oben zur Überschrift (kann angepasst werden) */
+}
+
+/* Tabellenkopf */
+.table thead th {
+    background-color: #007bff; /* Hintergrundfarbe des Tabellenkopfs */
+    color: black; /* Textfarbe des Tabellenkopfs */
+    padding: 0.75rem; /* Innenabstand */
+    text-align: left; /* Textausrichtung */
+}
+
+/* Tabellenkörper */
+.table tbody td {
+    padding: 0.75rem; /* Innenabstand */
+    border-bottom: 1px solid black; /* Unterer Rand der Zellen */
+}
+
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* Gestreifte Zeilen */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #a0e2d6; /* Hintergrundfarbe für jede ungerade Zeile */
+    color: black;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #abb9d1; /* Hintergrundfarbe für jede gerade Zeile */
+    color: black;
+}
+
+/* Alternativer Hintergrund für Tabellenzeilen */
+.table tbody tr:hover {
+    background-color: #9e9e9e; /* Hintergrundfarbe beim Hover-Effekt */
+}
+
+/* Rahmen um die Tabelle */
+.table-bordered {
+    border: 1px solid #dee2e6; /* Rahmenfarbe */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6; /* Rahmenfarbe für Kopfzeilen und Zellen */
+}
+
+/* ÄHNLICHE RECORDS FÜR DAS WERK ________________________________________________________________*/
+
+
+
+/* Stil für die Liste der ähnlichen Datensätze */
+.list-group {
+    list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+    padding: 0; /* Entfernt die Standard-Padding */
+    margin: 0; /* Entfernt die Standard-Margin */
+    margin-bottom: 5px;
+}
+
+ /* Stil für jede Listeneinheit */
+ .list-group-item {
+  border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
+  border-radius: 4px; /* Abgerundete Ecken */
+  background-color: #b7c8c4; /* Hintergrundfarbe der Listeneinträge */
+  padding: 10px; /* Innenabstand */
+  margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
+  margin-right: 5px;
+  margin-left: 5px;
+  /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
+  color: black;
+  border-color: black;
+}
+
+/* Hover-Effekt für Listeneinträge */
+.list-group-item:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe beim Hover */
+    border-color: #007bff; /* Rahmenfarbe beim Hover */
+}
+
+/* Stil für die Titel in der Liste */
+.related__title {
+    font-size: 1.2rem; /* Größe der Titel */
+    color: #007bff; /* Farbe der Titel */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+/* Hover-Effekt für die Titel */
+.related__title:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Stil für die Icons innerhalb der Listeneinträge */
+.related__icon {
+    margin-right: 10px; /* Abstand rechts vom Icon */
+    vertical-align: middle; /* Vertikale Ausrichtung des Icons */
+}
+
+/* Stil für zusätzliche Informationen wie Autoren und Veröffentlichungsdaten */
+.list-group-item br {
+    display: block; /* Zeigt den Zeilenumbruch als Blockelement an */
+    margin-top: 5px; /* Abstand oberhalb des Zeilenumbruchs */
+}
+
+/* DIE TABS UNTEN ALLE ----------------*/
+/* Farben für Links innerhalb des tab-content Containers */
+.tab-content a {
+    /*color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
+    text-decoration: none; /* Optional: Entfernt die Unterstreichung der Links */
+}
+
+.tab-content a:hover {
+    color: #0056b3; /* Farbe der Links beim Hover-Effekt (optional) */
+    text-decoration: underline; /* Optional: Unterstreicht den Link beim Hover-Effekt */
+}
+
+
+/* Verstecke das Bild */
+.record-cover-link img {
+    display: none; /* Versteckt das Bild */
+}
 
 /* Versteckt die Sektion "Ähnliche Einträge" */
-  #record-tab-similar {
-    display: none;
+#record-tab-similar {
+  display: none;
 }
 
-/* Versteckt die Sektion "Kommentare" */
-  #record-tab-usercomments {
-    display:none;
-  }
 
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
 .tab-content>.active {
-  display: block;
-  background-color: #acc1e2;
+display: block;
+background-color: #acc1e2;
 }
 
 .tab-pane.toc-tab.active strong {
-  color: darkred; /* Farbe für "Inhaltsangabe:" */
+color: darkred; /* Farbe für "Inhaltsangabe:" */
 }
 
 .tab-pane.toc-tab.active .toc li {
-  color: black; /* Farbe für den Text innerhalb der Liste */
+color: black; /* Farbe für den Text innerhalb der Liste */
 }
 
 
 /* Hintergrundfarbe für den Header */
 .header-background {
-  background-color: red; /* Beispiel: helles Grün */
-  padding: 10px; /* Optional: Abstand um den Inhalt */
-  color: white; /* Textfarbe für den Inhalt */
+background-color: red; /* Beispiel: helles Grün */
+padding: 10px; /* Optional: Abstand um den Inhalt */
+color: white; /* Textfarbe für den Inhalt */
 }
 
 /* Optional: Link- und Textfarbe innerhalb des Headers anpassen */
 .header-background a {
-  color: inherit; /* Vererbt die Textfarbe (weiß) */
+color: inherit; /* Vererbt die Textfarbe (weiß) */
 }
 
 .header-background h1 {
-  margin: 0; /* Entfernt den Standard-Abstand */
-  display: inline-block; /* Stellt sicher, dass die Überschriften nebeneinander stehen */
+margin: 0; /* Entfernt den Standard-Abstand */
+display: inline-block; /* Stellt sicher, dass die Überschriften nebeneinander stehen */
 }
 
 #side-panel-institution {
-  display:none;
+display:none;
 }
 
 #side-panel-building {
-  display: none;
+display: none;
+}
+
+.searchtools {
+display: none;
+}
+
+#make-list {
+font-weight: 400;
+color: #12538B;
+border-radius: 0;
+background-color: rgb(174, 174, 174);
+border-radius: 1vw;
+margin-top: 1vw;
+text-decoration: underline;
+}
+
+#make-list:hover {
+color: white;
+}
+
+/* filter reset button search page */
+.reset-filters-btn {
+  flex: none;
+  background-color: #333;
+  color: white;
+}
+
+.reset-filters-btn:hover {
+  background-color: gray;
+  color: black;
 }
