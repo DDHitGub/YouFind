@@ -4,6 +4,8 @@ $bodyClass = '';
 
 if (strpos($currentUrl, '/vufind/Search/History') !== false) {
     $bodyClass = 'acc-search-history-page';
+} elseif (strpos($currentUrl, '/vufind/Search/Advanced') !== false) {
+    $bodyClass = 'advanced-search';
 } elseif (strpos($currentUrl, '/vufind/Author/') !== false) {
     $bodyClass = 'author-page';
 } elseif (strpos($currentUrl, '/vufind/Record/') !== false) {
