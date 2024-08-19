@@ -1263,7 +1263,16 @@ font-family: CustomFont;
 
 
 
+/* Export-Button*/
+input.btn.btn-primary{
+width: 35vw;
+}
 
+
+/* Zum Clipboard kopieren*/
+#copyToClipboard1{
+width: 40vw;
+}
 
 
 
