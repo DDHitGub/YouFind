@@ -1,0 +1,170 @@
+<?php
+  $this->metadata()->generateMetatags($this->driver);
+?>
+<div class="media" vocab="http://schema.org/" resource="#record" typeof="<?=$this->driver->getSchemaOrgFormats()?> Product">
+  <?php
+    $QRCode = $this->record($this->driver)->getQRCode('core');
+    $coverDetails = $this->record($this->driver)->getCoverDetails('core', 'medium', $this->record($this->driver)->getThumbnail('large'));
+    $cover = $coverDetails['html'];
+    $preview = ($this->previewOverride ?? false)
+      ? $this->previewOverride : $this->record($this->driver)->getPreviews();
+    $rating = $this->driver->isRatingAllowed();
+  ?>
+  <?php if ($QRCode || $cover || $preview || $rating): ?>
+    <div class="media-left <?=$this->escapeHtmlAttr($coverDetails['size'])?> img-col">
+      <?php /* Display thumbnail if appropriate: */ ?>
+      <?php if ($cover): ?>
+        <?=$cover?>
+      <?php endif; ?>
+
+      <?php /* Display qrcode if appropriate: */ ?>
+      <?php if ($QRCode): ?>
+        <span class="hidden-xs">
+          <br><img alt="<?=$this->transEscAttr('QR Code')?>" class="qrcode" src="<?=$this->escapeHtmlAttr($QRCode);?>">
+        </span>
+      <?php endif; ?>
+
+      <?php /* Display rating if enabled: */ ?>
+      <?php if ($rating): ?>
+        <?=$this->record($this->driver)->renderTemplate('rating.phtml')?>
+      <?php endif; ?>
+
+      <?php // if you have a preview tab but want to move or remove the preview link
+         // from this area of the record view, this can be split into
+         // getPreviewData() (should stay here) and
+         // getPreviewLink() (can go in your desired tab) ?>
+      <?php if ($preview): ?>
+        <div class="record-previews">
+          <?=$preview?>
+        </div>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
+  <div class="media-body">
+
+    <h1 property="name"><?=$this->escapeHtml($this->driver->getShortTitle() . ' ' . $this->driver->getSubtitle() . ' ' . $this->driver->getTitleSection())?></h1>
+
+    <nav class="record-nav" aria-label="<?=$this->transEscAttr('ajaxview_label_tools'); ?>">
+  <ul class="action-toolbar">
+    <?php if (count($this->driver->getCitationFormats()) > 0): ?>
+      <li role="none">
+        <a class="cite-record toolbar-btn" data-lightbox href="<?=$this->escapeHtmlAttr($this->recordLinker()->getActionUrl($this->driver, 'Cite'))?>" rel="nofollow">
+          <?=$this->icon('cite') ?>
+          <?=$this->transEsc('Cite this')?>
+        </a>
+      </li>
+    <?php endif; ?>
+
+    <li>
+      <a class="print-record toolbar-btn" href="<?=$this->url()->addQueryParameters(['print' => true])?>" rel="nofollow">
+        <?=$this->icon('print') ?>
+        <?=$this->transEsc('Print')?>
+      </a>
+    </li>
+
+    <?php $exportFormats = $this->export()->getFormatsForRecord($this->driver); ?>
+    <?php if (count($exportFormats) > 0): ?>
+      <li role="none" class="dropdown">
+        <a class="export-toggle toolbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="<?=$this->escapeHtmlAttr($this->recordLinker()->getActionUrl($this->driver, 'Export', [], '', ['excludeSearchId' => true]))?>" rel="nofollow" aria-expanded="false" aria-controls="export-options">
+          <?=$this->icon('export') ?>
+          <?=$this->transEsc('Export Record') ?>
+        </a>
+        <ul class="dropdown-menu" id="export-options" role="menu">
+          <?php foreach ($exportFormats as $exportFormat): ?>
+            <li role="none">
+              <a <?php if ($this->export()->needsRedirect($exportFormat)): ?>target="<?=$this->escapeHtmlAttr($exportFormat)?>Main" <?php endif; ?>href="<?=$this->escapeHtmlAttr($this->recordLinker()->getActionUrl($this->driver, 'Export', [], '', ['excludeSearchId' => true]))?>?style=<?=$this->escapeHtmlAttr($exportFormat)?>" rel="nofollow" role="menuitem">
+                <?=$this->transEsc('export_to', ['%%target%%' => $this->translate($this->export()->getLabelForFormat($exportFormat))])?>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </li>
+    <?php endif; ?>
+
+    <?php if ($this->userlist()->getMode() !== 'disabled'): ?>
+      <li role="none">
+        <?php if ($this->permission()->allowDisplay('feature.Favorites')): ?>
+          <a class="save-record toolbar-btn" data-lightbox href="<?=$this->escapeHtmlAttr($this->recordLinker()->getActionUrl($this->driver, 'Save'))?>" rel="nofollow">
+            <?=$this->icon('user-favorites') ?>
+            <?=$this->transEsc('Add to favorites')?>
+          </a>
+        <?php elseif ($block = $this->permission()->getAlternateContent('feature.Favorites')): ?>
+          <?=$block ?>
+        <?php endif; ?>
+      </li>
+    <?php endif; ?>
+    <?php if (!empty($addThis)): ?>
+      <li role="none">
+        <a class="addThis addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=<?=urlencode($addThis)?>">
+          <?=$this->icon('addthis-bookmark') ?>
+          <?=$this->transEsc('Bookmark')?>
+        </a>
+      </li>
+    <?php endif; ?>
+
+    <?php if ($this->cart()->isActive()): ?>
+      <li>
+        <?=$this->render('record/cart-buttons.phtml', ['id' => $this->driver->getUniqueId(), 'source' => $this->driver->getSourceIdentifier()]); ?>
+      </li>
+    <?php endif; ?>
+
+    <li role="none">
+      <a class="permalink-record toolbar-btn" data-lightbox href="<?=$this->escapeHtmlAttr($this->recordLinker()->getActionUrl($this->driver, 'Permalink'))?>" rel="nofollow">
+        <?=$this->icon('external-link') ?>
+        <?=$this->transEsc('permanent_link')?>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+    <?php if ($this->driver->getExtraDetail('cached_record') && !$this->translationEmpty('cached_record_warning')): ?>
+      <div class="alert alert-warning">
+        <?=$this->transEsc('cached_record_warning')?>
+      </div>
+    <?php endif; ?>
+
+    <?php foreach ($this->driver->tryMethod('getFullTitlesAltScript', [], []) as $altTitle): ?>
+      <div class="title-alt">
+        <?=$this->escapeHtml($altTitle)?>
+      </div>
+    <?php endforeach; ?>
+
+    <?php if (!empty($this->extraControls)): ?>
+      <?=$this->extraControls['actionControls'] ?? ''?>
+      <?=$this->extraControls['availabilityInfo'] ?? ''?>
+    <?php endif; ?>
+
+    <?php if ($this->searchOptions($this->driver->getSourceIdentifier())->getVersionsAction()): ?>
+      <?=$this->record($this->driver)->renderTemplate('versions-link.phtml')?>
+    <?php endif; ?>
+
+    <?php $summary = $this->driver->getSummary(); ?>
+    <?php if ($summary = isset($summary[0]) ? $this->escapeHtml($summary[0]) : false): ?>
+      <p><?=$this->truncate($summary, 300)?></p>
+
+      <?php if (strlen($summary) > 300): ?>
+        <p><a href="<?=$this->escapeHtmlAttr($this->recordLinker()->getTabUrl($this->driver, 'Description'))?>#tabnav"><?=$this->transEsc('Full description')?></a></p>
+      <?php endif; ?>
+    <?php endif; ?>
+
+    <?php if ($this->userlist()->getMode() !== 'disabled'): ?>
+      <?php /* Display the lists that this record is saved to */ ?>
+      <div class="savedLists">
+        <strong><?=$this->transEsc('Saved in')?>:</strong>
+      </div>
+    <?php endif; ?>
+
+    <?php /* Display Main Details */ ?>
+    <?=
+      $this->record($this->driver)->renderTemplate(
+          'core-fields.phtml',
+          [
+            'driver' => $this->driver,
+            'defaults' => 'core',
+          ]
+      );
+    ?>
+    <?php /* End Main Details */ ?>
+  </div>
+</div>

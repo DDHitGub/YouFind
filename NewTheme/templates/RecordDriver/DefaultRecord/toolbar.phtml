@@ -1,0 +1,6 @@
+<?php
+  $addThis = $this->addThis();
+  if (!empty($addThis)) {
+    $this->headScript()->appendFile('https://s7.addthis.com/js/250/addthis_widget.js?pub=' . urlencode($addThis));
+  }
+?>

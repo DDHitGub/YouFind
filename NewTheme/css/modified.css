@@ -1,0 +1,2221 @@
+@font-face {
+  font-family: 'CustomFont'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Jaturat.ttf") format('truetype');
+  font-weight: normal; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
+
+@font-face {
+  font-family: 'CustomFont2'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Black\ Ops\ One\ Regular.ttf") format('truetype');
+  font-weight: 900; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
+
+@font-face {
+  font-family: 'CustomFont3'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Orbitron/Orbitron-VariableFont_wght.ttf") format('truetype');
+  font-weight: 900; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
+
+/* IM FOLGENDEN STARTSEITE(homepage), LISTE(search-page), ERGEBNIS(result-page), TAG-SEITE(tag-page)
+und eine ACCOUNT-Seite(account-page) (wenn man auf ihr konto oben rechts klickt).
+Diese Unterteilung wurde gemacht um innerhalb dieser Seiten spezielle Änderungen vornehmen zu können.
+Für Funktionsweise siehe Layouts/layout.phtml, erste if-clause mit url-filter. */
+
+/* Startseite */
+body.homepage {
+background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
+background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+
+.active-filters .filters-toggle {
+  display: none;
+}
+.reset-filters-btn {
+  display: none;
+}
+.active-filters .filters .title-value-pair {
+  display: none; }
+
+/* wenn man eingeloggt ist soll hier nix erscheinen, dass regelt die seite body.account-page */
+.mainbody.left {
+  display: none;
+}
+.sidebar.right.hidden-print {
+  display: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  color:white;
+}
+}
+
+
+
+/* 2. Seite der Liste mit Ergebnissen */
+body.search-page {
+background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover;
+background-repeat: no-repeat;
+
+
+
+#divContainerHeader{
+display: inline-block;
+margin-top: 0vw;
+}
+
+.active-filters .filters .filter-value {
+display: inline-block;
+margin-block:5px;padding: 2px 8px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+text-decoration: none;
+background: rgb(69, 69, 69);
+}
+
+.search-stats h2{
+  color: white;
+}
+
+
+}
+
+
+
+
+
+/* ADVANCED   SEARCH   PAGE*/
+body.advanced-search{
+
+  background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover;
+background-repeat: no-repeat;
+
+#divContainerHeader{
+display: inline-block;
+margin-top: 0vw;
+}
+.active-filters .filters .filter-value {
+display: inline-block;
+margin-block:5px;padding: 2px 8px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+text-decoration: none;
+background: rgb(69, 69, 69);
+}
+
+.search-stats h2{
+  color: white;
+}
+
+.result-body div {
+  color: white;
+}
+
+
+
+  .mainbody.left{
+    background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+
+  }
+}
+
+
+
+/* 3. Seite des einen Ergebnisses */
+body.record-page {
+background-image: url("../images/homepage/jellyfish-homepage.webp");
+background-size: cover;
+background-repeat: no-repeat;
+
+.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse {
+margin-right:0;
+width: auto;
+margin-left:0;
+}
+#divContainerHeader{
+display: inline-block;
+margin-top: 0vw;
+}
+.active-filters .filters .filter-value {
+display: inline-block;
+margin-block:5px;padding: 2px 8px;
+font-weight: 600;
+color: #fff;
+white-space: nowrap;
+text-decoration: none;
+background: rgb(69, 69, 69);
+}
+
+/* Holding Exemplare wegmachen */
+#record-tab-holdings{
+display:none;
+}
+
+
+
+
+.logoutOptions .logout {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
+
+
+border: 1px solid #0360df;
+  
+background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;
+}
+
+.logoutOptions .icon-link {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
+
+
+border: 1px solid #0360df;
+  
+background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;
+}
+
+/* War die version davor, für den fall dass der login button bei der record-page 
+crashen sollte weil man was geändert hat oder so
+.nav>li>a {
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 2vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 8vw;
+font-family: CustomFont;
+font-size: 1.4vw;
+display: inline;
+justify-content: center; /* Zentriert den Inhalt horizontal 
+align-items: center; /* Zentriert den Inhalt vertikal 
+} */
+
+
+
+.nav-tabs {
+border-bottom: none;
+}
+
+/* Für die Tabs Example, Beschreibung, Inhaltsangabe */
+.tab-content>.active {
+display: block;
+background-color: transparent;
+margin-top: 1.5vw;
+}
+
+.nav-tabs>li {
+float: left;
+/* margin-bottom:-1px; */
+margin-left: 1vw;
+font-size: 16px;
+}
+
+.record .media-body,.result .media-body {
+flex: 1;
+width: unset;
+overflow: visible;
+margin-bottom: 2vw;
+}
+.tab-content {
+padding: 4px;
+margin-left: 1vw;
+}
+
+#loginOptions .icon-link {
+position:relative;
+text-decoration: none;
+color: black;
+background-color: #a0d6cc;
+border-radius: 3px;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
+
+
+border: 1px solid #0360df;
+  
+background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;
+}
+
+#loginOptions .icon-link:hover {
+background-color: #333;
+color: white;
+border-left: 1px solid white;
+border-right: 1px solid white;
+border-top: 1px solid white;
+border-bottom: 1px solid white;
+}
+
+
+/* Wenn man eingeloggt ist: */
+.nav .navbar-nav .navbar-right.flip {
+margin-top: -3vw;
+}
+
+
+/* Suchleiste */
+.search.container.navbar {
+background-color: transparent;
+padding: 10px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+display: none;
+align-items: center; /* Vertikale Ausrichtung */
+overflow: hidden; /* Verhindert das Überlaufen des Inhalts */
+transform: scale(0.6);
+transform-origin: left;
+}
+
+.btn.btn-primary {
+padding: 5px;
+width: auto;
+font-size: 1.3vw;
+}
+.comment-name {
+color: black;
+margin-top: 1vw;
+margin-left: 1vw;
+}
+.comment-text {
+color: black;
+margin-top: 1vw;
+}
+.comment-label {
+color: black;
+margin-top: 1vw;
+margin-left: 1vw;
+}
+.comment-form .text-form {
+width: 100%;
+margin-top: 1vw;
+margin-right: 1vw;
+}
+
+}
+
+/* 4. Seite tag-page wo tag-ergebnisse gezeigt werden*/
+.tag-page {
+
+background-image: url('../images/searchpage/searchpage_orig.jpg');
+
+.search.container.navbar {
+display:none;
+}
+
+#divContainerHeader{
+display: inline-block;
+margin-top: 2vw;
+}
+
+.mainbody.left{
+margin-top:3vw;
+width: 100%;
+}
+
+.navbar-form {
+display:none;
+}
+
+}
+
+/* 5. Seite die erscheint wenn man auf ihr Konto klickt.
+Account-page  url mit MyResearch*/
+
+body.account-page {
+background-image: url('../images/homepage/jellyfish-homepage.webp');
+
+
+/* es hat nochmal ein h2, hier nur für account-page*/
+h2 {
+  color: white;
+}
+h3 {
+  color: white;
+}
+h4 {
+  color: black;
+}
+#divContainerHeader{
+  display: inline-block;
+  margin-top: 0vw;
+  }
+.btn-default,.search-filter-toggle {
+  color: #333;
+  background-color: #a0e2d6;
+  border-color: #ccc;
+}
+.btn-default:hover, .search-filter-toggle:hover {
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  color: white;
+  background-color:#333 ;
+  }
+  .search-controls .btn.icon-link {
+    display: inline-block;
+    padding: 1rem;
+    color: #12538B;
+    border: 1px solid black; /* Grüner Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+    width: auto;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+  }
+  .search-controls .btn.icon-link:hover {
+    color: black; 
+  }
+
+  .last {
+    color: black;
+  }
+  .resultItemLine2 {
+    color: white;
+  }
+  .result .title {
+    font-weight: bold;
+    color: white;
+  }
+  .result .title:hover {
+    text-decoration: underline;
+  }
+  b,strong {
+    color: white;
+    font-weight: normal;
+}
+  .toolbar-btn {
+    background: rgb(226, 66, 66);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+    /*background-color: #c1d6d2;
+    border: 1px solid #ddd;
+    border-radius: 5px;*/
+    margin-bottom: 20px;
+    color: white;
+    width: auto;
+  }
+  .toolbar-btn:hover {
+    color: #007bff;
+  }
+  .result-links{  
+    width: 8vw;
+    margin-left: 1vw;
+    background-color: transparent;
+    text-align: center;
+  }
+  fieldset,.fieldset {
+    float:left;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    background-color: #c1d6d2;
+    border-radius: 1vw;
+    align-items: center;
+    width: 40vw;
+    padding-left: 1vw;
+    color: black;
+    margin-bottom: 1vw;
+}
+.mainbody.left{
+
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  width:74%;
+}
+
+}
+
+/* 6. Seite mit acc-search-history-page (auch erst wenn man eingeloggt ist im login-fenster
+Kommt erst wenn man im login-bereich auf search-history drückt */
+body.acc-search-history-page {
+background-image: url('../images/homepage/jellyfish-homepage.webp');
+
+.mainbody.left{
+  width: 74%;
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  
+}
+
+h2 {
+  color: white;
+}
+h3 {
+  color: white;
+}
+
+  /* TABELLE NR.2 ONLY FÜR SEARCH-PAGE (ES GIBT 2 TABELLEN!!!) */
+#recent-searches .oddrow {
+  background-color: transparent;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid black;
+  color: #00f7ff;
+}
+
+
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid black;
+  color: #00f7ff;
+
+  
+}
+table {
+  border-collapse: collapse;
+  background: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: none;
+}
+
+table thead {
+  background: transparent;
+  text-align: left;
+  border-top: none;
+}
+
+table thead th {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+}
+
+table tbody tr {
+  transition: all 0.3s ease;
+  border:none;
+
+}
+
+table tbody tr:hover {
+  background: transparent;
+}
+
+table td {
+  
+  padding: 15px;
+  color: #fff;
+  font-size: 1em;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.fa-trash-o:before {
+  content: "\f014";
+  color: red;
+}
+
+
+
+/* ----*/
+a.icon-link[href="?purge=true"] {
+display: block;
+padding: 1rem;
+color: #12538B;
+border: none; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: transparent; /* Hintergrundfarbe, um den Text hervorzuheben */
+width: 19vw;
+font-size: 1.15vw;
+margin-bottom: 2vw;
+}
+a.icon-link[href="?purge=true"]:hover {
+color: white;
+ 
+}
+}
+
+/* 7. Seite mit author-page wenn man einen der authors anklickt */
+body.author-page {
+background-image: url('../images/homepage/jellyfish-homepage.webp');
+
+.search.container.navbar {
+display:none;
+}
+
+#divContainerHeader{
+display: inline-block;
+margin-top: 2vw;
+}
+
+.mainbody.left{
+margin-top:3vw;
+width: 75%;
+
+}
+
+.navbar-form {
+display:none;
+}
+
+
+h4 {
+color: white;
+}
+}
+
+body{
+  /*background: url("../images/schwarzer_hintergrund.jpg");*/
+  background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+  background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+  background-position: center;   /* Das Bild wird zentriert */
+  background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+  margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+  height: 100vh;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+  font-family: 'CustomFont', sans-serif;  /*Fallback auf sans-serif */
+  color: white; /* Standardfarbe für alle Texte */
+}
+
+
+/* "Neues Konto anlegen" Button wenn du auf Login gehst*/
+.btn.btn-link.createAccountLink{
+background-color: #a0d6cc;
+/* transform: scaleY(1.38); */
+margin-bottom: 1px; 
+border-radius: 5px;
+height: 45px;
+width: 30%;
+padding: 5px;
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+border: 1px solid #0360df;
+  
+background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;
+
+}
+
+.btn.btn-link.createAccountLink:hover{
+  color: #fff;
+  background-color: #333;
+  border-color: #adadad;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center;
+  font-family: CustomFont;
+  text-decoration: none;
+}
+
+
+/* Login Schriftzug wenn man auf Login geht */
+#lightbox-title.lightbox-header{
+color: white;
+}
+
+.mainbody.left{
+margin-top:3vw;
+}
+
+h2{
+color: white;
+font-family: "CustomFont";
+}
+
+.adv-submit .btn.btn-primary{
+margin-bottom: 50px;
+}
+
+
+
+/* auf der advanced search seite - erweiterte suche*/
+
+.pull-left {
+color: white;
+}
+legend {
+display: block;
+width: 100%;
+padding: 0;
+margin-bottom: 20px;
+font-size: 21px;
+line-height: inherit;
+color: white;
+border: 0;
+border-bottom: 1px solid white;
+}
+
+.adv-group {
+position: relative;
+margin-bottom: .5rem;
+padding: 1rem;
+border: 1px solid #ddd;
+border-radius: 4px;
+color: #007bff;
+background-color: #b7c8c4;
+}
+
+@media (min-width: 100px) {
+.solr-facet-container {
+    display:flex;
+    flex-wrap: wrap
+}
+
+.solr-adv-facet {
+    padding: 5px;
+    flex: 1 25%;
+    background-color: #b7c8c4;
+    color: #007bff;
+    border-radius: 5px;
+    margin-right: 1vw;
+    text-align: center;
+}
+}
+@media (min-width: 100px) {
+.mainbody {
+width: 75%;
+}
+.form-control {
+max-width: 100%;
+}
+}
+
+
+fieldset.solr label[for="illustrated_0"] {
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
+}
+
+fieldset.solr label[for="illustrated_-1"] {
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
+}
+
+
+fieldset.solr {
+position: relative; /* Für die absolute Positionierung des Rahmens */
+} 
+
+/* Kasten um das Label für 'Has Illustrations' */
+fieldset.solr label[for="illustrated_1"] {
+position: relative;
+display: inline-block;
+padding: 5px;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: #007bff;
+width: 10vw;
+font-size: 1vw;
+}
+
+.date-fields .date-from {
+padding-right: .25rem;
+background-color: transparent;
+color: #00f7ff;
+text-align: center;
+margin-right: 1vw;
+border-radius: 5px;
+padding: 2px;
+}
+
+.date-fields .date-to {
+padding-left: .25rem;
+background-color: transparent;
+color: #00f7ff;
+text-align: center;
+border-radius: 5px;
+padding: 2px;
+}
+
+#groupPlaceHolder {
+display: block;
+padding: 1rem;
+color: #12538B;
+border: 1px solid black; /* Grüner Rahmen */
+border-radius: 5px; /* Abgerundete Ecken */
+background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+width: 18vw;
+font-size: 1.15vw;
+margin-bottom: 2vw;
+}
+
+#groupPlaceHolder:hover {
+display: block;
+padding: 1rem;
+color: white;
+}
+
+.adv-submit .clear-btn {
+float: right;
+background-color: red;
+font-weight: bolder;
+font-family: CustomFont;
+font-size: 1vw;
+text-align: center;
+line-height: 2vw;
+height: 3vw;
+width: 10vw;
+max-width: 1000vw;
+margin-left: 1vw;
+display:inline;
+size: relative;
+max-block-size: 12vw;
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+color: white;
+
+
+border: 1px solid #0360df;
+  
+background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;
+
+}
+.adv-submit .clear-btn:hover {
+color: #333333;
+border-left: 2px solid white;
+border-right: 2px solid white;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+}
+
+
+
+.sidebar.right.hidden-print{
+font-family: "CustomFont";
+margin-top: 3vw;
+background: linear-gradient(135deg, rgba(0, 255, 204, 0.333) , rgba(0, 255, 204, 0) );
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-radius: 20px;
+border:1px solid rgba(255, 255, 255, 0.18);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+/* bis hier hin */
+
+/* Die Box wo man Konto erstellen kann */
+.modal-body #lightbox-title, .back-to-login.btn.btn-link, .help-block {
+color: white;
+}
+
+.form-group .btn.btn-primary{
+font-size: medium;
+margin: 0px;
+width:30%;
+height:45px;
+line-height: normal;
+justify-content: center;
+}
+
+.btn.btn-primary {
+padding: 5px;
+}
+/* bis hier hin */
+
+
+
+
+
+h1{
+display: inline;
+font-size: 10vw;
+min-block-size: 650%;
+font-family: 'CustomFont3', serif;
+font-weight: bolder;
+padding-bottom:0px;
+
+
+}
+
+#dive{
+color: #aaa8a7;
+font-family: "CustomFont";
+display: block;
+text-align:left;
+font-size: 1.9vw;
+position: relative;
+height: auto;
+width: auto;
+padding-right: 0%;
+margin-left: 10vw;
+margin-top: -3vw;
+}
+
+#divContainerHeader{
+  display: inline-block;
+  margin-top: 9vw;
+}
+
+
+#header1{
+  color: rgb(255, 54, 50); 
+  text-shadow:
+  0 0 40px #e1585a,  
+  0 0 50px #e1585a, 
+  0 0 1px #e1585a; 
+  margin-bottom: 0px;
+  display: inline-block;
+  position: relative;
+  font-size: 6vw;
+  margin-top: 0vw;
+
+color: #f073fc;
+text-shadow: 0 0 5px #ee2eff, 0 0 10px #ee2eff, 0 0 20px #ee2eff, 0 0 30px #ee2eff, 0 0 40px #ee2eff, 0 0 55px #ee2eff, 0 0 75px #ee2eff;
+text-align: center;
+}
+
+
+#header2{
+  color: #7f9ff7;
+  text-shadow:
+  0 0 40px #0044ff,  /* Erste Ebene des Schattens */
+  0 0 50px #0044ff, /* Zweite Ebene des Schattens */
+  0 0 1px #0044ff;
+  margin-bottom: 0px;
+  display: inline;
+  position: relative;
+  font-size: 6vw;
+  margin-top: 9vw;
+  
+color: #7f9ff7;
+text-shadow: 0 0 5px #00f7ff, 0 0 10px #0044ff, 0 0 20px #0044ff, 0 0 30px #0044ff, 0 0 40px #0044ff, 0 0 55px #0044ff, 0 0 75px #0044ff;
+text-align: center;
+
+}
+
+/*
+.navbar-header {
+
+  @media (min-width: 1080px) {
+      margin-top: -2vw;
+  }
+
+  @media (min-width: 1921px) {
+      margin-top: -5vw;
+  }
+} 
+*/
+
+.searchForm-query {
+  position:relative;
+  margin-left: auto;
+  margin-top: 20vw;
+  border-radius: 0;
+  font-weight: 999;
+  height: 3vw;
+  width: 40vw;
+  max-width: 1000vw;
+  display:inline;
+  size: relative;
+  max-block-size: 12vw;
+  height: auto;
+  
+}
+
+.searchForm-query #searchForm_lookfor {
+  height: 3vw;
+  width: 40vw;
+  max-width: 1000vw;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+  padding-right: 28px;
+ 
+  border-radius: 5px;
+}
+
+.form-control:hover{
+  border-color: #58afc2;
+  border-width: .1em;
+  outline:1em;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(102, 175, 233, 0.8);
+  box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(58, 150, 220, .8)
+}
+
+.form-control:focus{
+border-color: #58afc2;
+border-width: .1em;
+outline:1em;
+-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(102, 175, 233, 0.8);
+box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1em rgba(58, 150, 220, .8)
+}
+
+
+.navbar-form .form-control {
+  display: inline-block;
+  max-width: 25vw;
+  width: 30vw;
+  vertical-align: middle;
+  size: relative;
+  max-block-size: 12vw;
+  height: 5vh;
+}
+
+#searchForm_type {
+  color: black;
+  position: relative;
+  text-align: center;
+  font-size: 1.6vw;
+  margin-right: 0%;
+  height: 3vw;
+  width: 13vw;
+  display:inline;
+  size: relative;
+  font-family: CustomFont;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+
+
+  border: 1px solid #0360df;
+  
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.1s;
+
+
+}
+
+
+#searchForm_type:hover{
+color: #fff;
+background-color: #333;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+font-family: CustomFont;
+}
+
+#searchForm_type:focus{
+color: #000000;
+background-color: lightblue;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+font-family: CustomFont;
+}
+
+
+
+.searchForm-query #searchForm-reset {
+  position: absolute;
+  right: 0.6vw;
+  top: -0.6vw;
+  width: 2vw;
+  height: 2vw;
+  border: none;
+  background-color: gray;
+  font-size: 1.4vw;
+}
+
+
+.btn-primary {
+  color: #fff;
+  /*background-color: #ff3532;*/
+  
+  background: linear-gradient(to right, #ff3131, #ff5d3e, #ff8b4b);
+  font-weight: bold;
+  font-size: 1.6vw;
+  text-align: center;
+  line-height: 2vw;
+
+  font-family: CustomFont;
+  height: 3vw;
+  width: 10vw;
+  max-width: 1000vw;
+
+  margin-left: 1vw;
+  display:inline;
+  size: relative;
+  max-block-size: 12vw;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+
+
+  border: 1px solid #a83232;
+  background-color: #ea00ff;
+  background-image: radial-gradient(75% 50% at 50% 0%, #ffe0e0 12%, transparent), radial-gradient(75% 50% at 50% 85%, #ff7373, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(168, 50, 50, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #862626;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.1s;
+
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #333;
+  border-color: #adadad;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center;
+  }
+
+
+.icon--font {
+  display: inline-block;
+  max-width: 1.25em;
+  line-height: 1.8vw;
+  text-align: center;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.navbar-form {
+  width: 79vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+
+
+
+
+.searchForm .advanced-search-link {
+  background-color:#a0d6cc;
+  color: black;
+  position: relative;
+  text-align: center;
+  font-size: 1.7vw;
+  text-decoration: none;
+  line-height: 2vw;
+  justify-content: center;
+  align-items: center;
+  height: 3vw;
+  width: 11vw;
+  margin-left: 1vw;
+  size: relative;
+  font-family: CustomFont;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+
+  
+  border: 1px solid #0360df;
+  
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.1s;
+}
+
+
+
+.searchForm .advanced-search-link:hover{
+  color: #fff;
+  background-color: #333;
+  border-color: #adadad;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center;
+  font-family: CustomFont;
+  }
+
+
+
+
+.navbar-nav button.dropdown-toggle {
+  position:relative;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 255, 204, 0.4);
+  border-radius: .25vw;
+  border-color: #fff;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  size: relative;
+  max-block-size: 12vw;
+  height: 3vw;
+  width: 8vw;
+
+  font-family: CustomFont;
+  font-size: 1.2vw;
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+
+  
+  border: 1px solid #0360df;
+  
+  /*background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.1s;*/
+}
+
+
+.navbar-nav button.dropdown-toggle:hover, .navbar-nav button.dropdown-toggle:focus, .navbar-nav button.dropdown-toggle:active, .navbar-nav button.dropdown-toggle.active, .open .navbar-nav button.dropdown-toggle.dropdown-toggle {
+  color: black;
+  background-color: lightblue;
+  border-color: #adadad;
+}
+
+
+.nav>li>a:active, .nav>li>a:focus, .nav>li>a:hover {
+  color: black;
+  background-color: lightblue;
+  border-color: #adadad;
+}
+
+.icon-link:hover{
+  color:black;
+}
+
+.advanced-search-link:hover {
+color: #fff;
+background-color: #333;
+border-color: #adadad;
+justify-content: center; /* Zentriert den Inhalt horizontal */
+align-items: center;
+}
+
+.nav>li>a {
+position:relative;
+text-decoration: none;
+color: white;
+background-color: rgba(0, 255, 204, 0.40);
+border-radius: .25vw;
+border-color: #fff;
+margin-right: 1vw;
+margin-top: 1vw;
+size: relative;
+max-block-size: 12vw;
+height: 3vw;
+width: 10vw;
+font-family: CustomFont;
+font-size: 1.2vw;
+display: flex; /* Aktiviert Flexbox */
+justify-content: center;  /*Zentriert den Inhalt horizontal */
+align-items: center; /* Zentriert den Inhalt vertikal */
+border-left: 2px solid black;
+border-right: 2px solid black;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius: 5px;
+padding: 15px;
+
+
+border: 1px solid #0360df;
+  
+/*background-color: #0360df;
+background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+color: #fff;
+text-shadow: 0 1px 1px #116ee7;
+transition-property: border-color, transform, background-color;
+transition-duration: 0.1s;*/
+}
+
+
+.logo {
+  /* max-width: 300px;  Größe des Logos anpassen */
+  display: inline;
+   font-family: "CustomFont3";
+}
+
+#brand{
+  position: relative;
+  width: 9vw;
+  max-width: 9vw;
+  height: auto;
+  display: inline;
+}
+
+/*
+#brand{
+  position: relative;
+  display: inline-block;
+  height: 9vw;
+  width: 9vw;
+  margin-left: 0vw;
+  margin-top: 0vh;
+  margin-bottom: 6vw;
+}*/
+
+.container>.navbar-header,.container-fluid>.navbar-header,.container>.navbar-collapse,.container-fluid>.navbar-collapse {
+  margin-right:0;
+  width:auto;
+  margin-left: 5vw;
+}
+
+.navbar-header{    
+  margin-left: 5vw;
+  margin-bottom: 1.5vw;
+  width: 80vw;
+}
+
+.dropdown-menu{
+  background-color: lightblue;
+  font-family: CustomFont; 
+  color: white;
+  font-size: 1.2vw;
+}
+
+
+dropdown__link{
+  background-color: lightblue;
+  font-family: CustomFont; 
+  color: white;
+  font-size: 1.2vw;
+}
+.alert.alert-danger{
+  width: 54.5vw;
+}
+
+.breadcrumb{
+  width:54.5vw;
+  display:none;
+}
+.modal-body{
+  background: url("../images/homepage/jellyfish-homepage.webp");
+  background-size: cover;        /* Das Bild deckt das gesamte Fenster ab */
+  background-repeat: no-repeat;  /* Das Bild wird nicht wiederholt */
+  background-position: center;   /* Das Bild wird zentriert */
+  background-attachment: fixed;  /* Das Bild bleibt fixiert beim Scrollen */
+  margin: 0;                     /* Entfernt den Standard-Abstand des body-Elements */
+  height: fit-content;                 /* Stellt sicher, dass der body die gesamte Höhe des Fensters einnimmt */
+  color: white;    
+  
+}
+
+/*.container{
+  margin-left: 11vw;
+  width: auto;
+  margin-top: 2vw;
+}*/
+
+/* SEARCH BAR_--------------------------------------------------------*/
+/* Container für das Gesamtergebnis */
+.result-body {
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 100%
+}
+
+
+/* Titelstilierung */
+.result-body h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.title.getFull {
+  color: white;
+  text-decoration: none;
+}
+
+.title.getFull:hover {
+  text-decoration: underline;
+}
+
+/*
+.result-body a.title:hover {
+  text-decoration: underline;
+}*/
+
+/* Alternative Titelstilierung */
+.title-alt {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Autorenstilierung */
+.authors {
+  font-size: 1em;
+  color: gray;
+}
+
+.result-author {
+  color: #00f7ff;
+  text-decoration: none;
+}
+
+.result-author:hover {
+  text-decoration: underline;
+  color: #00f7ff;
+}
+
+/* Container-Link-Stilierung */
+.container-link {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container-link:hover {
+  text-decoration: underline;
+}
+
+/* Stilierung für Sammlung Links */
+.collectionLinkText {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.collectionLinkText:hover {
+  text-decoration: underline;
+}
+
+
+/* FILTER MÖGLICHKEITEN .....................................*/
+.facet {
+    background-color: #b7c8c4; /* Hintergrundfarbe für die Facette */
+    padding: 10px;            /* Innenabstand */
+    margin-top: 5px;       /* Abstand zwischen den Facetten */
+    text-decoration: none;
+}
+
+
+
+.top-facet-inner {
+    color: #a0d6cc; /* Textfarbe für das span-Element */
+    background-color: #a0d6cc;
+}
+
+
+.facet-group .collapse,.facet-group .collapsing,.facet-group.full-facet-list .facet {
+   position: relative; 
+   border-left: none; 
+   border-right: none; 
+}
+
+.facet-group .facet,.facet-load-indicator,.facet-load-failed {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #00f7ff;
+
+    background: rgba(255, 255, 255, 0.2) ;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border:1px solid rgba(255, 255, 255, 0.18);
+
+}
+.facet-group .facet:hover,.facet-load-indicator:hover,.facet-load-failed:hover {
+  background: rgba(255, 255, 255, 0.44);
+  color: white;
+}
+
+/* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
+.save-record {
+  color: #007bff; /* Ihre gewünschte Textfarbe */
+  /*border-radius: 8px;  Radius der Abrundung der Ecken */
+}
+  
+   /* Beispiel: Ändern der Farbe des Icons */
+   .save-record .icon-link__icon {
+    color: white; /* Ihre gewünschte Farbe für das Icon */
+  }
+  .icon-link__label:hover {
+    color: black; /* Ihre gewünschte Farbe für das Icon */
+    text-decoration: underline;
+  }
+  
+  /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
+  .save-record:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .save-record .icon-link__icon:hover {
+    color: white; /* Ihre gewünschte Farbe für das Icon */
+    text-decoration: none;
+  }
+
+/* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
+
+/* Container für das <select>-Element und den Pfeil */
+.select-container {
+    position: relative; /* Ermöglicht es, das Pfeilsymbol relativ zum Container zu positionieren */
+    display: inline-block; /* Der Container passt sich der Größe des Dropdown-Menüs an */
+    width: 300px; /* Breite des Containers, anpassen wie nötig */
+  }
+  
+    /* Stil für das <select>-Element */
+    .jumpMenu {
+
+       /* Innenabstände */
+      font-size: 20px; /* Schriftgröße */
+      color: white; /* Textfarbe */
+      width: auto; /* Breite auf 100% setzen */
+      height: auto;
+      box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite überschreiten */
+      padding-left: 0.5vw;
+      padding-top: 0.1vw;
+      padding-bottom: 0.1vw;
+      padding-bottom: 0.1vw;
+      /*---*/
+      
+    background: rgba(0, 255, 204, 0.404) ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+  
+
+    #filter-options {
+      color: black;
+      background:rgba(0, 255, 204, 0);
+    }
+
+  
+
+  /* Stil für das Pfeilsymbol */
+  .select-arrow {
+    position: absolute; /* Absolute Positionierung relativ zum Container */
+    right: 10px; /* Abstand vom rechten Rand des Containers */
+    top: 50%; /* Vertikale Zentrierung */
+    transform: translateY(-50%); /* Korrektur der vertikalen Positionierung */
+    font-size: 16px; /* Größe des Pfeils */
+    color: #333333; /* Farbe des Pfeils */
+    pointer-events: none; /* Verhindert, dass das Pfeilsymbol das Klicken blockiert */
+    user-select: none; /* Verhindert, dass der Pfeil ausgewählt wird */
+  }
+  
+  /* Optional: Stil für das Hover- und Fokus-Verhalten */
+  .jumpMenu:hover,
+  .jumpMenu:focus {
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
+  }
+
+  .search-sort{
+    padding-right: 10px;
+  }
+
+.breadcrumb {
+    background-color: #a0d6cc; /* Hintergrundfarbe nach Wunsch anpassen */
+}
+
+/* FILTER BUTTONS ---------------------------------------------------------------------------------*/
+
+/* Stil für die h3-Überschrift mit der Klasse facet-title */
+.facet-title {   
+  width: 99%;
+}
+
+
+
+.facet-group .title {
+  background-color: transparent;
+    display: flex;
+    width: 100%;
+    padding-right: 8px;
+    border:none;
+    font-weight: bold;
+    text-align: inherit;
+    background: none;
+    
+}
+
+  
+  /* Stil für das Button-Element innerhalb der facet-title */
+  .facet-title .title {
+    
+    background: rgba(0, 255, 204, 0.33) ;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border:1px solid rgba(255, 255, 255, 0.18);
+
+    padding: 8px 12px; /* Innenabstand des Buttons */
+    cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
+  }
+
+  
+  .more-less-btn-wrapper {
+    display:flex;
+    color:white;
+  }
+  
+  .sidebar{
+    padding-right: 1rem;
+  }
+
+/* ÜBERSCHRIFT DER SCHLAGWÖRTER ________________________________________________________________________*/
+/* Stil für den Link mit der Klasse top-title */
+.top-title {
+    color: #ffffff; /* Textfarbe */
+    background: linear-gradient(to right, #055296, #235e92, #4477a3);
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    padding: 8px 12px; /* Innenabstand */
+    border-radius: 4px; /* Abrundung der Ecken */
+    display: inline-block; /* Macht den Link wie einen Block, damit Padding wirkt */
+  }
+  
+  /* Stil für den Link beim Hover (wenn der Benutzer darüber fährt) */
+  .top-title:hover {
+    color: #f8f9fa; /* Textfarbe beim Hover */
+
+    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
+    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
+  }
+  
+  /* Stil für den Link beim Fokus (wenn der Benutzer mit Tab darauf fokussiert) */
+  .top-title:focus {
+    outline: none; /* Entfernen des Standard-Fokusrahmens */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
+  }
+
+  
+/* 3. SEITE WENN MAN EIN ERGEBNIS AUFMACHT AB HIER --------------------------------------------------------------------------------*/
+  
+.media-left {
+    display: none; /* Versteckt die linke Spalte */
+  }
+
+@media (max-width: 767px) {
+    .record .media-left,.record .media-right {
+        display: none;
+    }
+}
+  
+/* Überschrift des Ergebnisses */
+/* Medien-Container */
+.media {
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
+    gap: 20px; /* Abstand zwischen den Elementen */
+    /*padding-top: 20px;  Erhöht den oberen Abstand */
+}
+
+
+/* Rechte Spalte */
+.media-body {
+    flex: 1;
+    width: 100%;
+}
+
+ /* Überschrift */
+ .media-body h1 {
+  width:100%;
+  font-size: 2rem; /* Verwendet relative Einheiten */
+  font-weight: 100;
+  font-family: 'CUSTOMFONT';
+  border-radius: 4px;
+  word-wrap: break-word;
+  margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
+  border-radius: 8px; /* Abgerundete Ecken */
+  display:inline-block;
+  border-left:3px solid black ;
+  border-right:3px solid black ;
+  border-top:3px solid black ;
+  border-bottom:3px solid black ;
+    background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+} 
+a{
+  color: #00f7ff;
+}
+
+/* RECORD-PAGE-Buttons export, zitieren, favoriten usw. */
+.permalink-record{
+  background: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+  align-items: center;
+}
+.save-record{
+  background: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+  align-items: center;
+}
+.export-toggle{
+  background: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+  align-items: center;
+}
+.print-record{
+  background: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+  align-items: center;
+}
+.cite-record{
+  background: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+  align-items: center;
+}
+/* ERGEBNISSTABELLE ---------------------------------------------------*/
+.tag-record{
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
+
+  &:hover{
+    border: 1px solid rgb(0, 0, 0);
+  }
+}
+
+
+
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid black;
+  color: #00f7ff;
+
+  
+}
+table {
+  width: 80%;
+  border-collapse: collapse;
+  background: rgba(235, 50, 255, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: none;
+}
+
+table thead {
+  background: rgba(255, 255, 255, 0.25);
+  text-align: left;
+  border-top: none;
+}
+
+table thead th {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+}
+
+table tbody tr {
+  transition: all 0.3s ease;
+  border:none;
+
+}
+
+table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+table td {
+  
+  padding: 15px;
+  color: #fff;
+  font-size: 1em;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: none;
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(235, 50, 255, 0.1);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: rgba(235, 50, 255, 0.01);
+}
+
+table td:first-child {
+  border-top: none;
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+/* ÄHNLICHE RECORDS FÜR DAS WERK ________________________________________________________________*/
+
+
+
+/* Stil für die Liste der ähnlichen Datensätze */
+.list-group {
+    list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+    padding: 0; /* Entfernt die Standard-Padding */
+    margin: 0; /* Entfernt die Standard-Margin */
+    margin-bottom: 5px;
+}
+
+  /* Stil für jede Listeneinheit */
+ .list-group-item {
+  
+  border-radius: 4px; /* Abgerundete Ecken */
+ 
+  padding: 10px; /* Innenabstand */
+  margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
+  margin-right: 5px;
+  /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
+  color: white;
+
+
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+ 
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+}
+
+/* Hover-Effekt für Listeneinträge */
+.list-group-item:hover {
+    background-color: #a0d6cc; /* Hintergrundfarbe beim Hover */
+    border-color: #007bff; /* Rahmenfarbe beim Hover */
+}
+
+
+a.list-group-item,button.list-group-item {
+  color: white;
+  background-color:rgba(0, 255, 204, 0.171);
+}
+
+/* Stil für die Titel in der Liste */
+.related__title {
+    font-size: 1.2rem; /* Größe der Titel */
+    color: #007bff; /* Farbe der Titel */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+/* Hover-Effekt für die Titel */
+.related__title:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Stil für die Icons innerhalb der Listeneinträge */
+.related__icon {
+    margin-right: 10px; /* Abstand rechts vom Icon */
+    vertical-align: middle; /* Vertikale Ausrichtung des Icons */
+}
+
+/* Stil für zusätzliche Informationen wie Autoren und Veröffentlichungsdaten */
+.list-group-item br {
+    display: block; /* Zeigt den Zeilenumbruch als Blockelement an */
+    margin-top: 5px; /* Abstand oberhalb des Zeilenumbruchs */
+}
+
+/* DIE TABS UNTEN ALLE ----------------*/
+/* Farben für Links innerhalb des tab-content Containers */
+.tab-content a {
+    /*color: #007bff; /* Hier kannst du die gewünschte Farbe eingeben */
+    text-decoration: none; /* Optional: Entfernt die Unterstreichung der Links */
+}
+
+.tab-content a:hover {
+    color: #0056b3; /* Farbe der Links beim Hover-Effekt (optional) */
+    text-decoration: underline; /* Optional: Unterstreicht den Link beim Hover-Effekt */
+}
+
+
+/* Verstecke das Bild */
+.record-cover-link img {
+    display: none; /* Versteckt das Bild */
+}
+
+/* Versteckt die Sektion "Ähnliche Einträge" */
+#record-tab-similar {
+  display: none;
+}
+
+
+/* Für die Tabs Example, Beschreibung, Inhaltsangabe */
+.tab-content>.active {
+display: block;
+background-color: #acc1e2;
+}
+
+.tab-pane.toc-tab.active strong {
+color: darkred; /* Farbe für "Inhaltsangabe:" */
+}
+
+.tab-pane.toc-tab.active .toc li {
+color: black; /* Farbe für den Text innerhalb der Liste */
+}
+
+
+/* Hintergrundfarbe für den Header */
+.header-background {
+background-color: red; /* Beispiel: helles Grün */
+padding: 10px; /* Optional: Abstand um den Inhalt */
+color: white; /* Textfarbe für den Inhalt */
+}
+
+/* Optional: Link- und Textfarbe innerhalb des Headers anpassen */
+.header-background a {
+color: inherit; /* Vererbt die Textfarbe (weiß) */
+}
+
+.header-background h1 {
+margin: 0; /* Entfernt den Standard-Abstand */
+display: inline-block; /* Stellt sicher, dass die Überschriften nebeneinander stehen */
+}
+
+#side-panel-institution {
+display:none;
+}
+
+#side-panel-building {
+display: none;
+}
+
+.searchtools {
+display: none;
+}
+
+#make-list {
+font-weight: 400;
+color: #12538B;
+border-radius: 0;
+background-color: rgb(174, 174, 174);
+border-radius: 1vw;
+margin-top: 1vw;
+text-decoration: underline;
+}
+
+#make-list:hover {
+color: white;
+}
+
+/* filter reset button search page */
+.reset-filters-btn {
+  flex: none;
+  background-color: #333;
+  color: white;
+}
+
+.reset-filters-btn:hover {
+  background-color: gray;
+  color: black;
+}
+
+/* Wenn man eingeloggt ist und das Element gespeichert ist - search page und andere pages*/
+
+.result-links {
+  float: left;
+  width: 75%;
+  padding: 0
+}
+.savedLists.loaded {
+  display:block;
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.333) , rgba(0, 255, 204, 0) );
+  border: none;
+  width: auto;
+  color: white;
+}
+
+.btn-bookbag-toggle,.result-links a {
+  line-height: 1.5;
+
+}
+.btn-bookbag-toggle,.result-links a:hover {
+
+  color: white ;
+}
+
+/* Für den "zu den favoriten" button in searchpage: */
+.toolbar-btn,.toolbar-btn:active,.toolbar-btn:focus,.toolbar-btn:hover,.record-nav .cart-add,.record-nav .cart-add:active,.record-nav .cart-add:focus,.record-nav .cart-add:hover,.record-nav .cart-remove,.record-nav .cart-remove:active,.record-nav .cart-remove:focus,.record-nav .cart-remove:hover,.reset-filters-btn,.reset-filters-btn:active,.reset-filters-btn:focus,.reset-filters-btn:hover,.btn-link,.nav>li>a,.cart-controls .toolbar-btn,.tag-record,.tag-record:active,.tag-record:focus,.tag-record:hover,.cart-controls .toolbar-btn,.cart-controls .toolbar-btn:active,.cart-controls .toolbar-btn:focus,.cart-controls .toolbar-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Für den "veröffentlicht am ..." button */
+.result-body div {
+  color: white;
+}
+
+.icon-link__label {
+  color: white; 
+  text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------------------------*/
+  @media (min-width: 1200px) {
+    .container, footer {
+      width: 80vw;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container, footer {
+      width: 80vw;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container, footer {
+      width: 80vw;
+    }
+  }
+
