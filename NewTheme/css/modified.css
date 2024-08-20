@@ -12,6 +12,12 @@
   font-style: normal; /* Oder 'italic', je nach Schriftart */
 }
 
+@font-face {
+  font-family: 'CustomFont3'; /* Der Name der Schriftart */
+  src: url("../css/fonts/Orbitron/Orbitron-VariableFont_wght.ttf") format('truetype');
+  font-weight: 900; /* Oder 'bold', je nach Schriftart */
+  font-style: normal; /* Oder 'italic', je nach Schriftart */
+}
 
 /* IM FOLGENDEN STARTSEITE(homepage), LISTE(search-page), ERGEBNIS(result-page), TAG-SEITE(tag-page)
 und eine ACCOUNT-Seite(account-page) (wenn man auf ihr konto oben rechts klickt).
@@ -54,6 +60,7 @@ background-repeat: no-repeat;
 display: inline-block;
 margin-top: 0vw;
 }
+
 .active-filters .filters .filter-value {
 display: inline-block;
 margin-block:5px;padding: 2px 8px;
@@ -68,9 +75,6 @@ background: rgb(69, 69, 69);
   color: white;
 }
 
-.result-body div {
-  color: white;
-}
 
 }
 
@@ -125,7 +129,7 @@ background: rgb(69, 69, 69);
 
 /* 3. Seite des einen Ergebnisses */
 body.record-page {
-background-image: url("../images/searchpage/searchpage_orig.jpg");
+background-image: url("../images/homepage/jellyfish-homepage.webp");
 background-size: cover;
 background-repeat: no-repeat;
 
@@ -287,7 +291,7 @@ border-bottom: none;
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
 .tab-content>.active {
 display: block;
-background-color: #acc1e2;
+background-color: transparent;
 margin-top: 1.5vw;
 }
 
@@ -353,25 +357,6 @@ border-left: 1px solid white;
 border-right: 1px solid white;
 border-top: 1px solid white;
 border-bottom: 1px solid white;
-}
-
-/* Für die 3.Seite der Zu Favoriten Hinzufügen button
-/* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
-.save-record {
-  /* color: black; */ /* Ihre gewünschte Textfarbe */
-  /*border-radius: 8px;  Radius der Abrundung der Ecken */
-  background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
-  color: black;
-}
-/* Beispiel: Ändern der Farbe des Icons */
-.save-record .icon-link__icon {
-  color: red; /* Ihre gewünschte Farbe für das Icon */
-}
-
-/* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
-.save-record:hover {
-  color: #ff8986;
-  background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */ /* Ihre gewünschte Farbe beim Hover */
 }
 
 
@@ -451,21 +436,7 @@ display:none;
 Account-page  url mit MyResearch*/
 
 body.account-page {
-background-image: url('../images/searchpage/searchpage_orig.jpg');
-
-.result-body {
-  background: rgba(30, 47, 56, 0.726);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  padding: 20px;
-  /*background-color: #c1d6d2;
-  border: 1px solid #ddd;
-  border-radius: 5px;*/
-  margin-bottom: 20px;
-}
+background-image: url('../images/homepage/jellyfish-homepage.webp');
 
 
 /* es hat nochmal ein h2, hier nur für account-page*/
@@ -473,7 +444,7 @@ h2 {
   color: white;
 }
 h3 {
-  color: black;
+  color: white;
 }
 h4 {
   color: black;
@@ -514,14 +485,33 @@ h4 {
     color: black;
   }
   .resultItemLine2 {
-    color: black;
+    color: white;
   }
   .result .title {
     font-weight: bold;
-    color: #007bff;
+    color: white;
   }
+  .result .title:hover {
+    text-decoration: underline;
+  }
+  b,strong {
+    color: white;
+    font-weight: normal;
+}
   .toolbar-btn {
-    background-color: #a0e2d6;
+    background: rgb(226, 66, 66);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+    /*background-color: #c1d6d2;
+    border: 1px solid #ddd;
+    border-radius: 5px;*/
+    margin-bottom: 20px;
+    color: white;
+    width: auto;
   }
   .toolbar-btn:hover {
     color: #007bff;
@@ -529,7 +519,7 @@ h4 {
   .result-links{  
     width: 8vw;
     margin-left: 1vw;
-    background-color: #c1d6d2;
+    background-color: transparent;
     text-align: center;
   }
   fieldset,.fieldset {
@@ -553,6 +543,7 @@ h4 {
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 20px;
+  width:74%;
 }
 
 }
@@ -560,10 +551,10 @@ h4 {
 /* 6. Seite mit acc-search-history-page (auch erst wenn man eingeloggt ist im login-fenster
 Kommt erst wenn man im login-bereich auf search-history drückt */
 body.acc-search-history-page {
-background-image: url('../images/searchpage/searchpage_orig.jpg');
+background-image: url('../images/homepage/jellyfish-homepage.webp');
 
 .mainbody.left{
-
+  width: 74%;
   background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -578,23 +569,100 @@ h2 {
   color: white;
 }
 h3 {
-  color: black;
+  color: white;
 }
-td {
-  color: black;
-  background-color: white;
+
+  /* TABELLE NR.2 ONLY FÜR SEARCH-PAGE (ES GIBT 2 TABELLEN!!!) */
+#recent-searches .oddrow {
+  background-color: transparent;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid black;
+  color: #00f7ff;
 }
-th {
-  color: black;
-  background-color: #b7c8c4;
+
+
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid black;
+  color: #00f7ff;
+
+  
 }
+table {
+  border-collapse: collapse;
+  background: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: none;
+}
+
+table thead {
+  background: transparent;
+  text-align: left;
+  border-top: none;
+}
+
+table thead th {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+}
+
+table tbody tr {
+  transition: all 0.3s ease;
+  border:none;
+
+}
+
+table tbody tr:hover {
+  background: transparent;
+}
+
+table td {
+  
+  padding: 15px;
+  color: #fff;
+  font-size: 1em;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.fa-trash-o:before {
+  content: "\f014";
+  color: red;
+}
+
+
+
+/* ----*/
 a.icon-link[href="?purge=true"] {
 display: block;
 padding: 1rem;
 color: #12538B;
-border: 1px solid black; /* Grüner Rahmen */
+border: none; /* Grüner Rahmen */
 border-radius: 5px; /* Abgerundete Ecken */
-background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+background-color: transparent; /* Hintergrundfarbe, um den Text hervorzuheben */
 width: 19vw;
 font-size: 1.15vw;
 margin-bottom: 2vw;
@@ -606,7 +674,7 @@ color: white;
 
 /* 7. Seite mit author-page wenn man einen der authors anklickt */
 body.author-page {
-background-image: url('../images/searchpage/searchpage_orig.jpg');
+background-image: url('../images/homepage/jellyfish-homepage.webp');
 
 .search.container.navbar {
 display:none;
@@ -627,13 +695,9 @@ width: 75%;
 display:none;
 }
 
-.sidebar.right.hidden-print{
-font-family: "CustomFont";
-background-color: #c1d6d2;
-margin-top: 3vw;
-}
+
 h4 {
-color: black;
+color: white;
 }
 }
 
@@ -794,8 +858,8 @@ font-size: 1vw;
 
 .date-fields .date-from {
 padding-right: .25rem;
-background-color: #b7c8c4;
-color: #007bff;
+background-color: transparent;
+color: #00f7ff;
 text-align: center;
 margin-right: 1vw;
 border-radius: 5px;
@@ -804,8 +868,8 @@ padding: 2px;
 
 .date-fields .date-to {
 padding-left: .25rem;
-background-color: #b7c8c4;
-color: #007bff;
+background-color: transparent;
+color: #00f7ff;
 text-align: center;
 border-radius: 5px;
 padding: 2px;
@@ -906,7 +970,7 @@ h1{
 display: inline;
 font-size: 10vw;
 min-block-size: 650%;
-font-family: 'Times New Roman', serif;
+font-family: 'CustomFont3', serif;
 font-weight: bolder;
 padding-bottom:0px;
 
@@ -1293,6 +1357,7 @@ font-family: CustomFont;
 
 
 
+
 .navbar-nav button.dropdown-toggle {
   position:relative;
   text-decoration: none;
@@ -1388,6 +1453,7 @@ color: white;
 .logo {
   /* max-width: 300px;  Größe des Logos anpassen */
   display: inline;
+   font-family: "CustomFont3";
 }
 
 #brand{
@@ -1477,14 +1543,19 @@ color: white;
   margin-bottom: 10px;
 }
 
-.result-body a.title {
+.title.getFull {
   color: white;
   text-decoration: none;
 }
 
-.result-body a.title:hover {
+.title.getFull:hover {
   text-decoration: underline;
 }
+
+/*
+.result-body a.title:hover {
+  text-decoration: underline;
+}*/
 
 /* Alternative Titelstilierung */
 .title-alt {
@@ -1500,17 +1571,13 @@ color: white;
 }
 
 .result-author {
-  color: #007bff;
+  color: #00f7ff;
   text-decoration: none;
 }
 
-.result-body .author {
-  color: grey;
-}
-
-
 .result-author:hover {
   text-decoration: underline;
+  color: #00f7ff;
 }
 
 /* Container-Link-Stilierung */
@@ -1563,8 +1630,9 @@ color: white;
   border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
+  color: #00f7ff;
 
-    background: rgba(163, 250, 233, 0.63) ;
+    background: rgba(255, 255, 255, 0.1) ;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-radius: 20px;
@@ -1573,11 +1641,6 @@ color: white;
 
 }
 
-.btn.more-btn {
-    background-color: #a0d6cc; /* Ändere die Farbe nach Belieben */
-    color: #007bff; /* Optional: Ändert die Textfarbe, um einen guten Kontrast zur Hintergrundfarbe zu bieten */
-
-  }
 
 /* Beispiel: Ändern der Hintergrundfarbe und der Textfarbe */
 .save-record {
@@ -1585,14 +1648,14 @@ color: white;
   /*border-radius: 8px;  Radius der Abrundung der Ecken */
 }
   
-  /* Beispiel: Ändern der Farbe des Icons */
-  .save-record .icon-link__icon {
-    color: red; /* Ihre gewünschte Farbe für das Icon */
+   /* Beispiel: Ändern der Farbe des Icons */
+   .save-record .icon-link__icon {
+    color: white; /* Ihre gewünschte Farbe für das Icon */
   }
   
   /* Optional: Ändern der Hintergrundfarbe beim Hover-Effekt */
   .save-record:hover {
-    background-color: yellow; /* Ihre gewünschte Farbe beim Hover */
+    color: black;
   }
 
 /* FÜR DIE RELEVANZSORTIERUNG---------------------------------------------------------------- */
@@ -1690,19 +1753,9 @@ color: white;
     padding: 8px 12px; /* Innenabstand des Buttons */
     cursor: pointer; /* Zeigt den Zeiger-Cursor beim Überfahren */
   }
+
   
-  /* Stil für das Button-Element innerhalb der facet-title beim Hover */
-  .facet-title .title:hover {
-    border-color: #007bff; /* Randfarbe beim Hover oder Fokus */
-    outline: none; /* Entfernen des Standard-Fokus-Rahmens */
-    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25); /* Schatten-Effekt für besseren Fokus */
-  }
-  
-  /* Stil für das Button-Element innerhalb der facet-title beim Fokus */
-  .facet-title .title:focus {
-    outline: none; /* Entfernen des Fokus-Rahmens */
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Benutzerdefinierter Fokus-Schatten */
-  }
+ 
   
 
 
@@ -1744,58 +1797,6 @@ color: white;
         display: none;
     }
 }
-  /* Dropdown Toggle Button */
-  .export-toggle {
-    background-color: #a0d6cc; /* Hintergrundfarbe für Dropdown Toggle */
-    color: black;
-  }
-  
-  .export-toggle:hover {
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Dropdown Toggle */
-    color: #ff8986;
-  }
-  
-  /* Spezielle Stile für individuelle Buttons */
-  .cite-record {
-    background-color: #a0d6cc; /* Hintergrundfarbe für Cite Button */
-    color: black;
-  }
-  
-  .cite-record:hover {
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Cite Button */
-    color: #ff8986;
-}
-  
-  .print-record {
-    background-color: #a0d6cc; /* Hintergrundfarbe für Print Button */
-    color: black;
-  }
-  
-  .print-record:hover {
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Print Button */
-    color: #ff8986;
-  }
-  
-  
-  .addThis {
-    background-color: #a0d6cc; /* Hintergrundfarbe für AddThis Button */
-    color: black;
-  }
-  
-  .addThis:hover {
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für AddThis Button */
-    color: #ff8986;
-  }
-  
-  .permalink-record {
-    background-color: #a0d6cc; /* Hintergrundfarbe für Permalink Button */
-    color: black;
-  }
-  
-  .permalink-record:hover {
-    background-color: #a0d6cc; /* Hintergrundfarbe bei Hover für Permalink Button */
-    color: #ff8986;
-  }
   
 /* Überschrift des Ergebnisses */
 /* Medien-Container */
@@ -1818,75 +1819,211 @@ color: white;
   font-size: 2rem; /* Verwendet relative Einheiten */
   font-weight: 100;
   font-family: 'CUSTOMFONT';
-  color: #007bff;
   border-radius: 4px;
   word-wrap: break-word;
   margin: 0; /* Entfernt den Standard-Margin, der das Layout beeinflussen könnte */
-  background: linear-gradient(to right, #b7c8c4, #c1d6d2);
-  padding: 10px; /* Abstand innerhalb des Kastens */
   border-radius: 8px; /* Abgerundete Ecken */
   display:inline-block;
   border-left:3px solid black ;
   border-right:3px solid black ;
   border-top:3px solid black ;
   border-bottom:3px solid black ;
+    background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+} 
+a{
+  color: #00f7ff;
 }
 
+/* RECORD-PAGE-Buttons export, zitieren, favoriten usw. */
+.permalink-record{
+  background: rgb(226, 66, 66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+}
+.save-record{
+  background: rgb(226, 66, 66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+}
+.export-toggle{
+  background: rgb(226, 66, 66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+}
+.print-record{
+  background: rgb(226, 66, 66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+}
+.cite-record{
+  background: rgb(226, 66, 66);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  &:hover {
+    background-color: rgba(235, 50, 255, 0.5);
+    color: #00f7ff;
+  }
+}
 /* ERGEBNISSTABELLE ---------------------------------------------------*/
-/* Tabelle selbst */
-.table {
-    width: 100%; /* Breite der Tabelle */
-    border-collapse: collapse; /* Zusammenfallende Ränder */
-    margin-bottom: 1rem; /* Abstand nach unten */
-    margin-top: 20px; /* Abstand oben zur Überschrift (kann angepasst werden) */
+.tag-record{
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
+
+  &:hover{
+    border: 1px solid rgb(0, 0, 0);
+  }
 }
 
-/* Tabellenkopf */
-.table thead th {
-    background-color: #007bff; /* Hintergrundfarbe des Tabellenkopfs */
-    color: black; /* Textfarbe des Tabellenkopfs */
-    padding: 0.75rem; /* Innenabstand */
-    text-align: left; /* Textausrichtung */
-}
 
-/* Tabellenkörper */
-.table tbody td {
-    padding: 0.75rem; /* Innenabstand */
-    border-bottom: 1px solid black; /* Unterer Rand der Zellen */
-}
 
 .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td,.search-history-table>thead>tr>th,.search-history-table>tbody>tr>th,.search-history-table>tfoot>tr>th,.search-history-table>thead>tr>td,.search-history-table>tbody>tr>td,.search-history-table>tfoot>tr>td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid black;
+  border-top: none;
   border-bottom: 1px solid black;
+  color: #00f7ff;
+
+  
+}
+table {
+  width: 80%;
+  border-collapse: collapse;
+  background: rgba(235, 50, 255, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: none;
 }
 
-/* Gestreifte Zeilen */
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #a0e2d6; /* Hintergrundfarbe für jede ungerade Zeile */
-    color: black;
+table thead {
+  background: rgba(255, 255, 255, 0.25);
+  text-align: left;
+  border-top: none;
 }
 
-.table-striped tbody tr:nth-of-type(even) {
-    background-color: #abb9d1; /* Hintergrundfarbe für jede gerade Zeile */
-    color: black;
+table thead th {
+  padding: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
 }
 
-/* Alternativer Hintergrund für Tabellenzeilen */
-.table tbody tr:hover {
-    background-color: #9e9e9e; /* Hintergrundfarbe beim Hover-Effekt */
+table tbody tr {
+  transition: all 0.3s ease;
+  border:none;
+
 }
 
-/* Rahmen um die Tabelle */
-.table-bordered {
-    border: 1px solid #dee2e6; /* Rahmenfarbe */
+table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.table-bordered th,
-.table-bordered td {
-    border: 1px solid #dee2e6; /* Rahmenfarbe für Kopfzeilen und Zellen */
+table td {
+  
+  padding: 15px;
+  color: #fff;
+  font-size: 1em;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: none;
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(235, 50, 255, 0.1);
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: rgba(235, 50, 255, 0.01);
+}
+
+table td:first-child {
+  border-top: none;
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+  border-bottom: none;
 }
 
 /* ÄHNLICHE RECORDS FÜR DAS WERK ________________________________________________________________*/
@@ -1901,24 +2038,37 @@ color: white;
     margin-bottom: 5px;
 }
 
- /* Stil für jede Listeneinheit */
+  /* Stil für jede Listeneinheit */
  .list-group-item {
-  border: 1px solid #ddd; /* Rahmen um die Listeneinträge */
+  
   border-radius: 4px; /* Abgerundete Ecken */
-  background-color: #b7c8c4; /* Hintergrundfarbe der Listeneinträge */
+ 
   padding: 10px; /* Innenabstand */
   margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
   margin-right: 5px;
-  margin-left: 5px;
   /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
-  color: black;
-  border-color: black;
+  color: white;
+
+
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+ 
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
 }
 
 /* Hover-Effekt für Listeneinträge */
 .list-group-item:hover {
     background-color: #a0d6cc; /* Hintergrundfarbe beim Hover */
     border-color: #007bff; /* Rahmenfarbe beim Hover */
+}
+
+
+a.list-group-item,button.list-group-item {
+  color: white;
+  background-color:rgba(0, 255, 204, 0.171);
 }
 
 /* Stil für die Titel in der Liste */
@@ -2038,3 +2188,47 @@ color: white;
   background-color: gray;
   color: black;
 }
+
+/* Wenn man eingeloggt ist und das Element gespeichert ist - search page und andere pages*/
+
+.result-links {
+  float: left;
+  width: 75%;
+  padding: 0
+}
+.savedLists.loaded {
+  display:block;
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.333) , rgba(0, 255, 204, 0) );
+  border: none;
+  width: auto;
+  color: white;
+}
+
+.btn-bookbag-toggle,.result-links a {
+  line-height: 1.5;
+
+}
+.btn-bookbag-toggle,.result-links a:hover {
+  text-decoration: underline ;
+  color: white ;
+}
+
+/* Für den "zu den favoriten" button in searchpage: */
+.icon-link,.icon-link:active,.icon-link:focus,.icon-link:hover,.toolbar-btn,.toolbar-btn:active,.toolbar-btn:focus,.toolbar-btn:hover,.record-nav .cart-add,.record-nav .cart-add:active,.record-nav .cart-add:focus,.record-nav .cart-add:hover,.record-nav .cart-remove,.record-nav .cart-remove:active,.record-nav .cart-remove:focus,.record-nav .cart-remove:hover,.reset-filters-btn,.reset-filters-btn:active,.reset-filters-btn:focus,.reset-filters-btn:hover,.btn-link,.nav>li>a,.cart-controls .toolbar-btn,.tag-record,.tag-record:active,.tag-record:focus,.tag-record:hover,.cart-controls .toolbar-btn,.cart-controls .toolbar-btn:active,.cart-controls .toolbar-btn:focus,.cart-controls .toolbar-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Für den "veröffentlicht am ..." button */
+.result-body div {
+  color: white;
+}
+
+.icon-link__label {
+  color: #00f7ff; 
+  text-decoration: none;}
+
+  .icon-link__label:hover {
+    text-decoration: underline;
+  }
