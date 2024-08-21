@@ -55,9 +55,9 @@ background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
 
 /* 2. Seite der Liste mit Ergebnissen */
 body.search-page {
-background-image: url("../images/homepage/jellyfish-homepage.webp");
-background-size: cover;
-background-repeat: no-repeat;
+  background-image: url("../images/homepage/jellyfish-homepage.webp");
+  background-size: cover; /* Hintergrundbild skalieren, um den gesamten Bereich abzudecken */
+  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
 
 
 
@@ -79,6 +79,54 @@ background: rgb(69, 69, 69);
 .search-stats h2{
   color: white;
 }
+
+.nav-search-page{
+  position: absolute;
+  top: -8vw;
+  left:-5vw;
+  width:40%;
+  height: 0;
+}
+
+#brand{
+  width: 6vw;
+  max-width: 6vw;
+}
+
+#dive {
+  font-size: 1.2vw;
+  margin-left:6.254234556vw;
+  margin-top: -1.3vw;
+}
+
+#header1, #header2 {
+  font-size: 3vw;
+}
+
+.search.container.navbar{
+ 
+  top: 7vw;
+  
+}
+header.hidden-print{
+  height:15vw;
+}
+
+.result-body {
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 100%
+}
+
 
 
 }
@@ -127,6 +175,10 @@ background: rgb(69, 69, 69);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 20px;
 
+  }
+
+  .sidebar.right.hidden-print {
+    display: none;
   }
 }
 
@@ -201,7 +253,7 @@ text-shadow: 0 1px 1px #116ee7;
 transition-property: border-color, transform, background-color;
 transition-duration: 0.1s;
 }
-
+/*
 .logoutOptions .icon-link {
 position:relative;
 text-decoration: none;
@@ -217,9 +269,9 @@ height: 3vw;
 width: 10vw;
 font-family: CustomFont;
 font-size: 1.2vw;
-display: flex; /* Aktiviert Flexbox */
-justify-content: center;  /*Zentriert den Inhalt horizontal */
-align-items: center; /* Zentriert den Inhalt vertikal */
+display: flex; /* Aktiviert Flexbox 
+justify-content: center;  /*Zentriert den Inhalt horizontal
+align-items: center; /* Zentriert den Inhalt vertikal
 border-left: 2px solid black;
 border-right: 2px solid black;
 border-top: 2px solid black;
@@ -238,6 +290,7 @@ text-shadow: 0 1px 1px #116ee7;
 transition-property: border-color, transform, background-color;
 transition-duration: 0.1s;
 }
+*/
 
 /* War die version davor, für den fall dass der login button bei der record-page 
 crashen sollte weil man was geändert hat oder so
@@ -261,18 +314,45 @@ align-items: center; /* Zentriert den Inhalt vertikal
 } */
 
 
-
-.nav-tabs {
-border-bottom: none;
+.bottom-tabs{
+  margin:0;
+  height:50px;
+  font-size: 16px;
 }
 
+.nav-tabs {
+  height: 80px;
+  border-bottom: none;
+  display: inline-flex;
+  align-items: flex-end;
+  width: 98.33%;
+  margin-left:10px;
+  margin-right:10px;
+  background: linear-gradient(90deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom-width: 0;
+}
+
+
+.record-tabs{
+  display: grid;
+}
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
 .tab-content>.active {
 display: block;
 background-color: transparent;
-margin-top: 1.5vw;
+margin-top:0;
 }
 
+.tab-pane h2{
+  margin:0;
+}
+
+.tab-pane{
+  padding:20px;
+}
 .nav-tabs>li {
 float: left;
 /* margin-bottom:-1px; */
@@ -287,10 +367,17 @@ overflow: visible;
 margin-bottom: 2vw;
 }
 .tab-content {
-padding: 4px;
-margin-left: 1vw;
+  width:98.33%;
+  margin-left:10px;
+  margin-right:10px;
+  padding: 0;
+  background: linear-gradient(90deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top-width: 0;
 }
-
+/*
 #loginOptions .icon-link {
 position:relative;
 text-decoration: none;
@@ -306,9 +393,9 @@ height: 3vw;
 width: 10vw;
 font-family: CustomFont;
 font-size: 1.2vw;
-display: flex; /* Aktiviert Flexbox */
-justify-content: center;  /*Zentriert den Inhalt horizontal */
-align-items: center; /* Zentriert den Inhalt vertikal */
+display: flex; 
+justify-content: center;  
+align-items: center;
 border-left: 2px solid black;
 border-right: 2px solid black;
 border-top: 2px solid black;
@@ -327,16 +414,7 @@ text-shadow: 0 1px 1px #116ee7;
 transition-property: border-color, transform, background-color;
 transition-duration: 0.1s;
 }
-
-#loginOptions .icon-link:hover {
-background-color: #333;
-color: white;
-border-left: 1px solid white;
-border-right: 1px solid white;
-border-top: 1px solid white;
-border-bottom: 1px solid white;
-}
-
+*/
 
 /* Wenn man eingeloggt ist: */
 .nav .navbar-nav .navbar-right.flip {
@@ -383,12 +461,38 @@ margin-top: 1vw;
 margin-right: 1vw;
 }
 
+.search-stats h2{
+  color: white;
+}
+
+.nav-search-page{
+  position:absolute;
+  top: 1vw;
+  left:10vw;
+  width:33%;
+}
+
+#brand{
+  width: 4.5vw;
+  max-width: 4.5vw;
+}
+
+#dive {
+  font-size: 0.8vw;
+  margin-left:4.7vw;
+  margin-top: -1.3vw;
+}
+
+#header1, #header2 {
+  font-size: 2.4vw;
+}
+
 }
 
 /* 4. Seite tag-page wo tag-ergebnisse gezeigt werden*/
 .tag-page {
 
-background-image: url('../images/searchpage/searchpage_orig.jpg');
+background-image: url('../images/homepage/jellyfish-homepage.webp');
 
 .search.container.navbar {
 display:none;
@@ -476,21 +580,20 @@ h4 {
     color: white;
     font-weight: normal;
 }
-  .toolbar-btn {
-    background: rgb(226, 66, 66);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding: 10px;
-    /*background-color: #c1d6d2;
-    border: 1px solid #ddd;
-    border-radius: 5px;*/
-    margin-bottom: 20px;
-    color: white;
-    width: auto;
-  }
+.toolbar-btn {
+  background: rgba(0, 255, 204, 0.333);
+  background-color: rgba(0, 255, 204, 0.333);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+  align-items: center;
+}
   .toolbar-btn:hover {
     color: #007bff;
   }
@@ -523,6 +626,17 @@ h4 {
   padding: 20px;
   width:74%;
 }
+
+.result-body {
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 90%
+}
+
+
 
 }
 
@@ -664,6 +778,23 @@ display: inline-block;
 margin-top: 2vw;
 }
 
+.result-body {
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 100%
+}
+
+
+
 .mainbody.left{
 margin-top:3vw;
 width: 75%;
@@ -742,8 +873,8 @@ margin-top:3vw;
 }
 
 h2{
-color: white;
-font-family: "CustomFont";
+  color: white;
+  font-family: "CustomFont";
 }
 
 .adv-submit .btn.btn-primary{
@@ -1393,8 +1524,30 @@ transition-duration: 0.1s;*/
   height: auto;
   display: inline;
 }
-
 /*
+.banner.container.navbar.nav-search-page {
+  position: relative;
+  top: -5vw;
+  left: -15vw;
+}
+
+
+.banner.container.navbar.nav-search-page #brand {
+  position: relative;
+  width: 6vw;
+  max-width: 6vw;
+}
+
+.banner.container.navbar.nav-search-page #dive {
+  font-size: 1.2vw;
+  margin-left:6.254234556vw;
+  margin-top: -1.3vw;
+}
+
+.banner.container.navbar.nav-search-page #header1, #header2 {
+  font-size: 3vw;
+}
+
 #brand{
   position: relative;
   display: inline-block;
@@ -1459,20 +1612,7 @@ dropdown__link{
 
 /* SEARCH BAR_--------------------------------------------------------*/
 /* Container für das Gesamtergebnis */
-.result-body {
-  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  padding: 20px;
-  /*background-color: #c1d6d2;
-  border: 1px solid #ddd;
-  border-radius: 5px;*/
-  margin-bottom: 20px;
-  width: 100%
-}
+
 
 
 /* Titelstilierung */
@@ -1720,6 +1860,7 @@ dropdown__link{
   
   .sidebar{
     padding-right: 1rem;
+    padding-bottom: 10px;
   }
 
 /* ÜBERSCHRIFT DER SCHLAGWÖRTER ________________________________________________________________________*/
@@ -1813,7 +1954,7 @@ a{
   background: rgba(0, 255, 204, 0.333);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 5px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 10px;
@@ -1833,7 +1974,7 @@ a{
   background: rgba(0, 255, 204, 0.333);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 5px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 10px;
@@ -1853,7 +1994,7 @@ a{
   background: rgba(0, 255, 204, 0.333);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 5px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 10px;
@@ -1873,7 +2014,7 @@ a{
   background: rgba(0, 255, 204, 0.333);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 5px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 10px;
@@ -1893,7 +2034,7 @@ a{
   background: rgba(0, 255, 204, 0.333);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 5px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 10px;
@@ -2014,7 +2155,7 @@ table td:last-child {
  
   padding: 10px; /* Innenabstand */
   margin-bottom: 5px; /* Abstand unterhalb der Listeneinträge */
-  margin-right: 5px;
+  
   /* transition: background-color 0.3s, border-color 0.3s; */ /* Übergangseffekte für Hintergrund- und Rahmenfarbe */
   color: white;
 
@@ -2043,7 +2184,7 @@ a.list-group-item,button.list-group-item {
 /* Stil für die Titel in der Liste */
 .related__title {
     font-size: 1.2rem; /* Größe der Titel */
-    color: #007bff; /* Farbe der Titel */
+    color: #00f7ff; /* Farbe der Titel */
     text-decoration: none; /* Entfernt die Unterstreichung */
 }
 
@@ -2089,17 +2230,14 @@ a.list-group-item,button.list-group-item {
 
 
 /* Für die Tabs Example, Beschreibung, Inhaltsangabe */
-.tab-content>.active {
-display: block;
-background-color: #acc1e2;
-}
+
 
 .tab-pane.toc-tab.active strong {
-color: darkred; /* Farbe für "Inhaltsangabe:" */
+color: white; /* Farbe für "Inhaltsangabe:" */
 }
 
 .tab-pane.toc-tab.active .toc li {
-color: black; /* Farbe für den Text innerhalb der Liste */
+color: #00f7ff; /* Farbe für den Text innerhalb der Liste */
 }
 
 
@@ -2200,6 +2338,16 @@ color: white;
 }
 
 
+.ac-item{
+  color: black;
+  background-color: lightblue;
+}
+
+
+.well {
+  background-color: rgba(0,0,0,0);
+}
+
 /* ---------------------------------------------------------------------------*/
   @media (min-width: 1200px) {
     .container, footer {
@@ -2211,11 +2359,17 @@ color: white;
     .container, footer {
       width: 80vw;
     }
+
+
+
   }
 
   @media (min-width: 768px) {
     .container, footer {
       width: 80vw;
     }
+
+
+
   }
 
