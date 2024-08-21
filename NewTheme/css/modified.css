@@ -39,6 +39,20 @@ background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
 .active-filters .filters .title-value-pair {
   display: none; }
 
+/* Rechte Spalte */
+.media-body { background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+border: 1px solid #ddd;
+border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 100%}
+
 /* wenn man eingeloggt ist soll hier nix erscheinen, dass regelt die seite body.account-page */
 .mainbody.left {
   display: none;
@@ -49,6 +63,9 @@ background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
   padding-right: 15px;
   color:white;
 }
+
+
+
 }
 
 
@@ -103,11 +120,7 @@ background: rgb(69, 69, 69);
   font-size: 3vw;
 }
 
-.search.container.navbar{
- 
-  top: 7vw;
-  
-}
+
 header.hidden-print{
   height:15vw;
 }
@@ -221,7 +234,7 @@ display:none;
 position:relative;
 text-decoration: none;
 color: black;
-background-color: #a0d6cc;
+background-color: rgba(0, 255, 204, 0.4);
 border-radius: 3px;
 border-color: #fff;
 margin-right: 1vw;
@@ -241,17 +254,16 @@ border-top: 2px solid black;
 border-bottom: 2px solid black;
 border-radius: 5px;
 padding: 15px;
-
-
 border: 1px solid #0360df;
-  
-background-color: #0360df;
-background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
 box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
 color: #fff;
 text-shadow: 0 1px 1px #116ee7;
 transition-property: border-color, transform, background-color;
 transition-duration: 0.1s;
+}
+
+.logoutOptions .logout:hover {
+  background-color: lightblue;
 }
 /*
 .logoutOptions .icon-link {
@@ -442,16 +454,16 @@ width: auto;
 font-size: 1.3vw;
 }
 .comment-name {
-color: black;
+color: white;
 margin-top: 1vw;
 margin-left: 1vw;
 }
 .comment-text {
-color: black;
+color: white;
 margin-top: 1vw;
 }
 .comment-label {
-color: black;
+color: white;
 margin-top: 1vw;
 margin-left: 1vw;
 }
@@ -512,6 +524,25 @@ width: 100%;
 display:none;
 }
 
+/* für tag-page*/
+.media-body {
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  /*background-color: #c1d6d2;
+  border: 1px solid #ddd;
+  border-radius: 5px;*/
+  margin-bottom: 20px;
+  width: 30%
+}
+
+.sidebar.right.hidden-print{
+  display: none;}
+
 }
 
 /* 5. Seite die erscheint wenn man auf ihr Konto klickt.
@@ -535,11 +566,20 @@ h4 {
   display: inline-block;
   margin-top: 0vw;
   }
-.btn-default,.search-filter-toggle {
-  color: #333;
-  background-color: #a0e2d6;
-  border-color: #ccc;
-}
+  .btn-default,.search-filter-toggle {
+    background: rgba(0, 255, 204, 0.333);
+    background-color: rgba(0, 255, 204, 0.333);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    width: auto;
+    align-items: center;
+  }
 .btn-default:hover, .search-filter-toggle:hover {
   border-left: 2px solid #ccc;
   border-right: 2px solid #ccc;
@@ -549,16 +589,19 @@ h4 {
   background-color:#333 ;
   }
   .search-controls .btn.icon-link {
-    display: inline-block;
-    padding: 1rem;
-    color: #12538B;
-    border: 1px solid black; /* Grüner Rahmen */
-    border-radius: 5px; /* Abgerundete Ecken */
-    background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
+    background: rgba(0, 255, 204, 0.333);
+    background-color: rgba(0, 255, 204, 0.333);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
     width: auto;
-    font-size: 1.2vw;
-    margin-bottom: 1vw;
-  }
+    align-items: center;
+    }
   .search-controls .btn.icon-link:hover {
     color: black; 
   }
@@ -627,18 +670,39 @@ h4 {
   width:74%;
 }
 
-.result-body {
+@media (max-width: 768px) {
+.sidebar.right.hidden-print{
+  padding-left: 10px;
+  }
+.mainbody.left {
+  width: 100%;
+} }
+/* für acc-page*/
+.media-body {
+  background: linear-gradient(135deg, rgb(235 50 255 / 42%), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 20px;
   /*background-color: #c1d6d2;
   border: 1px solid #ddd;
   border-radius: 5px;*/
   margin-bottom: 20px;
-  width: 90%
+  width: 100%
+}
+
+.alert-info,.savedLists {
+  color: white;
+  background-color: blue;
+}
+
 }
 
 
 
-}
+
 
 /* 6. Seite mit acc-search-history-page (auch erst wenn man eingeloggt ist im login-fenster
 Kommt erst wenn man im login-bereich auf search-history drückt */
@@ -901,14 +965,13 @@ border-bottom: 1px solid white;
 }
 
 .adv-group {
-position: relative;
-margin-bottom: .5rem;
-padding: 1rem;
-border: 1px solid #ddd;
-border-radius: 4px;
-color: #007bff;
-background-color: #b7c8c4;
-}
+  position: relative;
+  margin-bottom: .5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #00f7ff;
+  background-color: transparent;}
 
 @media (min-width: 100px) {
 .solr-facet-container {
@@ -917,23 +980,19 @@ background-color: #b7c8c4;
 }
 
 .solr-adv-facet {
-    padding: 5px;
-    flex: 1 25%;
-    background-color: #b7c8c4;
-    color: #007bff;
-    border-radius: 5px;
-    margin-right: 1vw;
-    text-align: center;
+  padding: 5px;
+  flex: 1 25%;
+  background-color: transparent;
+  color: #00f7ff;
+  border-radius: 5px;
+  margin-right: 1vw;
+  text-align: center;
 }
-}
-@media (min-width: 100px) {
-.mainbody {
-width: 75%;
 }
 .form-control {
 max-width: 100%;
 }
-}
+
 
 
 fieldset.solr label[for="illustrated_0"] {
@@ -942,8 +1001,8 @@ display: inline-block;
 padding: 5px;
 border: 1px solid black; /* Grüner Rahmen */
 border-radius: 5px; /* Abgerundete Ecken */
-background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-color: #007bff;
+background-color: #00ffcc66; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: white;
 width: 10vw;
 font-size: 1vw;
 }
@@ -954,8 +1013,8 @@ display: inline-block;
 padding: 5px;
 border: 1px solid black; /* Grüner Rahmen */
 border-radius: 5px; /* Abgerundete Ecken */
-background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-color: #007bff;
+background-color: #00ffcc66; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: white;
 width: 10vw;
 font-size: 1vw;
 }
@@ -972,8 +1031,8 @@ display: inline-block;
 padding: 5px;
 border: 1px solid black; /* Grüner Rahmen */
 border-radius: 5px; /* Abgerundete Ecken */
-background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-color: #007bff;
+background-color: #00ffcc66; /* Hintergrundfarbe, um den Text hervorzuheben */
+color: white;
 width: 10vw;
 font-size: 1vw;
 }
@@ -998,16 +1057,16 @@ padding: 2px;
 }
 
 #groupPlaceHolder {
-display: block;
-padding: 1rem;
-color: #12538B;
-border: 1px solid black; /* Grüner Rahmen */
-border-radius: 5px; /* Abgerundete Ecken */
-background-color: #b7c8c4; /* Hintergrundfarbe, um den Text hervorzuheben */
-width: 18vw;
-font-size: 1.15vw;
-margin-bottom: 2vw;
-}
+  display: block;
+  padding: 1rem;
+  color: #00f7ff;
+  /* border: 1px solid white; */ /* GrÃ¼ner Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  background-color: #00ffcc66; /* Hintergrundfarbe, um den Text hervorzuheben */
+  width: 18vw;
+  font-size: 1.15vw;
+  margin-bottom: 2vw;
+  }
 
 #groupPlaceHolder:hover {
 display: block;
@@ -1912,11 +1971,7 @@ dropdown__link{
 }
 
 
-/* Rechte Spalte */
-.media-body {
-    flex: 1;
-    width: 100%;
-}
+
 
  /* Überschrift */
  .media-body h1 {
