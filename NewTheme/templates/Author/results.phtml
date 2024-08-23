@@ -1,26 +1,3 @@
-<div class="banner container navbar nav-search-page">
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse" aria-label="<?=$this->transEscAttr('mobile_toggle_navigation_text')?>">
-        <?=$this->icon('ui-menu') ?>
-    </button>
-
-    <a id="link" href="http://localhost/vufind">
-        <span id="mainHeader">
-        <div id="divContainerHeader">
-            <span id="DataDiver">
-            <img id="brand" src="<?=$this->imageLink('background.png'); ?>" />
-            <h1 id="header1" class="logo">Data</h1>
-            <h1 id="header2" class="logo">Diver</h1>
-            </span>
-            <span>
-            <h2 id="dive" class="logo">Dive into Knowledge</h2>
-            </span>
-            
-        </div>
-        </span>
-    </a>
-    </div>
-</div>
 <?php
     // Load standard settings from the default search results screen:
     echo $this->render('search/results.phtml');
