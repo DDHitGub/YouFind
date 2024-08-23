@@ -448,7 +448,13 @@ transform: scale(0.6);
 transform-origin: left;
 }
 
-.btn.btn-primary {
+#copyToClipboard1{
+  padding: 5px;
+  width: auto;
+  font-size: 1.3vw;  
+}
+
+.comment-form .btn.btn-primary {
 padding: 5px;
 width: auto;
 font-size: 1.3vw;
